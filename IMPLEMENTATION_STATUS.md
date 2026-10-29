@@ -197,3 +197,13 @@ The web app now detects this itself: the recovery notice and the AI-notes error 
 - Set a strong `JWT_SECRET_KEY`/`SECRET_KEY`, `MONGODB_URI` (Atlas), `FRONTEND_URL`, `CORS_ORIGINS`, and `MATCHMYTONE_API_BASE_URL` (must end in `/api`).
 - OpenAI has no credit; leave `OPENAI_API_KEY` empty unless it is topped up.
 - The free tier cannot guarantee unlimited requests. The app degrades gracefully, but heavy traffic needs a paid Gemini tier.
+
+## Scoped cleanup, security audit, email verification and deployment (2026-10-29, later)
+
+- UI: visible photo credits removed (attribution kept on `/credits`); beard & moustache styling removed everywhere; styling choices are Men's / Women's / Unisex; "Preferred presentation", "Fit you usually like", "Upkeep you're happy with" and facial-hair preferences removed; occasions limited to Everyday / College / Office / Festive; "Use my colours" removed from the look generator; new Face/Body module-card photos.
+- Compatibility: retired preference fields/options are marked `retired` in `preference_options.json`. They are accepted from old clients, never stored, and ignored by the engine. Stored legacy values stay in MongoDB, and a legacy "mixed" catalog falls back to the profile gender, otherwise unisex. Legacy beard favourites stay stored but are hidden.
+- Email verification (Resend): 32-byte `secrets.token_urlsafe` tokens, stored as SHA-256 hashes, single-use, 24 h expiry. The link is `FRONTEND_URL/verify-email#token=…`, and the website POSTs the token to `/api/auth/verify-email`. Login is refused for unverified accounts and `require_user` blocks them API-wide. Resend gives a generic answer with per-email, per-visitor and registration rate limits. Verification is mandatory in production.
+- Security: production fail-fast config checks; `/api/test-email` is debug-only; JWT pinned to HS256/headers; ownership verified by tests.
+- Deployment: website on Vercel (`web/`), API on Render (`render.yaml`, Gunicorn). See `DEPLOYMENT.md`.
+- Verified: pytest 159 passed; Jest 97 passed; ESLint 0 errors; `next build` OK; browser smoke 26/26 and regression journey 60/60 on an isolated DB. Not verified: real Resend/Gmail delivery, Render/Vercel deployment.
+- Published to github.com/Priyanshiii07/MatchMyTone without earlier history: `main` (initial `.gitignore`) and `feature/NO-WI/initial-website-upload` (all code), ready for a PR.

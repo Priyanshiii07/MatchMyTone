@@ -314,12 +314,46 @@ def test_production_refuses_placeholder_secrets_and_local_databases(monkeypatch)
     monkeypatch.setattr(config, "SECRET_KEY", strong_a)
     monkeypatch.setattr(config, "JWT_SECRET_KEY", strong_a)
     assert any("different" in problem for problem in config.production_problems())
-    monkeypatch.setattr(config, "REQUIRE_EMAIL_VERIFICATION", False)
-    assert any("REQUIRE_EMAIL_VERIFICATION" in problem for problem in config.production_problems())
-    monkeypatch.setattr(config, "REQUIRE_EMAIL_VERIFICATION", True)
     monkeypatch.setattr(config, "JWT_SECRET_KEY", strong_b)
     monkeypatch.setattr(config, "MONGODB_URI", "mongodb+srv://cluster.example.mongodb.net/matchmytone")
     monkeypatch.setattr(config, "FLASK_DEBUG", False)
     assert config.production_problems() == []
     # Messages name variables, never values.
     assert strong_a not in " ".join(problems)
+
+
+def _config_in_subprocess(env, expression):
+    import json
+    import os
+    import subprocess
+    import sys
+    clean = {k: v for k, v in os.environ.items() if k not in {"APP_ENV", "RENDER", "REQUIRE_EMAIL_VERIFICATION", "FROM_EMAIL", "FRONTEND_URL", "RESEND_API_KEY"}}
+    code = f"import json, config; print(json.dumps({expression}))"
+    out = subprocess.run([sys.executable, "-c", code], env={**clean, **env}, capture_output=True, text=True, cwd=os.path.dirname(__file__), check=True)
+    return json.loads(out.stdout.strip().splitlines()[-1])
+
+
+def test_production_always_requires_verification_even_if_switched_off():
+    # Render sets RENDER=true; a copied local REQUIRE_EMAIL_VERIFICATION=false must not disable verification there.
+    assert _config_in_subprocess({"RENDER": "true", "REQUIRE_EMAIL_VERIFICATION": "false"}, "config.REQUIRE_EMAIL_VERIFICATION") is True
+    assert _config_in_subprocess({"APP_ENV": "production", "REQUIRE_EMAIL_VERIFICATION": "False "}, "config.REQUIRE_EMAIL_VERIFICATION") is True
+    assert _config_in_subprocess({"REQUIRE_EMAIL_VERIFICATION": "false"}, "config.REQUIRE_EMAIL_VERIFICATION") is False
+
+
+def test_email_configuration_problems_are_named_without_values():
+    problems = _config_in_subprocess({"RENDER": "true", "RESEND_API_KEY": "not-a-real-key-SENTINEL", "FROM_EMAIL": "MatchMyTone <noreply@example.com>", "FRONTEND_URL": "http://localhost:3000"}, "config.email_problems()")
+    text = " ".join(problems)
+    assert "FROM_EMAIL" in text and "FRONTEND_URL" in text and "not-a-real-key-SENTINEL" not in text
+    good = _config_in_subprocess({"RENDER": "true", "RESEND_API_KEY": "re_x", "FROM_EMAIL": "MatchMyTone <noreply@mail.matchmytone.test>", "FRONTEND_URL": "https://matchmytone.vercel.app"}, "config.email_problems()")
+    assert good == []
+
+
+def test_misconfigured_sender_is_reported_not_faked(client, monkeypatch):
+    monkeypatch.setattr(app.resend, "api_key", "re_test")
+    monkeypatch.setattr(config, "FROM_EMAIL", "MatchMyTone <noreply@example.com>")
+    sent = []
+    monkeypatch.setattr(app.resend.Emails, "send", lambda message: sent.append(message))
+    details, body = register(client)
+    assert body["verification_email_sent"] is False and sent == []
+    response = client.post("/api/auth/resend-verification", json={"email": details["email"]})
+    assert response.status_code == 503 and response.get_json()["errorCode"] == "email_not_configured"

@@ -6,6 +6,8 @@ import uuid
 # Must be set before config/models are imported; load_dotenv does not override existing variables.
 os.environ["MONGODB_DB"] = "matchmytone_test"
 os.environ["RESEND_API_KEY"] = ""
+os.environ["FROM_EMAIL"] = "MatchMyTone <noreply@mail.matchmytone.test>"
+os.environ["FRONTEND_URL"] = "http://localhost:3000"
 # Most tests exercise features of an already-verified flow; test_security.py switches verification on explicitly.
 os.environ["REQUIRE_EMAIL_VERIFICATION"] = "false"
 os.environ.pop("APP_ENV", None)

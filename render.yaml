@@ -7,8 +7,8 @@ services:
     runtime: python
     rootDir: backend
     buildCommand: pip install -r requirements.txt
-    # One worker with threads: the duplicate-request guards and AI cooldowns live in process memory.
-    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 120
+    # backend/gunicorn.conf.py supplies the bind address ($PORT), 1 worker, 8 threads and a 120 s timeout.
+    startCommand: gunicorn app:app
     healthCheckPath: /api/health
     envVars:
       - key: PYTHON_VERSION

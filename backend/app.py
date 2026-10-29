@@ -71,6 +71,12 @@ app.register_blueprint(ai_routes.bp)
 app.register_blueprint(favorites.bp)
 app.register_blueprint(stylist.bp)
 resend.api_key = RESEND_API_KEY
+if PRODUCTION and not config.REQUIRE_EMAIL_VERIFICATION_SETTING:
+    app.logger.warning("REQUIRE_EMAIL_VERIFICATION is set to off, which is ignored in production: email verification stays on.")
+if config.email_problems():
+    app.logger.warning("Verification emails cannot be sent: %s", " ".join(config.email_problems()))
+else:
+    app.logger.info("Email: Resend configured; verification links point to %s/verify-email", FRONTEND_URL)
 
 
 @jwt.invalid_token_loader
@@ -174,16 +180,31 @@ def validate_profile(data, require_all=False):
     return profile, None
 
 
+EMAIL_ADDRESS = re.compile(r"[^@\s<>\"']+@[^@\s<>\"']+")
+
+
+def email_problems():
+    """Configuration problems that stop emails being sent (the key is checked on the live client so tests can stub it)."""
+    problems = [problem for problem in config.email_problems() if not problem.startswith("RESEND_API_KEY")]
+    return (["RESEND_API_KEY is not set."] if not resend.api_key else []) + problems
+
+
 def send_email(message, purpose):
-    """Send through Resend. Returns True only when the provider accepted the message."""
-    if not resend.api_key:
-        app.logger.info("Email not sent purpose=%s reason=resend_not_configured", purpose)
+    """Send through Resend. Returns True only when the provider accepted the message.
+
+    Failures are logged with Resend's reason (for example an unverified sender domain), with any email
+    addresses masked; message bodies, links and tokens are never logged.
+    """
+    if (problems := email_problems()):
+        app.logger.warning("Email not sent purpose=%s reason=%s", purpose, " ".join(problems))
         return False
     try:
         resend.Emails.send({"from": FROM_EMAIL, **message})
+        app.logger.info("Email accepted by Resend purpose=%s", purpose)
         return True
     except Exception as error:
-        app.logger.warning("Email delivery failed purpose=%s error=%s", purpose, type(error).__name__)
+        reason = EMAIL_ADDRESS.sub("<email>", str(getattr(error, "message", "") or error))[:200]
+        app.logger.warning("Email delivery failed purpose=%s error=%s reason=%s", purpose, type(error).__name__, reason)
         return False
 
 
@@ -393,7 +414,7 @@ def resend_verification():
     data = request.get_json(silent=True) or {}
     identity = str(data.get("email", "")).strip().lower()
     if not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", identity): return jsonify({"error": "A valid email is required."}), 400
-    if not resend.api_key: return jsonify({"error": "Email delivery is not configured on this server, so verification emails can't be sent yet.", "errorCode": "email_not_configured"}), 503
+    if email_problems(): return jsonify({"error": "Email delivery is not configured on this server, so verification emails can't be sent yet.", "errorCode": "email_not_configured"}), 503
     generic = {"message": "If that email belongs to an account that still needs verifying, we've sent a new link. Please check your inbox and spam folder."}
     # Limits apply to every address, registered or not, so a 429 says nothing about whether an account exists.
     wait = max(rate_limited("verify_email", identity), rate_limited("verify_ip", client_ip()))
@@ -414,7 +435,7 @@ def request_password_reset():
     email = str(data.get("email", "")).strip().lower()
     if not re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", email): return jsonify({"error": "A valid email is required."}), 400
     # Without an email provider the reset link can never reach the user, so say so instead of pretending.
-    if not resend.api_key: return jsonify({"error": "Password reset email is not configured on this server. Contact the administrator.", "errorCode": "email_not_configured"}), 503
+    if email_problems(): return jsonify({"error": "Password reset email is not configured on this server. Contact the administrator.", "errorCode": "email_not_configured"}), 503
     user = users.find_one({"email": email})
     if user:
         token = uuid.uuid4().hex

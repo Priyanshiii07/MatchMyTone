@@ -12,7 +12,7 @@ All secrets live **only on Render**. The browser never sees an API key, and Verc
 
 | Piece | Where | Root directory | Build | Start | Health check |
 |---|---|---|---|---|---|
-| API | Render web service (Python) | `backend` | `pip install -r requirements.txt` | `gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 120` | `/api/health` |
+| API | Render web service (Python) | `backend` | `pip install -r requirements.txt` | `gunicorn app:app` (settings come from `backend/gunicorn.conf.py`) | `/api/health` |
 | Website | Vercel project (Next.js) | `web` | `npm run build` (Vercel default) | managed by Vercel | — |
 
 ## 0. Before you start
@@ -74,7 +74,7 @@ Set these environment variables. Values marked *secret* go only in Render's dash
 | `SECRET_KEY` | random, 32+ characters *(secret; the Blueprint generates it)* |
 | `JWT_SECRET_KEY` | a **different** random value, 32+ characters *(secret; generated)* |
 | `JWT_ACCESS_TOKEN_MINUTES` | `60` |
-| `REQUIRE_EMAIL_VERIFICATION` | `true` (production refuses to start with `false`) |
+| `REQUIRE_EMAIL_VERIFICATION` | `true`. On Render, verification is always on: a `false` value is ignored and logged as a warning. |
 | `EMAIL_VERIFICATION_HOURS` | `24` |
 | `FRONTEND_URL` | your Vercel URL, e.g. `https://matchmytone.vercel.app`, with no trailing slash |
 | `BACKEND_URL` | this API's URL, e.g. `https://matchmytone-api.onrender.com` |
@@ -96,13 +96,16 @@ In production the API **refuses to start** if any of the following holds:
 - `SECRET_KEY` and `JWT_SECRET_KEY` are equal.
 - `MONGODB_URI` is local.
 - `FLASK_DEBUG` is on.
-- Email verification is off.
 
 The log names the variable, never the value. `CORS_ORIGINS` defaults to `FRONTEND_URL`. It rarely matters, because the browser never calls the API directly.
 
 You don't know the Vercel URL yet: put a placeholder in `FRONTEND_URL` now and fix it in step 6.
 
 Check that `https://<api>.onrender.com/api/health` returns `"status": "ok"`.
+
+The deploy log states the email setup. Either you see `Email: Resend configured; verification links point to https://…/verify-email`, or a warning such as `Verification emails cannot be sent: FROM_EMAIL uses a placeholder domain…`.
+
+In Render's **Shell** tab you can run `python scripts/check_email.py`. It shows the configuration and your Resend domains' status, and sends nothing. Add `--send-to you@gmail.com` to send one real test email.
 
 ## 5. Deploy the website on Vercel
 
