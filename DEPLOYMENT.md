@@ -12,7 +12,7 @@ All secrets live **only on Render**. The browser never sees an API key, and Verc
 
 | Piece | Where | Root directory | Build | Start | Health check |
 |---|---|---|---|---|---|
-| API | Render web service (Python) | `backend` | `pip install -r requirements.txt` | `gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 120` | `/api/health` |
+| API | Render web service (Python) | `backend` | `pip install -r requirements.txt` | `gunicorn app:app` (settings come from `backend/gunicorn.conf.py`) | `/api/health` |
 | Website | Vercel project (Next.js) | `web` | `npm run build` (Vercel default) | managed by Vercel | — |
 
 ## 0. Before you start
@@ -49,15 +49,30 @@ The API creates its collections and indexes on first start (`models.initialize_d
 - `rate_limit_events`: `(key, created_at)` plus a TTL.
 - The analysis, favourites and cache collections.
 
-## 3. Resend (verification emails)
+## 3. Email for verification: Brevo now, Resend once you own a domain
 
-1. Sign up at resend.com.
-2. **Domains → Add domain.** Use a domain you own; a subdomain such as `mail.yourdomain.com` is fine. Add the DNS records Resend shows (SPF `TXT`/`MX` and DKIM `TXT`; DMARC is recommended) at your DNS provider, and wait for **Verified**.
-   - Without a verified domain you can only send from `onboarding@resend.dev`, and only to the email address of your own Resend account. Real users, including Gmail addresses, will **not** receive verification emails until the domain is verified.
-3. **API Keys → Create** with "Sending access". This is `RESEND_API_KEY`.
-4. Choose the sender, e.g. `MatchMyTone <noreply@mail.yourdomain.com>`. This is `FROM_EMAIL`, and its domain must be the verified one.
+Verification emails must reach any user's inbox. Resend can only do that from a domain you have verified in Resend. Without a domain it sends only from `onboarding@resend.dev`, and only to your own Resend account address. Render's free tier also blocks SMTP ports (25/465/587), so Gmail SMTP isn't an option there.
 
-Creating an API key alone does not guarantee delivery to Gmail. Send yourself a real test after deployment (step 7).
+### No domain yet: Brevo (`EMAIL_PROVIDER=brevo`)
+
+Brevo sends over HTTPS (allowed on Render's free tier) and only needs one verified sender address, such as a Gmail address.
+
+1. Create a free account at brevo.com.
+2. **Senders, Domains & Dedicated IPs → Senders → Add a sender.** Enter a name (`MatchMyTone`) and an address you can open, for example your Gmail. Brevo emails that address a confirmation; click it so the sender shows as verified.
+3. **SMTP & API → API Keys → Generate a new API key.** Use an API (v3) key, not an SMTP key. This is `BREVO_API_KEY`.
+4. On Render set `EMAIL_PROVIDER=brevo`, `BREVO_API_KEY=<key>` and `FROM_EMAIL=MatchMyTone <the-address-you-verified@gmail.com>`. Leave `RESEND_API_KEY` empty or as is; it isn't used while the provider is Brevo.
+
+Mail sent through a provider "from" a Gmail address can land in Spam, because Gmail can't vouch for another company's servers. Tell testers to check Spam and mark the first email "Not spam". Brevo's free plan has a daily sending limit; check your Brevo dashboard.
+
+### When you have a domain: Resend (`EMAIL_PROVIDER=resend`)
+
+1. In Resend, **Domains → Add domain** (a subdomain like `mail.yourdomain.com` is fine). Add the DNS records it shows (SPF/MX and DKIM `TXT`; DMARC is recommended) and wait for **Verified**.
+2. **API Keys → Create** with "Sending access". This is `RESEND_API_KEY`.
+3. On Render set `EMAIL_PROVIDER=resend`, `RESEND_API_KEY=<key>` and `FROM_EMAIL=MatchMyTone <noreply@mail.yourdomain.com>`, then redeploy. No code change is needed to switch.
+
+A domain also improves inbox placement. Cheap domains cost a few dollars a year, and Vercel, Namecheap, Cloudflare and Porkbun all sell them.
+
+Whichever provider you use, run `python scripts/check_email.py --send-to you@gmail.com` in Render's Shell after deploying to confirm a real email arrives.
 
 ## 4. Deploy the API on Render
 
@@ -74,12 +89,14 @@ Set these environment variables. Values marked *secret* go only in Render's dash
 | `SECRET_KEY` | random, 32+ characters *(secret; the Blueprint generates it)* |
 | `JWT_SECRET_KEY` | a **different** random value, 32+ characters *(secret; generated)* |
 | `JWT_ACCESS_TOKEN_MINUTES` | `60` |
-| `REQUIRE_EMAIL_VERIFICATION` | `true` (production refuses to start with `false`) |
+| `REQUIRE_EMAIL_VERIFICATION` | `true`. On Render, verification is always on: a `false` value is ignored and logged as a warning. |
 | `EMAIL_VERIFICATION_HOURS` | `24` |
 | `FRONTEND_URL` | your Vercel URL, e.g. `https://matchmytone.vercel.app`, with no trailing slash |
 | `BACKEND_URL` | this API's URL, e.g. `https://matchmytone-api.onrender.com` |
-| `RESEND_API_KEY` | *(secret)* |
-| `FROM_EMAIL` | `MatchMyTone <noreply@your-verified-domain>` |
+| `EMAIL_PROVIDER` | `brevo` while you have no domain; `resend` once your domain is verified in Resend |
+| `BREVO_API_KEY` | *(secret)*, when `EMAIL_PROVIDER=brevo` |
+| `RESEND_API_KEY` | *(secret)*, when `EMAIL_PROVIDER=resend` |
+| `FROM_EMAIL` | the verified sender, e.g. `MatchMyTone <your.address@gmail.com>` (Brevo) or `MatchMyTone <noreply@mail.yourdomain.com>` (Resend) |
 | `GEMINI_API_KEY` | *(secret)* from Google AI Studio |
 | `GEMINI_MODEL` | `gemini-3.5-flash` |
 | `GEMINI_FALLBACK_MODELS` | `gemini-3.6-flash,gemini-3.1-flash-lite` |
@@ -96,13 +113,16 @@ In production the API **refuses to start** if any of the following holds:
 - `SECRET_KEY` and `JWT_SECRET_KEY` are equal.
 - `MONGODB_URI` is local.
 - `FLASK_DEBUG` is on.
-- Email verification is off.
 
 The log names the variable, never the value. `CORS_ORIGINS` defaults to `FRONTEND_URL`. It rarely matters, because the browser never calls the API directly.
 
 You don't know the Vercel URL yet: put a placeholder in `FRONTEND_URL` now and fix it in step 6.
 
 Check that `https://<api>.onrender.com/api/health` returns `"status": "ok"`.
+
+The deploy log states the email setup. Either you see `Email: brevo configured; verification links point to https://…/verify-email` (or `resend`), or a warning such as `Verification emails cannot be sent: FROM_EMAIL uses a placeholder address…`.
+
+In Render's **Shell** tab you can run `python scripts/check_email.py`. It shows the configuration and your sender or domain status at Brevo or Resend, and sends nothing. Add `--send-to you@gmail.com` to send one real test email.
 
 ## 5. Deploy the website on Vercel
 

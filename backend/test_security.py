@@ -3,6 +3,7 @@
 Email is never sent: Resend is replaced by a recorder. Tokens are read from the recorded message only.
 """
 
+import json
 import re
 import uuid
 from datetime import timedelta
@@ -314,12 +315,107 @@ def test_production_refuses_placeholder_secrets_and_local_databases(monkeypatch)
     monkeypatch.setattr(config, "SECRET_KEY", strong_a)
     monkeypatch.setattr(config, "JWT_SECRET_KEY", strong_a)
     assert any("different" in problem for problem in config.production_problems())
-    monkeypatch.setattr(config, "REQUIRE_EMAIL_VERIFICATION", False)
-    assert any("REQUIRE_EMAIL_VERIFICATION" in problem for problem in config.production_problems())
-    monkeypatch.setattr(config, "REQUIRE_EMAIL_VERIFICATION", True)
     monkeypatch.setattr(config, "JWT_SECRET_KEY", strong_b)
     monkeypatch.setattr(config, "MONGODB_URI", "mongodb+srv://cluster.example.mongodb.net/matchmytone")
     monkeypatch.setattr(config, "FLASK_DEBUG", False)
     assert config.production_problems() == []
     # Messages name variables, never values.
     assert strong_a not in " ".join(problems)
+
+
+def _config_in_subprocess(env, expression):
+    import json
+    import os
+    import subprocess
+    import sys
+    clean = {k: v for k, v in os.environ.items() if k not in {"APP_ENV", "RENDER", "REQUIRE_EMAIL_VERIFICATION", "FROM_EMAIL", "FRONTEND_URL", "RESEND_API_KEY"}}
+    code = f"import json, config; print(json.dumps({expression}))"
+    out = subprocess.run([sys.executable, "-c", code], env={**clean, **env}, capture_output=True, text=True, cwd=os.path.dirname(__file__), check=True)
+    return json.loads(out.stdout.strip().splitlines()[-1])
+
+
+def test_production_always_requires_verification_even_if_switched_off():
+    # Render sets RENDER=true; a copied local REQUIRE_EMAIL_VERIFICATION=false must not disable verification there.
+    assert _config_in_subprocess({"RENDER": "true", "REQUIRE_EMAIL_VERIFICATION": "false"}, "config.REQUIRE_EMAIL_VERIFICATION") is True
+    assert _config_in_subprocess({"APP_ENV": "production", "REQUIRE_EMAIL_VERIFICATION": "False "}, "config.REQUIRE_EMAIL_VERIFICATION") is True
+    assert _config_in_subprocess({"REQUIRE_EMAIL_VERIFICATION": "false"}, "config.REQUIRE_EMAIL_VERIFICATION") is False
+
+
+def test_email_configuration_problems_are_named_without_values():
+    problems = _config_in_subprocess({"RENDER": "true", "RESEND_API_KEY": "not-a-real-key-SENTINEL", "FROM_EMAIL": "MatchMyTone <noreply@example.com>", "FRONTEND_URL": "http://localhost:3000"}, "config.email_problems()")
+    text = " ".join(problems)
+    assert "FROM_EMAIL" in text and "FRONTEND_URL" in text and "not-a-real-key-SENTINEL" not in text
+    good = _config_in_subprocess({"RENDER": "true", "RESEND_API_KEY": "re_x", "FROM_EMAIL": "MatchMyTone <noreply@mail.matchmytone.test>", "FRONTEND_URL": "https://matchmytone.vercel.app"}, "config.email_problems()")
+    assert good == []
+
+
+def test_misconfigured_sender_is_reported_not_faked(client, monkeypatch):
+    monkeypatch.setattr(app.resend, "api_key", "re_test")
+    monkeypatch.setattr(config, "FROM_EMAIL", "MatchMyTone <noreply@example.com>")
+    sent = []
+    monkeypatch.setattr(app.resend.Emails, "send", lambda message: sent.append(message))
+    details, body = register(client)
+    assert body["verification_email_sent"] is False and sent == []
+    response = client.post("/api/auth/resend-verification", json={"email": details["email"]})
+    assert response.status_code == 503 and response.get_json()["errorCode"] == "email_not_configured"
+
+
+# ---------- Brevo (no-domain option) ----------
+
+class _BrevoResponse:
+    status = 201
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+@pytest.fixture
+def brevo(monkeypatch):
+    """EMAIL_PROVIDER=brevo with the HTTPS call captured instead of sent."""
+    calls = []
+    monkeypatch.setattr(config, "EMAIL_PROVIDER", "brevo")
+    monkeypatch.setattr(config, "BREVO_API_KEY", "brevo-test-key")
+    monkeypatch.setattr(config, "FROM_EMAIL", "MatchMyTone <matchmytone.app@gmail.com>")
+
+    def fake_urlopen(request, timeout=None):
+        calls.append({"url": request.full_url, "headers": dict(request.header_items()), "body": json.loads(request.data)})
+        return _BrevoResponse()
+
+    monkeypatch.setattr(app, "urlopen", fake_urlopen)
+    return calls
+
+
+def test_brevo_sends_verification_from_a_single_verified_sender(client, brevo, require_verification):
+    # Arrange / Act
+    details, body = register(client)
+    # Assert: one HTTPS call to Brevo with the sender split into name and address, and a working link.
+    assert body["verification_email_sent"] is True and len(brevo) == 1
+    call = brevo[0]
+    assert call["url"] == "https://api.brevo.com/v3/smtp/email" and call["headers"]["Api-key"] == "brevo-test-key"
+    assert call["body"]["sender"] == {"name": "MatchMyTone", "email": "matchmytone.app@gmail.com"}
+    assert call["body"]["to"] == [{"email": details["email"]}] and "Verify my email" in call["body"]["htmlContent"]
+    token = re.search(r"/verify-email#token=([A-Za-z0-9_-]+)", call["body"]["textContent"]).group(1)
+    assert client.post("/api/auth/verify-email", json={"token": token}).get_json()["status"] == "verified"
+
+
+def test_brevo_rejection_is_reported_not_faked(client, brevo, monkeypatch, require_verification):
+    from io import BytesIO
+    from urllib.error import HTTPError
+
+    def reject(request, timeout=None):
+        raise HTTPError(request.full_url, 400, "Bad Request", {}, BytesIO(b'{"code":"invalid_parameter","message":"sender not valid"}'))
+
+    monkeypatch.setattr(app, "urlopen", reject)
+    details, body = register(client)
+    assert body["verification_email_sent"] is False and "couldn't send" in body["message"]
+    assert login(client, details).status_code == 403
+
+
+def test_brevo_without_a_key_counts_as_not_configured(client, brevo, monkeypatch):
+    monkeypatch.setattr(config, "BREVO_API_KEY", "")
+    details, _ = register(client)
+    response = client.post("/api/auth/resend-verification", json={"email": details["email"]})
+    assert response.status_code == 503 and response.get_json()["errorCode"] == "email_not_configured"
