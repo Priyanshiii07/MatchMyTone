@@ -1,0 +1,4309 @@
+{
+  "version": 2,
+  "catalog_labels": {
+    "menswear": "Men's styling",
+    "womenswear": "Women's styling",
+    "unisex": "Unisex styling"
+  },
+  "shape_display_names": {
+    "menswear": {
+      "Hourglass": "Balanced (Hourglass)",
+      "Pear": "Triangle (Pear)",
+      "Apple": "Oval (Apple)",
+      "Rectangle": "Rectangle",
+      "Inverted Triangle": "Inverted Triangle"
+    },
+    "unisex": {
+      "Hourglass": "Balanced (Hourglass)",
+      "Pear": "Triangle (Pear)",
+      "Apple": "Oval (Apple)",
+      "Rectangle": "Rectangle",
+      "Inverted Triangle": "Inverted Triangle"
+    }
+  },
+  "body_categories": [
+    {
+      "id": "tops",
+      "label": "Tops"
+    },
+    {
+      "id": "bottoms",
+      "label": "Bottoms"
+    },
+    {
+      "id": "dresses",
+      "label": "Dresses & one-pieces"
+    },
+    {
+      "id": "outerwear",
+      "label": "Outerwear & tailoring"
+    },
+    {
+      "id": "traditional",
+      "label": "Traditional & festive"
+    },
+    {
+      "id": "footwear",
+      "label": "Footwear"
+    },
+    {
+      "id": "accessories",
+      "label": "Accessories"
+    }
+  ],
+  "occasion_labels": {
+    "everyday": "Everyday",
+    "college": "College",
+    "office": "Office",
+    "formal": "Formal",
+    "festive": "Festive",
+    "wedding": "Weddings",
+    "party": "Parties",
+    "travel": "Travel & weekends"
+  },
+  "body_items": [
+    {
+      "id": "m-crew-tee",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "Crew-neck T-shirts",
+      "desc": "A clean everyday base layer in mid-weight cotton.",
+      "tip": "The shoulder seam should sit on your shoulder bone and the hem just past your belt.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "fitted",
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Rectangle": "A crew neck adds a little width at the collarbone, framing a straighter build.",
+        "Pear": "A crew neck in a structured cotton keeps attention up near the shoulders.",
+        "Hourglass": "A close, not tight, fit follows your balanced proportions."
+      },
+      "art": "tee",
+      "role": "accent",
+      "photo": "photos/m-crew-tee.jpg"
+    },
+    {
+      "id": "m-vneck-tee",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "V-neck T-shirts",
+      "desc": "A shallow V creates a longer vertical line at the neck.",
+      "tip": "Keep the V shallow — about two fingers below the collarbone.",
+      "occasions": [
+        "everyday",
+        "party",
+        "travel"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Inverted Triangle": "A V-neck narrows the visual line across broad shoulders.",
+        "Apple": "The vertical line at the neck lengthens the torso."
+      },
+      "art": "vneck-tee",
+      "role": "light",
+      "photo": "photos/m-vneck-tee.jpg"
+    },
+    {
+      "id": "m-polo",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "Polo shirts",
+      "desc": "Collared and knitted — smarter than a tee, easier than a shirt.",
+      "tip": "Sleeves should end mid-bicep; tuck only when you add a belt.",
+      "occasions": [
+        "everyday",
+        "office",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Rectangle": "The collar and placket add structure at the top.",
+        "Hourglass": "A tailored polo keeps the waistline clean."
+      },
+      "art": "polo",
+      "role": "accent",
+      "photo": "photos/m-polo.jpg"
+    },
+    {
+      "id": "m-casual-shirt",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "Casual shirts",
+      "desc": "Linen, cotton or chambray shirts worn untucked.",
+      "tip": "Untucked shirts should end around mid-fly; longer hems are meant to be tucked.",
+      "occasions": [
+        "everyday",
+        "party",
+        "travel",
+        "college"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "A straight, untucked hem skims the midsection instead of clinging.",
+        "Pear": "Chest pockets and a firm collar add interest above the waist."
+      },
+      "art": "shirt",
+      "role": "light",
+      "photo": "photos/m-shirt.jpg"
+    },
+    {
+      "id": "m-oxford",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "Oxford shirts",
+      "desc": "A sturdy button-down that works tucked with chinos or open over a tee.",
+      "tip": "Check the collar: one finger should slide in when it's buttoned.",
+      "occasions": [
+        "office",
+        "college",
+        "everyday"
+      ],
+      "fits": [
+        "regular",
+        "fitted",
+        "structured"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Soft Oxford cloth doesn't add bulk at the shoulders.",
+        "Rectangle": "Tucked into chinos with a belt, it creates a waist point."
+      },
+      "art": "shirt",
+      "role": "light",
+      "photo": "photos/m-shirt.jpg"
+    },
+    {
+      "id": "m-camp-shirt",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "Casual button-downs (camp collar)",
+      "desc": "Short-sleeve shirts with an open collar and small prints for warm days.",
+      "tip": "Small, tonal prints are easier to wear than large busy ones.",
+      "occasions": [
+        "party",
+        "travel",
+        "everyday"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Pear": "A print on top draws the eye upward.",
+        "Rectangle": "The open collar adds width at the neckline."
+      },
+      "art": "shirt-short",
+      "role": "accent",
+      "photo": "photos/m-camp-shirt.jpg"
+    },
+    {
+      "id": "m-henley",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "Henley shirts",
+      "desc": "A collarless knit with a short button placket.",
+      "tip": "Leave the top button open for a relaxed look.",
+      "occasions": [
+        "everyday",
+        "travel",
+        "college"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Rectangle": "The placket adds detail to an even frame.",
+        "Inverted Triangle": "The open placket keeps focus on the centre of the chest."
+      },
+      "art": "henley",
+      "role": "accent",
+      "photo": "photos/m-henley.jpg"
+    },
+    {
+      "id": "m-knit",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "tops",
+      "title": "Knitwear",
+      "desc": "Crew- or V-neck sweaters in merino or cotton.",
+      "tip": "Fine-gauge knits layer over shirts; chunky knits add bulk.",
+      "occasions": [
+        "office",
+        "everyday",
+        "formal",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Rectangle": "Textured or ribbed knits add depth to a straighter frame.",
+        "Apple": "A fine-gauge knit worn slightly loose skims rather than clings.",
+        "Pear": "A textured knit adds visual weight up top."
+      },
+      "art": "knit",
+      "role": "neutral",
+      "photo": "photos/m-knit.jpg"
+    },
+    {
+      "id": "m-straight-jeans",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "bottoms",
+      "title": "Straight-fit jeans",
+      "desc": "A straight leg from thigh to hem in a dark or mid wash.",
+      "tip": "Aim for a slight break, or none, where the hem meets your shoe.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel",
+        "party"
+      ],
+      "fits": [
+        "regular"
+      ],
+      "shapes": {
+        "Inverted Triangle": "A straight leg balances broader shoulders.",
+        "Apple": "A mid-rise straight leg gives a clean vertical line.",
+        "Pear": "A straight leg falls smoothly from the hip without clinging."
+      },
+      "art": "jeans",
+      "role": "dark",
+      "photo": "photos/m-jeans.jpg"
+    },
+    {
+      "id": "m-slim-jeans",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "bottoms",
+      "title": "Slim or tapered jeans",
+      "desc": "Slim through the thigh with a gentle taper to the ankle.",
+      "tip": "Leave room to sit comfortably — a little stretch helps.",
+      "occasions": [
+        "everyday",
+        "college",
+        "party"
+      ],
+      "fits": [
+        "fitted"
+      ],
+      "shapes": {
+        "Rectangle": "A slim taper keeps an even frame looking sharp.",
+        "Hourglass": "Follows balanced proportions without extra fabric."
+      },
+      "art": "jeans",
+      "role": "dark",
+      "photo": "photos/m-jeans.jpg"
+    },
+    {
+      "id": "m-chinos",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "bottoms",
+      "title": "Chinos",
+      "desc": "Cotton twill trousers between jeans and formal trousers.",
+      "tip": "A mid-rise works for most; a small cuff suits loafers and sneakers.",
+      "occasions": [
+        "office",
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "fitted"
+      ],
+      "shapes": {
+        "Rectangle": "A belted chino creates a waist point.",
+        "Pear": "A mid-to-dark straight chino keeps the lower half simple."
+      },
+      "art": "trousers",
+      "role": "neutral",
+      "photo": "photos/m-chinos.jpg"
+    },
+    {
+      "id": "m-tailored-trousers",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "bottoms",
+      "title": "Tailored trousers",
+      "desc": "Pressed wool-blend trousers with a front crease.",
+      "tip": "A single light break at the shoe looks sharp.",
+      "occasions": [
+        "office",
+        "formal",
+        "wedding"
+      ],
+      "fits": [
+        "structured",
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "A mid-to-high rise sits comfortably at the natural waist.",
+        "Inverted Triangle": "A little fullness or a pleat in the leg balances broad shoulders."
+      },
+      "art": "trousers",
+      "role": "dark",
+      "photo": "photos/m-relaxed-trousers.jpg"
+    },
+    {
+      "id": "m-relaxed-trousers",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "bottoms",
+      "title": "Relaxed trousers",
+      "desc": "Wider, pleated or drawstring trousers with drape.",
+      "tip": "Pair with a neater top so the outfit keeps its shape.",
+      "occasions": [
+        "everyday",
+        "travel",
+        "party"
+      ],
+      "fits": [
+        "relaxed",
+        "oversized"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Extra volume in the leg balances a broad upper body.",
+        "Rectangle": "Drape adds movement to a straight frame."
+      },
+      "art": "wide-trousers",
+      "role": "neutral",
+      "photo": "photos/m-relaxed-trousers.jpg"
+    },
+    {
+      "id": "m-cargo",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "bottoms",
+      "title": "Cargo trousers",
+      "desc": "Utility trousers with side pockets.",
+      "tip": "Keep pockets flat and the top simple to avoid bulk.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Pockets at the thigh add balancing volume below.",
+        "Rectangle": "Utility details add interest to an even build."
+      },
+      "art": "cargo",
+      "role": "neutral",
+      "photo": "photos/m-cargo.jpg"
+    },
+    {
+      "id": "m-shorts",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "bottoms",
+      "title": "Shorts",
+      "desc": "Chino or linen shorts that end just above the knee.",
+      "tip": "A 13–18 cm (5–7 in) inseam suits most heights.",
+      "occasions": [
+        "travel",
+        "everyday"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Inverted Triangle": "A slightly wider leg opening balances the shoulders."
+      },
+      "art": "shorts",
+      "role": "neutral",
+      "flags": [
+        "revealing"
+      ],
+      "photo": "photos/m-shorts.jpg"
+    },
+    {
+      "id": "m-bomber",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Bomber jackets",
+      "desc": "A short jacket with a ribbed hem and cuffs.",
+      "tip": "The hem should land at your belt line.",
+      "occasions": [
+        "everyday",
+        "college",
+        "party"
+      ],
+      "fits": [
+        "regular"
+      ],
+      "shapes": {
+        "Rectangle": "The ribbed hem creates shape at the waist.",
+        "Pear": "Volume at the chest and shoulders balances the hips."
+      },
+      "art": "bomber",
+      "role": "dark",
+      "photo": "photos/m-bomber.jpg"
+    },
+    {
+      "id": "m-denim-jacket",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Denim jackets",
+      "desc": "A classic trucker jacket for layering.",
+      "tip": "Wear it over a tee or hoodie; size up only if you layer knits.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "fitted"
+      ],
+      "shapes": {
+        "Rectangle": "Chest pockets and seams add structure.",
+        "Pear": "A structured shoulder broadens the top line."
+      },
+      "art": "denim-jacket",
+      "role": "dark",
+      "photo": "photos/m-denim-jacket.jpg"
+    },
+    {
+      "id": "m-harrington",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Harrington jackets",
+      "desc": "A lightweight zip jacket with a stand collar.",
+      "tip": "Keep it waist-length so it doesn't cut your legs short.",
+      "occasions": [
+        "everyday",
+        "office",
+        "travel"
+      ],
+      "fits": [
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "Worn open, a light jacket creates vertical lines.",
+        "Hourglass": "A neat waist-length cut keeps proportions balanced."
+      },
+      "art": "bomber",
+      "role": "neutral",
+      "photo": "photos/m-bomber.jpg"
+    },
+    {
+      "id": "m-overshirt",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Overshirts",
+      "desc": "A heavier shirt worn open as a light jacket.",
+      "tip": "Choose one roomy enough to wear over a tee.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel",
+        "office"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "Worn open, the straight panels create a long vertical line.",
+        "Rectangle": "Layering adds dimension.",
+        "Inverted Triangle": "A soft overshirt layers without adding shoulder padding."
+      },
+      "art": "overshirt",
+      "role": "neutral",
+      "photo": "photos/m-overshirt.jpg"
+    },
+    {
+      "id": "m-blazer",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Blazers",
+      "desc": "A single-breasted blazer in navy, grey, olive or one of your palette shades.",
+      "tip": "Shoulder seams end at your shoulder; let a little shirt cuff show.",
+      "occasions": [
+        "office",
+        "formal",
+        "party",
+        "wedding"
+      ],
+      "fits": [
+        "structured",
+        "fitted"
+      ],
+      "shapes": {
+        "Pear": "Structured shoulders balance wider hips.",
+        "Rectangle": "A slightly suppressed waist adds shape.",
+        "Inverted Triangle": "Soft-shouldered or unstructured blazers keep the shoulders from widening further.",
+        "Apple": "A single-button blazer worn open creates a long vertical line."
+      },
+      "art": "blazer",
+      "role": "dark",
+      "photo": "photos/m-blazer.jpg"
+    },
+    {
+      "id": "m-suit",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Two-piece suits",
+      "desc": "A matching jacket and trousers for formal events.",
+      "tip": "Tailoring is worth it: hemming and taking in the waist make most suits look made for you.",
+      "occasions": [
+        "formal",
+        "wedding",
+        "office"
+      ],
+      "fits": [
+        "structured"
+      ],
+      "shapes": {
+        "Apple": "A single-breasted, two-button suit with a mid-rise trouser elongates.",
+        "Inverted Triangle": "Soft shoulders and a fuller trouser balance a broad chest."
+      },
+      "art": "suit",
+      "role": "dark",
+      "photo": "photos/m-suit.jpg"
+    },
+    {
+      "id": "m-coat",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Structured coats",
+      "desc": "An overcoat or car coat for cooler weather.",
+      "tip": "Knee length suits taller frames; mid-thigh suits shorter ones.",
+      "occasions": [
+        "office",
+        "formal",
+        "travel"
+      ],
+      "fits": [
+        "structured",
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "Long vertical lines streamline the frame.",
+        "Rectangle": "A tailored coat adds shape."
+      },
+      "art": "coat",
+      "role": "dark",
+      "photo": "photos/m-coat.jpg"
+    },
+    {
+      "id": "m-quarter-zip",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "outerwear",
+      "title": "Lightweight layering pieces",
+      "desc": "Quarter-zip knits and light cardigans that layer over shirts.",
+      "tip": "Thin layers trap warmth without bulk in changing weather.",
+      "occasions": [
+        "office",
+        "travel",
+        "everyday"
+      ],
+      "fits": [
+        "regular",
+        "fitted"
+      ],
+      "shapes": {
+        "Rectangle": "A zip collar adds interest near the face."
+      },
+      "art": "knit",
+      "role": "neutral",
+      "photo": "photos/m-knit.jpg"
+    },
+    {
+      "id": "m-kurta",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "traditional",
+      "title": "Kurtas",
+      "desc": "A straight-cut kurta in cotton or linen for day events.",
+      "tip": "Hip-to-knee length works for most heights; shorter kurtas pair well with jeans.",
+      "occasions": [
+        "festive",
+        "everyday",
+        "wedding"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "A straight, longer kurta skims the midsection.",
+        "Pear": "A kurta ending mid-thigh or at the knee falls smoothly past the hips.",
+        "Inverted Triangle": "A band collar and straight panels keep the upper body simple."
+      },
+      "art": "kurta",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/m-kurta.jpg"
+    },
+    {
+      "id": "m-kurta-set",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "traditional",
+      "title": "Kurta-pyjama sets",
+      "desc": "A kurta with churidar or straight pyjama, matching or in contrast.",
+      "tip": "A tapered churidar suits shorter kurtas; straight pyjamas suit longer ones.",
+      "occasions": [
+        "festive",
+        "wedding"
+      ],
+      "fits": [
+        "regular"
+      ],
+      "shapes": {
+        "Rectangle": "A contrast pyjama adds definition to a long, straight line."
+      },
+      "art": "kurta-set",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/m-kurta-set.jpg"
+    },
+    {
+      "id": "m-nehru",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "traditional",
+      "title": "Nehru jackets",
+      "desc": "A sleeveless band-collar jacket layered over a kurta or shirt.",
+      "tip": "It should end at the hip and button without pulling.",
+      "occasions": [
+        "festive",
+        "wedding",
+        "formal",
+        "office"
+      ],
+      "fits": [
+        "structured",
+        "fitted"
+      ],
+      "shapes": {
+        "Rectangle": "Adds structure and a waist point.",
+        "Apple": "Worn open over a long kurta, it creates vertical panels."
+      },
+      "art": "nehru-jacket",
+      "role": "dark",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/m-nehru.jpg"
+    },
+    {
+      "id": "m-sherwani",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "traditional",
+      "title": "Sherwanis",
+      "desc": "A long, structured coat for weddings and major festive events.",
+      "tip": "Get the shoulders fitted; the length usually sits just below the knee.",
+      "occasions": [
+        "wedding",
+        "festive"
+      ],
+      "fits": [
+        "structured"
+      ],
+      "shapes": {
+        "Apple": "The long, straight line streamlines.",
+        "Pear": "Structured shoulders balance the lower body."
+      },
+      "art": "sherwani",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/m-sherwani.jpg"
+    },
+    {
+      "id": "m-indo-western",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "traditional",
+      "title": "Indo-western combinations",
+      "desc": "A bandhgala or asymmetric kurta with tailored trousers.",
+      "tip": "Keep one statement piece and let the rest stay plain.",
+      "occasions": [
+        "party",
+        "wedding",
+        "festive"
+      ],
+      "fits": [
+        "structured",
+        "regular"
+      ],
+      "shapes": {
+        "Inverted Triangle": "An asymmetric hem draws the eye down and across."
+      },
+      "art": "indo-western",
+      "role": "dark",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/m-indo-western.jpg"
+    },
+    {
+      "id": "m-mojari",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "traditional",
+      "title": "Mojaris & kolhapuris",
+      "desc": "Traditional slip-ons coordinated with the kurta or sherwani.",
+      "tip": "Pick up one colour from the outfit's embroidery rather than matching exactly.",
+      "occasions": [
+        "festive",
+        "wedding"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "loafer",
+      "role": "neutral",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/mojari.jpg"
+    },
+    {
+      "id": "m-sneakers",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "footwear",
+      "title": "Clean sneakers",
+      "desc": "Minimal leather or canvas sneakers.",
+      "tip": "White or off-white goes with almost everything — keep them clean.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel",
+        "party"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "sneaker",
+      "role": "light",
+      "photo": "photos/sneakers.jpg"
+    },
+    {
+      "id": "m-loafers",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "footwear",
+      "title": "Loafers",
+      "desc": "Slip-ons that dress up chinos and tailored trousers.",
+      "tip": "No-show socks keep the ankle clean in warm weather.",
+      "occasions": [
+        "office",
+        "party",
+        "everyday",
+        "formal"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "loafer",
+      "role": "dark",
+      "photo": "photos/loafers.jpg"
+    },
+    {
+      "id": "m-derby",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "footwear",
+      "title": "Derby shoes",
+      "desc": "Open-laced leather shoes that suit wider feet.",
+      "tip": "Match your belt to your shoes.",
+      "occasions": [
+        "office",
+        "formal"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "derby",
+      "role": "dark",
+      "photo": "photos/derby.jpg"
+    },
+    {
+      "id": "m-boots",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "footwear",
+      "title": "Chelsea or chukka boots",
+      "desc": "Ankle boots that work with jeans and chinos.",
+      "tip": "Slim trousers should rest on the boot, not bunch over it.",
+      "occasions": [
+        "everyday",
+        "office",
+        "travel"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "boot",
+      "role": "dark",
+      "photo": "photos/chelsea-boots.jpg"
+    },
+    {
+      "id": "m-formal-shoes",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "footwear",
+      "title": "Formal shoes",
+      "desc": "Closed-lace Oxfords for suits and formal events.",
+      "tip": "Black for evening formal wear; dark brown for daytime.",
+      "occasions": [
+        "formal",
+        "wedding"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "derby",
+      "role": "dark",
+      "photo": "photos/derby.jpg"
+    },
+    {
+      "id": "m-sandals",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "footwear",
+      "title": "Sandals",
+      "desc": "Leather or cushioned sandals for hot days and travel.",
+      "tip": "Keep them for casual settings.",
+      "occasions": [
+        "travel",
+        "everyday"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "sandal",
+      "role": "neutral",
+      "photo": "photos/sandals.jpg"
+    },
+    {
+      "id": "m-belt",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "accessories",
+      "title": "Belts",
+      "desc": "A leather belt matched to your shoes.",
+      "tip": "A 3–3.5 cm width suits most trousers.",
+      "occasions": [
+        "office",
+        "formal",
+        "everyday"
+      ],
+      "fits": [],
+      "shapes": {
+        "Rectangle": "A belt marks a waist point on a straight frame."
+      },
+      "art": "belt",
+      "role": "dark",
+      "photo": "photos/belt.jpg"
+    },
+    {
+      "id": "m-watch",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "accessories",
+      "title": "Watches",
+      "desc": "A simple dial on a leather or metal strap.",
+      "tip": "Match the strap to your belt and shoes, or the metal to your undertone.",
+      "occasions": [
+        "office",
+        "everyday",
+        "formal"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "watch",
+      "role": "neutral",
+      "photo": "photos/watch.jpg"
+    },
+    {
+      "id": "m-tie",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "accessories",
+      "title": "Ties & pocket squares",
+      "desc": "A tie in an accent shade with a pocket square that picks up a second colour.",
+      "tip": "Don't match the tie and pocket square exactly — echo a colour instead.",
+      "occasions": [
+        "office",
+        "formal",
+        "wedding"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "tie",
+      "role": "accent",
+      "photo": "photos/tie.jpg"
+    },
+    {
+      "id": "m-bag",
+      "catalogs": [
+        "menswear"
+      ],
+      "category": "accessories",
+      "title": "Bags",
+      "desc": "A backpack, tote or messenger in leather or canvas.",
+      "tip": "Structured leather reads smarter; canvas suits weekends.",
+      "occasions": [
+        "college",
+        "office",
+        "travel"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "backpack",
+      "role": "dark",
+      "photo": "photos/backpack.jpg"
+    },
+    {
+      "id": "w-offshoulder",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Off-shoulder tops",
+      "desc": "Draw the eye across the shoulders.",
+      "tip": "A wide elastic band stays put more comfortably.",
+      "occasions": [
+        "party",
+        "everyday",
+        "travel"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Pear": "Width at the shoulders balances the hips."
+      },
+      "art": "blouse",
+      "photo": "offshouldertop.jpg",
+      "role": "accent",
+      "flags": [
+        "revealing"
+      ]
+    },
+    {
+      "id": "w-boatneck",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Boat-neck tops",
+      "desc": "A wide neckline adds visual width at the top.",
+      "tip": "Tuck the front in to show the waist.",
+      "occasions": [
+        "office",
+        "everyday"
+      ],
+      "fits": [
+        "regular",
+        "fitted"
+      ],
+      "shapes": {
+        "Pear": "A wide neckline balances the hips.",
+        "Rectangle": "Width at the collarbone adds shape."
+      },
+      "art": "blouse",
+      "photo": "boatnecktop.jpg",
+      "role": "light"
+    },
+    {
+      "id": "w-peplum",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Peplum tops",
+      "desc": "A soft flare just below the waist.",
+      "tip": "Pair with slim or straight bottoms so the flare stands out.",
+      "occasions": [
+        "office",
+        "party"
+      ],
+      "fits": [
+        "fitted",
+        "structured"
+      ],
+      "shapes": {
+        "Hourglass": "Follows the waist and echoes balanced proportions.",
+        "Rectangle": "Creates a waist point."
+      },
+      "art": "blouse",
+      "photo": "peplumtops.jpg",
+      "role": "accent"
+    },
+    {
+      "id": "w-puff-sleeve",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Puff-sleeve tops",
+      "desc": "Sleeve volume adds dimension at the shoulders.",
+      "tip": "Keep bottoms simple to balance the sleeves.",
+      "occasions": [
+        "everyday",
+        "party",
+        "college"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Rectangle": "Sleeve volume adds shape at the top.",
+        "Pear": "Volume at the shoulders balances the hips."
+      },
+      "art": "blouse",
+      "photo": "puffsleevetop.jpg",
+      "role": "accent"
+    },
+    {
+      "id": "w-empire",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Empire-waist tops",
+      "desc": "Defined just below the bust, skimming the midsection.",
+      "tip": "Choose soft fabrics that drape.",
+      "occasions": [
+        "everyday",
+        "office"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "Skims the midsection and highlights the neckline."
+      },
+      "art": "blouse",
+      "photo": "empirewaisttop.jpg",
+      "role": "light"
+    },
+    {
+      "id": "w-scoop",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Scoop-neck tops",
+      "desc": "Draw attention to the centre line of the body.",
+      "tip": "A medium scoop works for day; deeper for evening.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Softens a strong shoulder line.",
+        "Apple": "Opens the neckline and lengthens the torso."
+      },
+      "art": "blouse",
+      "photo": "scoopnecktop.jpg",
+      "role": "light"
+    },
+    {
+      "id": "w-shirts-tees",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Shirts & T-shirts",
+      "desc": "Crisp cotton shirts and good basic tees.",
+      "tip": "A front tuck defines the waist without a belt.",
+      "occasions": [
+        "everyday",
+        "office",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "relaxed",
+        "fitted"
+      ],
+      "shapes": {
+        "Rectangle": "A half tuck creates a waist point.",
+        "Apple": "An open shirt over a tee makes a long vertical line."
+      },
+      "art": "shirt",
+      "role": "light",
+      "photo": "photos/w-shirt.jpg"
+    },
+    {
+      "id": "w-wrap-top",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "tops",
+      "title": "Wrap tops & blouses",
+      "desc": "A crossover front that ties at the waist.",
+      "tip": "Add a camisole underneath for a higher neckline.",
+      "occasions": [
+        "office",
+        "party",
+        "everyday"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Hourglass": "Follows your natural waist.",
+        "Apple": "The V wrap creates a vertical line."
+      },
+      "art": "blouse",
+      "role": "accent",
+      "photo": "photos/w-wrap-top.jpg"
+    },
+    {
+      "id": "w-high-waist",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "High-waisted trousers",
+      "desc": "Mark the waist and lengthen the leg line.",
+      "tip": "Pair with tucked or cropped tops.",
+      "occasions": [
+        "office",
+        "everyday",
+        "party"
+      ],
+      "fits": [
+        "structured",
+        "regular"
+      ],
+      "shapes": {
+        "Rectangle": "Marks a waist point.",
+        "Hourglass": "Highlights the narrowest point."
+      },
+      "art": "trousers",
+      "photo": "highwaistpants.jpg",
+      "role": "dark"
+    },
+    {
+      "id": "w-wide-leg",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "Wide-leg trousers",
+      "desc": "Fluid trousers with a wide, straight leg.",
+      "tip": "Hem them to just skim the floor in the shoes you'll wear.",
+      "occasions": [
+        "office",
+        "everyday",
+        "party",
+        "travel"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Volume below balances the shoulders.",
+        "Pear": "A wide leg falls straight from the hip."
+      },
+      "art": "wide-trousers",
+      "role": "neutral",
+      "photo": "photos/w-wide-leg.jpg"
+    },
+    {
+      "id": "w-straight-trousers",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "Straight trousers",
+      "desc": "A tailored straight leg for work and beyond.",
+      "tip": "Ankle length shows off loafers and flats.",
+      "occasions": [
+        "office",
+        "everyday"
+      ],
+      "fits": [
+        "regular",
+        "structured"
+      ],
+      "shapes": {
+        "Apple": "A straight leg keeps a clean vertical line."
+      },
+      "art": "trousers",
+      "role": "dark",
+      "photo": "photos/w-straight-trousers.jpg"
+    },
+    {
+      "id": "w-flared",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "Flared trousers",
+      "desc": "A gentle flare from the knee down.",
+      "tip": "Wear with a small heel or platform to keep the line long.",
+      "occasions": [
+        "everyday",
+        "party",
+        "office"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Pear": "The flare balances the line from hip to hem.",
+        "Hourglass": "Echoes your curves."
+      },
+      "art": "flared-trousers",
+      "photo": "flaredpants.jpg",
+      "role": "dark"
+    },
+    {
+      "id": "w-bootcut",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "Bootcut jeans",
+      "desc": "Balance the upper body and lengthen the leg line.",
+      "tip": "Mid or dark washes look polished.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "Balances the upper body and lengthens the legs.",
+        "Pear": "Falls smoothly from the hip."
+      },
+      "art": "flared-trousers",
+      "photo": "bootcutjeans.jpg",
+      "role": "dark"
+    },
+    {
+      "id": "w-straight-jeans",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "Straight jeans",
+      "desc": "A straight leg in a mid or dark wash.",
+      "tip": "Cropped straight jeans suit sneakers and flats.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Inverted Triangle": "A straight leg adds balance below.",
+        "Rectangle": "Keeps an easy, even line."
+      },
+      "art": "jeans",
+      "role": "dark",
+      "photo": "photos/w-jeans.jpg"
+    },
+    {
+      "id": "w-aline-skirt",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "A-line skirts",
+      "desc": "Graceful movement from the waist down.",
+      "tip": "Knee to midi length is the most versatile.",
+      "occasions": [
+        "office",
+        "everyday",
+        "party"
+      ],
+      "fits": [
+        "regular"
+      ],
+      "shapes": {
+        "Hourglass": "Fitted at the waist, flowing below.",
+        "Inverted Triangle": "Adds volume below the waist."
+      },
+      "art": "skirt",
+      "photo": "alineskirt.jpg",
+      "role": "neutral"
+    },
+    {
+      "id": "w-pleated-skirt",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "Pleated skirts",
+      "desc": "Pleats add graceful volume and movement.",
+      "tip": "Tuck in a fine knit to keep the top neat.",
+      "occasions": [
+        "office",
+        "party",
+        "college"
+      ],
+      "fits": [
+        "regular"
+      ],
+      "shapes": {
+        "Rectangle": "Pleats add shape and movement.",
+        "Inverted Triangle": "Volume below balances the shoulders."
+      },
+      "art": "pleated-skirt",
+      "photo": "pleatedskirt.jpg",
+      "role": "accent"
+    },
+    {
+      "id": "w-midi-skirt",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "bottoms",
+      "title": "Flowy midi skirts",
+      "desc": "Soft fabrics like chiffon or satin add movement.",
+      "tip": "Balance with a fitted or tucked top.",
+      "occasions": [
+        "everyday",
+        "party",
+        "festive"
+      ],
+      "fits": [
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "Soft movement keeps focus on the legs."
+      },
+      "art": "skirt",
+      "photo": "flowymidiskirt.jpg",
+      "role": "accent"
+    },
+    {
+      "id": "w-fit-flare",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Fit-and-flare dresses",
+      "desc": "Fitted at the waist, flowing over the hips.",
+      "tip": "A knee-length hem is the easiest to wear day to night.",
+      "occasions": [
+        "party",
+        "office",
+        "everyday"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Pear": "Fitted at the waist, flowing over the hips.",
+        "Hourglass": "Follows your waist."
+      },
+      "art": "dress",
+      "photo": "flareddresses.jpg",
+      "role": "accent"
+    },
+    {
+      "id": "w-shift",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Shift dresses",
+      "desc": "An easy, straight shape.",
+      "tip": "Add a belt only if you want to mark the waist.",
+      "occasions": [
+        "office",
+        "everyday"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "Skims the midsection and keeps focus on the legs.",
+        "Rectangle": "A clean line that suits an even frame."
+      },
+      "art": "dress",
+      "photo": "shiftdresses.jpg",
+      "role": "neutral"
+    },
+    {
+      "id": "w-bodycon",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Bodycon dresses",
+      "desc": "A close fit that follows your silhouette.",
+      "tip": "Thicker, structured knits are more forgiving than thin jersey.",
+      "occasions": [
+        "party"
+      ],
+      "fits": [
+        "fitted"
+      ],
+      "shapes": {
+        "Hourglass": "Follows balanced curves."
+      },
+      "art": "dress",
+      "photo": "bodycondresses.jpg",
+      "role": "accent",
+      "flags": [
+        "revealing"
+      ]
+    },
+    {
+      "id": "w-bodycon-midi",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Fitted midi dresses",
+      "desc": "A slightly fitted midi that creates gentle shape without clinging.",
+      "tip": "Ribbed fabrics add texture.",
+      "occasions": [
+        "party",
+        "office"
+      ],
+      "fits": [
+        "fitted"
+      ],
+      "shapes": {
+        "Rectangle": "Creates gentle curves.",
+        "Hourglass": "Follows the waist."
+      },
+      "art": "dress",
+      "photo": "bodyconmididress.jpg",
+      "role": "accent"
+    },
+    {
+      "id": "w-waist-jumpsuit",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Defined-waist jumpsuits",
+      "desc": "Tie-waist designs that follow your shape.",
+      "tip": "Check the torso length — it shouldn't pull when you sit.",
+      "occasions": [
+        "party",
+        "office",
+        "travel"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Hourglass": "Follows natural curves."
+      },
+      "art": "jumpsuit",
+      "photo": "definedwaistjumpsuit.jpg",
+      "role": "accent"
+    },
+    {
+      "id": "w-vneck-jumpsuit",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "V-neck jumpsuits",
+      "desc": "A V neckline creates a long vertical line.",
+      "tip": "Wide legs balance the V.",
+      "occasions": [
+        "party",
+        "everyday",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "The V lengthens the torso."
+      },
+      "art": "jumpsuit",
+      "photo": "vneckjumpsuit.jpg",
+      "role": "dark"
+    },
+    {
+      "id": "w-wide-jumpsuit",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Wide-leg jumpsuits",
+      "desc": "Flowing legs add volume and symmetry below the waist.",
+      "tip": "A belt keeps the waist from disappearing.",
+      "occasions": [
+        "party",
+        "travel"
+      ],
+      "fits": [
+        "relaxed"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Volume below balances the shoulders."
+      },
+      "art": "jumpsuit",
+      "photo": "widelegjumpsuit.jpg",
+      "role": "neutral"
+    },
+    {
+      "id": "w-coord",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Co-ord sets",
+      "desc": "A matching top and trousers or skirt.",
+      "tip": "Wear the pieces separately too — they double your options.",
+      "occasions": [
+        "travel",
+        "party",
+        "office",
+        "everyday"
+      ],
+      "fits": [
+        "relaxed",
+        "regular",
+        "structured"
+      ],
+      "shapes": {
+        "Rectangle": "A single colour head-to-toe lengthens the frame.",
+        "Apple": "One colour throughout creates an unbroken vertical line."
+      },
+      "art": "coord",
+      "role": "neutral",
+      "photo": "photos/w-coord.jpg"
+    },
+    {
+      "id": "w-strapless",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "dresses",
+      "title": "Strapless styles",
+      "desc": "A clean neckline that keeps the shoulder line simple.",
+      "tip": "Look for boning or a silicone grip at the top edge.",
+      "occasions": [
+        "party",
+        "formal"
+      ],
+      "fits": [
+        "fitted"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Keeps the shoulder line simple."
+      },
+      "art": "dress",
+      "photo": "straplessstyles.jpg",
+      "role": "accent",
+      "flags": [
+        "revealing"
+      ]
+    },
+    {
+      "id": "w-belted-blazer",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "outerwear",
+      "title": "Belted blazers",
+      "desc": "Structure that keeps the waist visible.",
+      "tip": "Belt at the natural waist, not the hips.",
+      "occasions": [
+        "office",
+        "formal",
+        "party"
+      ],
+      "fits": [
+        "structured",
+        "fitted"
+      ],
+      "shapes": {
+        "Hourglass": "Keeps the waist visible.",
+        "Rectangle": "The belt creates a waist point."
+      },
+      "art": "blazer",
+      "photo": "beltedblazer.jpg",
+      "role": "dark"
+    },
+    {
+      "id": "w-cropped-jacket",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "outerwear",
+      "title": "Cropped jackets",
+      "desc": "Ending just above the hips highlights the waist.",
+      "tip": "Pair with high-waisted bottoms.",
+      "occasions": [
+        "everyday",
+        "party",
+        "college"
+      ],
+      "fits": [
+        "fitted",
+        "regular"
+      ],
+      "shapes": {
+        "Pear": "Ends above the hips and highlights the waist.",
+        "Rectangle": "Creates a waist point."
+      },
+      "art": "bomber",
+      "photo": "croppedjacket.jpg",
+      "role": "dark"
+    },
+    {
+      "id": "w-soft-blazer",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "outerwear",
+      "title": "Soft-shoulder blazers",
+      "desc": "Soft-structured blazers without heavy shoulder pads.",
+      "tip": "Wear open for a long vertical line.",
+      "occasions": [
+        "office",
+        "formal",
+        "everyday"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Inverted Triangle": "No extra width at the shoulders.",
+        "Apple": "Worn open, it lengthens the torso."
+      },
+      "art": "blazer",
+      "photo": "minimalshoulderblazer.jpg",
+      "role": "neutral"
+    },
+    {
+      "id": "w-cardigan",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "outerwear",
+      "title": "Cardigans",
+      "desc": "Add vertical movement through the upper body.",
+      "tip": "Longer cardigans worn open create length.",
+      "occasions": [
+        "everyday",
+        "office",
+        "travel"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Vertical lines soften the shoulders.",
+        "Apple": "Open long layers add length."
+      },
+      "art": "cardigan",
+      "photo": "cardigans.jpg",
+      "role": "neutral"
+    },
+    {
+      "id": "w-long-coat",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "outerwear",
+      "title": "Long coats & dusters",
+      "desc": "A long layer that streamlines any outfit.",
+      "tip": "Below-the-knee lengths look best with a slight heel or boot.",
+      "occasions": [
+        "office",
+        "travel",
+        "formal"
+      ],
+      "fits": [
+        "structured",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "A long, open layer adds length.",
+        "Rectangle": "A belted coat adds a waist point."
+      },
+      "art": "coat",
+      "role": "dark",
+      "photo": "photos/w-long-coat.jpg"
+    },
+    {
+      "id": "w-saree",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "traditional",
+      "title": "Sarees & blouses",
+      "desc": "A saree with a blouse cut to suit the occasion.",
+      "tip": "Lighter fabrics like georgette or chiffon drape closely; silks and organza hold shape.",
+      "occasions": [
+        "festive",
+        "wedding",
+        "formal"
+      ],
+      "fits": [],
+      "shapes": {
+        "Pear": "A fitted blouse with interest at the neckline draws the eye up.",
+        "Apple": "Pleats tucked slightly to the side and a longer pallu create length.",
+        "Inverted Triangle": "A simple neckline and a wider pallu draped low balance the shoulders."
+      },
+      "art": "saree",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/w-saree.jpg"
+    },
+    {
+      "id": "w-kurta-set",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "traditional",
+      "title": "Kurtas & kurta sets",
+      "desc": "Straight, A-line or anarkali kurtas with trousers or palazzos.",
+      "tip": "Side slits make long kurtas easier to move in.",
+      "occasions": [
+        "everyday",
+        "office",
+        "festive",
+        "college"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "A straight or A-line kurta skims the midsection.",
+        "Pear": "An A-line kurta flows past the hips.",
+        "Rectangle": "An anarkali adds shape and movement."
+      },
+      "art": "kurta-w",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/w-kurta-set.jpg"
+    },
+    {
+      "id": "w-lehenga",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "traditional",
+      "title": "Lehengas",
+      "desc": "A flared skirt, blouse and dupatta for weddings and festive events.",
+      "tip": "Lighter lehengas are easier to dance in.",
+      "occasions": [
+        "wedding",
+        "festive",
+        "party"
+      ],
+      "fits": [],
+      "shapes": {
+        "Hourglass": "A fitted blouse and flared skirt follow your proportions.",
+        "Inverted Triangle": "Volume in the skirt balances the shoulders."
+      },
+      "art": "lehenga",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/w-lehenga.jpg"
+    },
+    {
+      "id": "w-sharara",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "traditional",
+      "title": "Sharara & palazzo sets",
+      "desc": "A short kurta with flared sharara or palazzo trousers.",
+      "tip": "A shorter kurta shows off the flare.",
+      "occasions": [
+        "festive",
+        "wedding",
+        "party"
+      ],
+      "fits": [
+        "relaxed"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Flared trousers balance the upper body."
+      },
+      "art": "kurta-w",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/w-kurta-set.jpg"
+    },
+    {
+      "id": "w-block-heels",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "footwear",
+      "title": "Block heels",
+      "desc": "Stable, comfortable height.",
+      "tip": "5–7 cm is comfortable for long days.",
+      "occasions": [
+        "office",
+        "party",
+        "formal",
+        "wedding"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "heel",
+      "role": "neutral",
+      "photo": "photos/block-heels.jpg"
+    },
+    {
+      "id": "w-flats",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "footwear",
+      "title": "Flats, juttis & loafers",
+      "desc": "Comfortable everyday shoes.",
+      "tip": "Juttis suit kurta sets; loafers suit trousers.",
+      "occasions": [
+        "everyday",
+        "office",
+        "college",
+        "festive"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "flat",
+      "role": "neutral",
+      "photo": "photos/flats.jpg"
+    },
+    {
+      "id": "w-sneakers",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "footwear",
+      "title": "Sneakers",
+      "desc": "Clean sneakers for casual outfits and travel.",
+      "tip": "White sneakers go with dresses as well as jeans.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "sneaker",
+      "role": "light",
+      "photo": "photos/sneakers.jpg"
+    },
+    {
+      "id": "w-ankle-boots",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "footwear",
+      "title": "Ankle boots",
+      "desc": "Boots that work with jeans, skirts and dresses.",
+      "tip": "Match the boot to your tights for a longer leg line.",
+      "occasions": [
+        "everyday",
+        "travel",
+        "party"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "boot",
+      "role": "dark",
+      "photo": "photos/ankle-boots.jpg"
+    },
+    {
+      "id": "w-handbag",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "accessories",
+      "title": "Handbags",
+      "desc": "A structured tote for work and a small bag for evenings.",
+      "tip": "A neutral from your palette goes with most outfits.",
+      "occasions": [
+        "office",
+        "everyday",
+        "party"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "handbag",
+      "role": "neutral",
+      "photo": "photos/handbag.jpg"
+    },
+    {
+      "id": "w-corset-belt",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "accessories",
+      "title": "Corset & wide belts",
+      "desc": "Add waist definition and a modern finishing touch.",
+      "tip": "Wear over dresses or long shirts.",
+      "occasions": [
+        "party",
+        "everyday"
+      ],
+      "fits": [
+        "fitted",
+        "structured"
+      ],
+      "shapes": {
+        "Rectangle": "Adds waist definition.",
+        "Hourglass": "Highlights the waist."
+      },
+      "art": "belt",
+      "photo": "corsetbelt.jpg",
+      "role": "dark"
+    },
+    {
+      "id": "w-scarf",
+      "catalogs": [
+        "womenswear"
+      ],
+      "category": "accessories",
+      "title": "Scarves & dupattas",
+      "desc": "A quick way to wear your best colours near your face.",
+      "tip": "Drape vertically for length, or loop for warmth.",
+      "occasions": [
+        "everyday",
+        "festive",
+        "travel",
+        "office"
+      ],
+      "fits": [],
+      "shapes": {
+        "Apple": "A long, vertical drape adds length."
+      },
+      "art": "scarf",
+      "role": "accent",
+      "photo": "photos/w-scarf.jpg"
+    },
+    {
+      "id": "u-oversized-tee",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "tops",
+      "title": "Oversized T-shirts",
+      "desc": "A dropped-shoulder tee with a relaxed body.",
+      "tip": "Balance the volume with straight or tapered bottoms.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "oversized",
+        "relaxed"
+      ],
+      "shapes": {
+        "Rectangle": "Volume adds shape to a straight frame.",
+        "Pear": "A roomier top balances the hips."
+      },
+      "art": "tee",
+      "role": "accent",
+      "photo": "photos/u-oversized-tee.jpg"
+    },
+    {
+      "id": "u-relaxed-shirt",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "tops",
+      "title": "Relaxed shirts",
+      "desc": "A loose cotton or linen shirt, worn open or buttoned.",
+      "tip": "Roll the sleeves twice for an easy look.",
+      "occasions": [
+        "everyday",
+        "office",
+        "travel",
+        "college"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "A straight hem skims the midsection.",
+        "Inverted Triangle": "Soft fabric doesn't add shoulder width."
+      },
+      "art": "shirt",
+      "role": "light",
+      "photo": "photos/u-relaxed-shirt.jpg"
+    },
+    {
+      "id": "u-knit",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "tops",
+      "title": "Fine knits",
+      "desc": "Merino or cotton crew-necks for layering.",
+      "tip": "Layer over a collared shirt for smart days.",
+      "occasions": [
+        "office",
+        "everyday",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Rectangle": "Texture adds depth."
+      },
+      "art": "knit",
+      "role": "neutral",
+      "photo": "photos/u-knit.jpg"
+    },
+    {
+      "id": "u-hoodie",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "tops",
+      "title": "Hoodies & sweatshirts",
+      "desc": "Heavyweight cotton in a palette neutral.",
+      "tip": "Choose a hem with a rib so it sits neatly at the hip.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "relaxed",
+        "oversized"
+      ],
+      "shapes": {
+        "Pear": "Upper-body volume balances the hips."
+      },
+      "art": "hoodie",
+      "role": "neutral",
+      "photo": "photos/u-hoodie.jpg"
+    },
+    {
+      "id": "u-straight-denim",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "bottoms",
+      "title": "Straight-leg denim",
+      "desc": "A straight, mid-rise jean.",
+      "tip": "A slight crop shows off sneakers.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel",
+        "party"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Balances broader shoulders.",
+        "Apple": "A clean vertical line."
+      },
+      "art": "jeans",
+      "role": "dark",
+      "photo": "photos/m-jeans.jpg"
+    },
+    {
+      "id": "u-relaxed-trousers",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "bottoms",
+      "title": "Relaxed trousers",
+      "desc": "Pleated or elastic-waist trousers with drape.",
+      "tip": "Taper slightly at the ankle if you're shorter.",
+      "occasions": [
+        "office",
+        "everyday",
+        "travel"
+      ],
+      "fits": [
+        "relaxed",
+        "oversized"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Volume below balances the shoulders.",
+        "Rectangle": "Drape adds movement."
+      },
+      "art": "wide-trousers",
+      "role": "neutral",
+      "photo": "photos/u-relaxed-trousers.jpg"
+    },
+    {
+      "id": "u-cargo",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "bottoms",
+      "title": "Cargo & utility trousers",
+      "desc": "Practical trousers with pockets.",
+      "tip": "Keep the top streamlined.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "relaxed"
+      ],
+      "shapes": {
+        "Inverted Triangle": "Pocket detail adds balance below."
+      },
+      "art": "cargo",
+      "role": "neutral",
+      "photo": "photos/m-cargo.jpg"
+    },
+    {
+      "id": "u-denim-jacket",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "outerwear",
+      "title": "Denim jackets",
+      "desc": "A trucker jacket that layers over everything.",
+      "tip": "Size up for a boxy fit over hoodies.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "oversized"
+      ],
+      "shapes": {
+        "Pear": "Structure at the shoulders balances the hips."
+      },
+      "art": "denim-jacket",
+      "role": "dark",
+      "photo": "photos/m-denim-jacket.jpg"
+    },
+    {
+      "id": "u-chore-jacket",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "outerwear",
+      "title": "Chore jackets & overshirts",
+      "desc": "Boxy cotton jackets with patch pockets.",
+      "tip": "Wear open over a tee or knit.",
+      "occasions": [
+        "everyday",
+        "office",
+        "travel"
+      ],
+      "fits": [
+        "relaxed",
+        "regular"
+      ],
+      "shapes": {
+        "Apple": "Worn open, straight panels lengthen.",
+        "Rectangle": "Pockets add structure."
+      },
+      "art": "overshirt",
+      "role": "neutral",
+      "photo": "photos/u-chore-jacket.jpg"
+    },
+    {
+      "id": "u-layer",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "outerwear",
+      "title": "Minimalist layering pieces",
+      "desc": "Light cardigans, vests and zip knits.",
+      "tip": "Stick to two or three palette shades for easy mixing.",
+      "occasions": [
+        "office",
+        "everyday",
+        "travel"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {},
+      "art": "cardigan",
+      "role": "neutral",
+      "photo": "photos/u-cardigan.jpg"
+    },
+    {
+      "id": "u-long-coat",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "outerwear",
+      "title": "Long coats",
+      "desc": "A clean, single-breasted coat.",
+      "tip": "A dark neutral from your palette goes with everything.",
+      "occasions": [
+        "office",
+        "formal",
+        "travel"
+      ],
+      "fits": [
+        "structured",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "Long lines streamline."
+      },
+      "art": "coat",
+      "role": "dark",
+      "photo": "photos/u-long-coat.jpg"
+    },
+    {
+      "id": "u-kurta",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "traditional",
+      "title": "Straight kurtas with trousers",
+      "desc": "A simple straight kurta worn with straight trousers or jeans.",
+      "tip": "Plain fabrics with a contrast placket keep it versatile.",
+      "occasions": [
+        "festive",
+        "everyday",
+        "wedding"
+      ],
+      "fits": [
+        "regular",
+        "relaxed"
+      ],
+      "shapes": {
+        "Apple": "A straight line skims the midsection."
+      },
+      "art": "kurta",
+      "role": "accent",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/u-kurta.jpg"
+    },
+    {
+      "id": "u-jacket-trad",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "traditional",
+      "title": "Bandhgala & short jackets",
+      "desc": "A structured band-collar jacket over a kurta or tee.",
+      "tip": "Dark palette shades look festive without being loud.",
+      "occasions": [
+        "festive",
+        "wedding",
+        "party"
+      ],
+      "fits": [
+        "structured"
+      ],
+      "shapes": {
+        "Rectangle": "Adds structure."
+      },
+      "art": "nehru-jacket",
+      "role": "dark",
+      "flags": [
+        "traditional"
+      ],
+      "photo": "photos/u-bandhgala.jpg"
+    },
+    {
+      "id": "u-sneakers",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "footwear",
+      "title": "Sneakers",
+      "desc": "Low-top leather or canvas sneakers.",
+      "tip": "One light and one dark pair cover most outfits.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel",
+        "party"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "sneaker",
+      "role": "light",
+      "photo": "photos/sneakers.jpg"
+    },
+    {
+      "id": "u-boots",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "footwear",
+      "title": "Boots",
+      "desc": "Chelsea or lace-up boots.",
+      "tip": "Treat leather before the rainy season.",
+      "occasions": [
+        "everyday",
+        "travel",
+        "office"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "boot",
+      "role": "dark",
+      "photo": "photos/chelsea-boots.jpg"
+    },
+    {
+      "id": "u-loafers",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "footwear",
+      "title": "Loafers",
+      "desc": "Easy slip-ons that smarten up trousers.",
+      "tip": "Chunky soles suit relaxed trousers.",
+      "occasions": [
+        "office",
+        "everyday",
+        "party"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "loafer",
+      "role": "dark",
+      "photo": "photos/loafers.jpg"
+    },
+    {
+      "id": "u-bag",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "accessories",
+      "title": "Crossbody bags & totes",
+      "desc": "Hands-free bags in leather or canvas.",
+      "tip": "Wear the strap so the bag sits at the hip.",
+      "occasions": [
+        "everyday",
+        "college",
+        "travel"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "backpack",
+      "role": "neutral",
+      "photo": "photos/backpack.jpg"
+    },
+    {
+      "id": "u-watch",
+      "catalogs": [
+        "unisex"
+      ],
+      "category": "accessories",
+      "title": "Watches & simple jewellery",
+      "desc": "A simple watch, a fine chain or small hoops.",
+      "tip": "Choose one metal tone and repeat it.",
+      "occasions": [
+        "office",
+        "everyday"
+      ],
+      "fits": [],
+      "shapes": {},
+      "art": "watch",
+      "role": "neutral",
+      "photo": "photos/watch.jpg"
+    }
+  ],
+  "body_fit_guides": {
+    "menswear": [
+      {
+        "topic": "Fit & proportion",
+        "tip": "Shoulder seams should sit at the edge of your shoulders; most fit problems elsewhere can be tailored."
+      },
+      {
+        "topic": "Trouser length & break",
+        "tip": "A slight break (one soft fold at the shoe) suits most trousers; slim trousers look best with no break."
+      },
+      {
+        "topic": "Shirt length",
+        "tip": "Untucked shirts should end around mid-fly; if it covers your seat, it's meant to be tucked."
+      },
+      {
+        "topic": "Jacket length",
+        "tip": "A blazer should cover your seat; casual jackets look best ending at the belt."
+      },
+      {
+        "topic": "Layering",
+        "tip": "Go from thin to thick: tee, then shirt or overshirt, then jacket."
+      },
+      {
+        "topic": "Fabric & climate",
+        "tip": "Linen and cotton for hot, humid days; wool blends for air-conditioned offices and cooler months."
+      }
+    ],
+    "womenswear": [
+      {
+        "topic": "Fit & proportion",
+        "tip": "Choose one focus area per outfit — a fitted top with relaxed bottoms, or the reverse."
+      },
+      {
+        "topic": "Hem lengths",
+        "tip": "Hem trousers for the shoes you'll wear most; midi skirts look best ending just below the widest part of the calf."
+      },
+      {
+        "topic": "Waist definition",
+        "tip": "A front tuck, a belt or a wrap is optional — use it when you want to mark the waist."
+      },
+      {
+        "topic": "Layering",
+        "tip": "Long open layers add length; cropped layers mark the waist."
+      },
+      {
+        "topic": "Fabric & climate",
+        "tip": "Cotton, linen and rayon breathe in heat; structured fabrics hold shape for work."
+      },
+      {
+        "topic": "Comfort & movement",
+        "tip": "If you can't sit, reach or walk easily, the fit is wrong — not you."
+      }
+    ],
+    "unisex": [
+      {
+        "topic": "Fit & proportion",
+        "tip": "Pair one roomy piece with one neater piece so the outfit keeps shape."
+      },
+      {
+        "topic": "Lengths",
+        "tip": "A slight crop at the ankle suits sneakers and loafers; full length suits boots."
+      },
+      {
+        "topic": "Layering",
+        "tip": "Build around a base tee or shirt, then add an overshirt, knit or jacket."
+      },
+      {
+        "topic": "Colour coordination",
+        "tip": "Stick to two or three palette shades per outfit for easy mixing."
+      },
+      {
+        "topic": "Fabric & climate",
+        "tip": "Choose breathable cotton and linen for heat; heavier twill and wool for cooler days."
+      },
+      {
+        "topic": "Comfort & movement",
+        "tip": "Relaxed shouldn't mean sloppy — check the shoulders still sit near your shoulder line."
+      }
+    ]
+  },
+  "body_shape_notes": {
+    "menswear": {
+      "Hourglass": [
+        "Most cuts work — tailored and regular fits follow your balanced frame.",
+        "A belt at the natural waist keeps outfits neat."
+      ],
+      "Rectangle": [
+        "Layering and texture add depth to an even build.",
+        "Waist points — a belt, a tucked shirt or a waist-length jacket — add shape.",
+        "Crew necks and patterned shirts add interest up top."
+      ],
+      "Pear": [
+        "Structure and detail on top — collars, chest pockets, structured shoulders — balance the hips.",
+        "Darker, straight or relaxed trousers keep the lower half simple.",
+        "Avoid very skinny trousers that emphasise the hip-to-ankle contrast."
+      ],
+      "Apple": [
+        "Open layers and straight hems create vertical lines.",
+        "Mid-rise trousers with a comfortable waistband sit better than low-rise.",
+        "Choose fabrics that drape rather than cling, and avoid tight knits."
+      ],
+      "Inverted Triangle": [
+        "V-necks and open collars narrow the shoulder line.",
+        "Straight, relaxed or pleated trousers balance the upper body.",
+        "Soft-shouldered jackets don't add extra width."
+      ]
+    },
+    "womenswear": {
+      "Hourglass": [
+        "Wrap, sweetheart and V necklines echo your balanced proportions.",
+        "Fabrics with gentle drape and stretch keep the waist defined.",
+        "Belt longer layers at the natural waist rather than the hips."
+      ],
+      "Rectangle": [
+        "Scoop, sweetheart and square necklines add softness.",
+        "Cropped jackets over high-waisted pieces create a waist point.",
+        "Textured or pleated fabrics add movement."
+      ],
+      "Pear": [
+        "Boat, off-shoulder and square necklines bring attention upward.",
+        "Darker or simpler bottoms with brighter tops create balance.",
+        "Straight-leg, bootcut and flared shapes fall smoothly from the hip."
+      ],
+      "Apple": [
+        "V and scoop necklines create a vertical line.",
+        "Open long layers such as cardigans or dusters add length.",
+        "Soft, structured fabrics that drape rather than cling feel comfortable."
+      ],
+      "Inverted Triangle": [
+        "Scoop, V and halter necklines soften the shoulder line.",
+        "A-line skirts, wide-leg trousers and prints add interest below the waist.",
+        "Keep shoulder details minimal and let lower-half pieces carry volume."
+      ]
+    },
+    "unisex": {
+      "Hourglass": [
+        "Most cuts work; relaxed pieces look best with one defined point, like a tucked hem."
+      ],
+      "Rectangle": [
+        "Layering and texture add depth.",
+        "Boxy jackets ending at the hip add shape."
+      ],
+      "Pear": [
+        "Keep volume and detail on top; choose straight bottoms.",
+        "Darker trousers with lighter tops create balance."
+      ],
+      "Apple": [
+        "Open layers and straight hems create vertical lines.",
+        "Choose drape over cling."
+      ],
+      "Inverted Triangle": [
+        "Relaxed or wide trousers balance the upper body.",
+        "Soft shoulders and open collars narrow the line."
+      ]
+    }
+  },
+  "face_items": [
+    {
+      "id": "m-hair-crop",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Textured crop",
+      "desc": "Short sides with choppy texture on top.",
+      "tip": "Ask for scissor-cut texture on top with a low or mid taper; style with a matte clay.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Oval": "Short, textured cuts suit balanced proportions.",
+        "Round": "Texture on top adds height; keep the sides short.",
+        "Square": "Texture softens a strong jaw.",
+        "Diamond": "A short fringe adds width at the forehead."
+      },
+      "art": "hair-crop",
+      "photo": "photos/hair-crop.jpg"
+    },
+    {
+      "id": "m-hair-crew",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Crew cut",
+      "desc": "A classic short cut, slightly longer at the front.",
+      "tip": "A trim every 3–4 weeks keeps it sharp.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Oval": "A clean, classic option for balanced features.",
+        "Square": "Complements a defined jaw."
+      },
+      "art": "hair-crew",
+      "photo": "photos/hair-crew.jpg"
+    },
+    {
+      "id": "m-hair-side-part",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Side part",
+      "desc": "A tidy parting with a little length on top.",
+      "tip": "A natural part grows out more gracefully than a shaved 'hard' part.",
+      "lengths": [
+        "short",
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "An off-centre part adds asymmetry and length.",
+        "Square": "A soft side part balances strong angles.",
+        "Heart": "A low side part with some fringe narrows a wider forehead.",
+        "Oval": "A versatile, smart option."
+      },
+      "art": "hair-sidepart",
+      "photo": "photos/hair-sidepart.jpg"
+    },
+    {
+      "id": "m-hair-quiff",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Quiff",
+      "desc": "Lift and movement at the front.",
+      "tip": "Blow-dry upwards and finish with a light paste.",
+      "lengths": [
+        "short",
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "Lift at the front elongates the face.",
+        "Oval": "Height works well with balanced proportions.",
+        "Square": "Volume on top balances a strong jaw."
+      },
+      "art": "hair-quiff",
+      "photo": "photos/hair-quiff.jpg"
+    },
+    {
+      "id": "m-hair-pompadour",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Pompadour",
+      "desc": "Swept-back volume with shorter sides.",
+      "tip": "Needs daily styling with a pomade and blow-dryer.",
+      "lengths": [
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "high",
+      "shapes": {
+        "Round": "Height at the crown makes the face look longer.",
+        "Square": "Height balances a wide jaw.",
+        "Oval": "Shows off balanced features."
+      },
+      "art": "hair-pompadour",
+      "photo": "photos/hair-pompadour.jpg"
+    },
+    {
+      "id": "m-hair-fade",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Fade variations",
+      "desc": "Low, mid or skin fades under a longer top.",
+      "tip": "Low fades grow out softer; skin fades need a trim every 2–3 weeks.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "A mid or high fade slims the sides.",
+        "Square": "A fade keeps a strong jaw the focus.",
+        "Diamond": "A low fade keeps some width at the temples.",
+        "Oval": "Works with most tops."
+      },
+      "art": "hair-fade",
+      "photo": "photos/hair-fade.jpg"
+    },
+    {
+      "id": "m-hair-buzz",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Buzz cut",
+      "desc": "Even, very short length all over.",
+      "tip": "A 2–4 guard is common; go longer for a softer look.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Oval": "Shows off balanced proportions.",
+        "Square": "Shows off a strong jaw."
+      },
+      "art": "hair-buzz",
+      "photo": "photos/hair-buzz.jpg"
+    },
+    {
+      "id": "m-hair-medium",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Medium-length textured",
+      "desc": "Loose, ear-length layers with movement.",
+      "tip": "A sea-salt spray on damp hair adds texture.",
+      "lengths": [
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Square": "Movement at the sides softens angles.",
+        "Heart": "Length around the ears adds width lower down.",
+        "Diamond": "Fuller sides balance cheekbones.",
+        "Oval": "An easy, relaxed option."
+      },
+      "art": "hair-medium",
+      "photo": "photos/hair-medium-m.jpg"
+    },
+    {
+      "id": "m-hair-curly-taper",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Curly top with taper",
+      "desc": "Defined curls on top with tapered sides.",
+      "tip": "Apply curl cream to damp hair and avoid brushing curls when dry.",
+      "lengths": [
+        "short",
+        "medium"
+      ],
+      "textures": [
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "Keeping curls taller than wide adds length.",
+        "Oval": "Shows off natural texture.",
+        "Square": "Curls soften angles.",
+        "Heart": "Keep some volume at the sides.",
+        "Diamond": "Curls at the fringe widen the forehead."
+      },
+      "art": "hair-curly-short",
+      "photo": "photos/hair-curly-short.jpg"
+    },
+    {
+      "id": "m-hair-twists",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Short twists or natural coils",
+      "desc": "Defined coils or twists with a neat edge.",
+      "tip": "Moisturise regularly and sleep on a satin pillowcase to reduce frizz.",
+      "lengths": [
+        "short",
+        "medium"
+      ],
+      "textures": [
+        "coily",
+        "curly"
+      ],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "Height on top elongates.",
+        "Oval": "Shows off natural texture.",
+        "Square": "Rounded volume softens angles."
+      },
+      "art": "hair-curly-short",
+      "photo": "photos/hair-curly-short.jpg"
+    },
+    {
+      "id": "m-hair-long",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Longer hairstyles",
+      "desc": "Shoulder-length hair with long layers.",
+      "tip": "Long layers stop it sitting bulky; tie it into a low bun for formal events.",
+      "lengths": [
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Square": "Length softens a strong jaw.",
+        "Heart": "Length near the jaw balances the forehead.",
+        "Diamond": "Length frames the cheekbones.",
+        "Oval": "Most lengths work.",
+        "Round": "Keep length past the chin with face-framing layers."
+      },
+      "art": "hair-long",
+      "photo": "photos/hair-long-m.jpg"
+    },
+    {
+      "id": "m-hair-bun",
+      "group": "hair",
+      "catalogs": [
+        "menswear"
+      ],
+      "title": "Top knot or low bun",
+      "desc": "Long hair tied back neatly.",
+      "tip": "Use a soft elastic to avoid breakage.",
+      "lengths": [
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Round": "A higher knot adds length.",
+        "Oval": "Shows off balanced features."
+      },
+      "art": "hair-bun",
+      "photo": "photos/hair-bun.jpg"
+    },
+    {
+      "id": "w-hair-pixie",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Pixie cut",
+      "desc": "Cropped and textured, with soft pieces at the front.",
+      "tip": "Book a trim every 4–6 weeks to keep the shape.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Oval": "Short cuts show off balanced features.",
+        "Heart": "A side-swept pixie with a soft fringe narrows the forehead.",
+        "Diamond": "Fullness at the forehead balances cheekbones."
+      },
+      "art": "hair-pixie",
+      "photo": "photos/hair-pixie.jpg"
+    },
+    {
+      "id": "w-hair-bob",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Chin-length bob",
+      "desc": "A classic bob with soft ends.",
+      "tip": "Soft, textured ends feel easier than a blunt line at the jaw.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Oval": "A versatile length for balanced features.",
+        "Heart": "Volume at the chin balances a narrower chin.",
+        "Diamond": "Fullness at the jaw balances cheekbones.",
+        "Square": "A slightly longer, textured bob softens the jaw."
+      },
+      "art": "hair-bob",
+      "photo": "photos/hair-bob.jpg"
+    },
+    {
+      "id": "w-hair-lob",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Layered lob",
+      "desc": "A long bob with soft layers.",
+      "tip": "Ask for layers starting just below the chin.",
+      "lengths": [
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Round": "Falling below the chin elongates the face.",
+        "Square": "Soft layers soften the jaw.",
+        "Oval": "Easy movement.",
+        "Heart": "Fullness near the jaw balances the forehead."
+      },
+      "art": "hair-lob",
+      "photo": "layeredlob.jpg"
+    },
+    {
+      "id": "w-hair-long-layers",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Long layers",
+      "desc": "Movement while keeping length.",
+      "tip": "Face-framing layers can start at the cheekbones or chin.",
+      "lengths": [
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Oval": "Adds movement while keeping balance.",
+        "Round": "Layers starting below the chin lengthen.",
+        "Square": "Soft layers around the jaw.",
+        "Diamond": "Layers frame the cheekbones."
+      },
+      "art": "hair-long-layers",
+      "photo": "longlayers.jpg"
+    },
+    {
+      "id": "w-hair-curtain-bangs",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Curtain bangs",
+      "desc": "A soft, centre-parted fringe.",
+      "tip": "Blow-dry with a round brush away from the face.",
+      "lengths": [
+        "short",
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Square": "Softens a strong forehead and jaw.",
+        "Heart": "Parted bangs narrow a wider forehead.",
+        "Oval": "Frames the eyes."
+      },
+      "art": "hair-fringe",
+      "photo": "curtainbangs.jpg"
+    },
+    {
+      "id": "w-hair-wispy-fringe",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Wispy fringe",
+      "desc": "A light, see-through fringe.",
+      "tip": "Trim the fringe every 3–4 weeks.",
+      "lengths": [
+        "short",
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Heart": "Softens a wider forehead.",
+        "Diamond": "Widens the look of a narrow forehead.",
+        "Oval": "A soft frame for the eyes."
+      },
+      "art": "hair-fringe",
+      "photo": "wispyfringe.jpg"
+    },
+    {
+      "id": "w-hair-curtain-fringe",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Side-swept curtain fringe",
+      "desc": "A longer fringe swept to one side.",
+      "tip": "Grows out easily into face-framing layers.",
+      "lengths": [
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Diamond": "Adds width at the forehead.",
+        "Square": "Diagonal lines soften angles."
+      },
+      "art": "hair-fringe",
+      "photo": "curtainfringe.jpg"
+    },
+    {
+      "id": "w-hair-waves",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Soft waves",
+      "desc": "Loose waves for movement.",
+      "tip": "Heat-free: braid damp hair overnight. With heat: use protection spray.",
+      "lengths": [
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Oval": "Soft movement enhances symmetry.",
+        "Square": "Waves soften angles.",
+        "Diamond": "Volume at the jaw balances cheekbones."
+      },
+      "art": "hair-waves",
+      "photo": "beachcurls.jpg"
+    },
+    {
+      "id": "w-hair-curly-shag",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Curly shag",
+      "desc": "Layered curls with volume at the crown.",
+      "tip": "Ask for a dry cut or a stylist experienced with curls.",
+      "lengths": [
+        "medium"
+      ],
+      "textures": [
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "Volume on top elongates.",
+        "Oval": "Shows off natural texture.",
+        "Square": "Curls soften angles.",
+        "Heart": "Volume lower down balances the forehead."
+      },
+      "art": "hair-shag",
+      "photo": "photos/hair-curls.jpg"
+    },
+    {
+      "id": "w-hair-crown-lift",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Crown-lift ponytail",
+      "desc": "A ponytail with height at the crown.",
+      "tip": "Tease lightly at the crown before tying.",
+      "lengths": [
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Round": "Height at the crown elongates.",
+        "Oval": "Shows off balanced features."
+      },
+      "art": "hair-ponytail",
+      "photo": "crownlift.jpg"
+    },
+    {
+      "id": "w-hair-low-pony",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Low ponytail",
+      "desc": "A sleek or soft low ponytail.",
+      "tip": "Wrap a strand around the elastic for a polished finish.",
+      "lengths": [
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Diamond": "Keeps attention on the cheekbones.",
+        "Heart": "A low line balances the forehead.",
+        "Oval": "Clean and simple."
+      },
+      "art": "hair-ponytail",
+      "photo": "lowpony.jpg"
+    },
+    {
+      "id": "w-hair-curtain-pony",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Ponytail with face-framing pieces",
+      "desc": "A ponytail with curtain pieces left out at the front.",
+      "tip": "Leave out two front sections before tying.",
+      "lengths": [
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Heart": "Front pieces soften the forehead.",
+        "Square": "Front pieces soften the jaw."
+      },
+      "art": "hair-ponytail",
+      "photo": "curtainpony.jpg"
+    },
+    {
+      "id": "w-hair-updo",
+      "group": "hair",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Low bun or updo",
+      "desc": "A polished updo for formal and festive days.",
+      "tip": "Leave a few face-framing pieces loose.",
+      "lengths": [
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Oval": "Shows off balanced proportions.",
+        "Diamond": "Face-framing pieces soften the cheekbones.",
+        "Round": "A higher bun adds height."
+      },
+      "art": "hair-updo",
+      "photo": "photos/hair-updo.jpg"
+    },
+    {
+      "id": "u-hair-buzz",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Buzz cut",
+      "desc": "Even, very short length.",
+      "tip": "A slightly longer guard on top keeps it soft.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Oval": "Shows off balanced features.",
+        "Square": "Highlights a defined jaw."
+      },
+      "art": "hair-buzz",
+      "photo": "photos/hair-buzz.jpg"
+    },
+    {
+      "id": "u-hair-crop-fringe",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Crop with soft fringe",
+      "desc": "Short sides and a forward-brushed fringe.",
+      "tip": "Point-cut the fringe so it isn't too heavy.",
+      "lengths": [
+        "short"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Diamond": "A fringe widens the forehead.",
+        "Heart": "Softens the forehead.",
+        "Oval": "An easy, modern cut."
+      },
+      "art": "hair-crop",
+      "photo": "photos/hair-crop-fringe.jpg"
+    },
+    {
+      "id": "u-hair-undercut",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Undercut with length on top",
+      "desc": "Shorter sides with a longer top you can sweep or part.",
+      "tip": "Tidy the sides every 3–4 weeks.",
+      "lengths": [
+        "short",
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "Short sides slim the face.",
+        "Square": "Length on top balances the jaw."
+      },
+      "art": "hair-fade",
+      "photo": "photos/hair-fade.jpg"
+    },
+    {
+      "id": "u-hair-shag",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Modern shag",
+      "desc": "Choppy layers with movement.",
+      "tip": "Air-dry with a light texture spray.",
+      "lengths": [
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Round": "Layers on top add height.",
+        "Square": "Texture softens angles.",
+        "Heart": "Volume at the jaw balances the forehead.",
+        "Oval": "Shows off balance."
+      },
+      "art": "hair-shag",
+      "photo": "photos/hair-shag.jpg"
+    },
+    {
+      "id": "u-hair-chin",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Chin-length cut",
+      "desc": "A blunt or textured cut around the chin.",
+      "tip": "Tuck one side behind the ear for asymmetry.",
+      "lengths": [
+        "short",
+        "medium"
+      ],
+      "textures": [],
+      "maintenance": "medium",
+      "shapes": {
+        "Heart": "Volume at the chin balances the forehead.",
+        "Diamond": "Fullness at the jaw balances cheekbones."
+      },
+      "art": "hair-bob",
+      "photo": "photos/hair-chin.jpg"
+    },
+    {
+      "id": "u-hair-shoulder",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Shoulder-length layers",
+      "desc": "Loose layers that sit at the shoulders.",
+      "tip": "Wear down, half-up or tied back.",
+      "lengths": [
+        "medium",
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Square": "Length softens the jaw.",
+        "Round": "Length past the chin elongates.",
+        "Oval": "Versatile."
+      },
+      "art": "hair-long",
+      "photo": "photos/hair-shoulder.jpg"
+    },
+    {
+      "id": "u-hair-curls",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Shaped natural curls",
+      "desc": "Curls cut to their natural shape.",
+      "tip": "Find a stylist who cuts curls dry, curl by curl.",
+      "lengths": [
+        "short",
+        "medium",
+        "long"
+      ],
+      "textures": [
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "maintenance": "medium",
+      "shapes": {
+        "Round": "Height on top elongates.",
+        "Oval": "Shows off natural texture.",
+        "Square": "Rounded shape softens angles."
+      },
+      "art": "hair-curly-long",
+      "photo": "photos/hair-curls.jpg"
+    },
+    {
+      "id": "u-hair-long",
+      "group": "hair",
+      "catalogs": [
+        "unisex"
+      ],
+      "title": "Long and loose",
+      "desc": "Long hair with minimal layers.",
+      "tip": "A trim every 8–12 weeks keeps ends healthy.",
+      "lengths": [
+        "long"
+      ],
+      "textures": [],
+      "maintenance": "low",
+      "shapes": {
+        "Square": "Length softens angles.",
+        "Diamond": "Frames the cheekbones.",
+        "Oval": "Most lengths work."
+      },
+      "art": "hair-long",
+      "photo": "photos/hair-long-m.jpg"
+    },
+    {
+      "id": "eye-round",
+      "group": "eyewear",
+      "catalogs": [
+        "menswear",
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Round frames",
+      "desc": "Soft circles that contrast with angles.",
+      "tip": "Make sure the frame is about as wide as your face at the temples.",
+      "shapes": {
+        "Square": "Curves contrast a strong jaw.",
+        "Diamond": "Softens angular cheekbones.",
+        "Heart": "Light round frames soften the forehead."
+      },
+      "art": "frames-round",
+      "photo": "roundframes.jpg"
+    },
+    {
+      "id": "eye-rect",
+      "group": "eyewear",
+      "catalogs": [
+        "menswear",
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Rectangular frames",
+      "desc": "Clean lines for structure.",
+      "tip": "A slightly wider-than-tall lens suits most faces.",
+      "shapes": {
+        "Round": "Angular lines add definition.",
+        "Oval": "Adds structure to balanced features.",
+        "Heart": "A slim rectangle keeps the upper face light."
+      },
+      "art": "frames-rect",
+      "photo": "photos/frames-rect.jpg"
+    },
+    {
+      "id": "eye-aviator",
+      "group": "eyewear",
+      "catalogs": [
+        "menswear",
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Aviator-inspired frames",
+      "desc": "A teardrop shape, wider at the bottom.",
+      "tip": "Thin metal aviators feel lighter for everyday wear.",
+      "shapes": {
+        "Heart": "A wider lower edge balances a broader forehead.",
+        "Square": "The curved bottom softens the jaw.",
+        "Oval": "A classic, easy shape."
+      },
+      "art": "frames-aviator",
+      "photo": "photos/frames-aviator.jpg"
+    },
+    {
+      "id": "eye-browline",
+      "group": "eyewear",
+      "catalogs": [
+        "menswear",
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Browline frames",
+      "desc": "A bold upper rim with a thin lower rim.",
+      "tip": "The top rim should follow your eyebrows.",
+      "shapes": {
+        "Diamond": "A strong brow line widens the forehead.",
+        "Round": "The defined upper line adds structure.",
+        "Oval": "A smart, professional look."
+      },
+      "art": "frames-browline",
+      "photo": "wayfarer.jpg"
+    },
+    {
+      "id": "eye-square",
+      "group": "eyewear",
+      "catalogs": [
+        "menswear",
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Square acetate frames",
+      "desc": "Thick, slightly oversized square frames.",
+      "tip": "Check that your eyes sit near the centre of each lens.",
+      "shapes": {
+        "Round": "Angles contrast soft curves.",
+        "Oval": "A bold, modern choice.",
+        "Diamond": "A wider top line balances cheekbones."
+      },
+      "art": "frames-square",
+      "photo": "oversizedframes.jpg"
+    },
+    {
+      "id": "eye-cateye",
+      "group": "eyewear",
+      "catalogs": [
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Cat-eye frames",
+      "desc": "An upswept outer edge for a lifted look.",
+      "tip": "Subtle upsweeps are easiest for everyday wear.",
+      "shapes": {
+        "Diamond": "Upswept corners highlight cheekbones.",
+        "Oval": "A lifted, defined look.",
+        "Round": "Angles add contrast."
+      },
+      "art": "frames-cateye",
+      "photo": "cateyeglasses.jpg"
+    },
+    {
+      "id": "eye-rimless",
+      "group": "eyewear",
+      "catalogs": [
+        "menswear",
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Lightweight semi-rimless frames",
+      "desc": "Minimal frames that feel light all day.",
+      "tip": "A good everyday choice if you wear glasses for long hours.",
+      "shapes": {
+        "Heart": "Keeps the upper face light.",
+        "Diamond": "Doesn't compete with cheekbones.",
+        "Oval": "Barely-there everyday wear."
+      },
+      "art": "frames-rimless",
+      "photo": "semirimlessframes.jpg"
+    },
+    {
+      "id": "m-acc-watch",
+      "group": "accessories",
+      "catalogs": [
+        "menswear",
+        "unisex"
+      ],
+      "title": "Watches",
+      "desc": "A simple dial on leather or metal.",
+      "tip": "Match the metal to your undertone and the strap to your belt.",
+      "shapes": {
+        "Round": "A rectangular dial adds an angular accent.",
+        "Square": "A round dial softens the overall look."
+      },
+      "art": "watch",
+      "photo": "photos/watch.jpg"
+    },
+    {
+      "id": "m-acc-chain",
+      "group": "accessories",
+      "catalogs": [
+        "menswear",
+        "unisex"
+      ],
+      "title": "Fine chains",
+      "desc": "A thin chain worn under an open collar.",
+      "tip": "Keep it close to the collarbone.",
+      "shapes": {
+        "Round": "A slightly longer chain creates a vertical line."
+      },
+      "art": "necklace",
+      "photo": "photos/chain.jpg"
+    },
+    {
+      "id": "m-acc-cap",
+      "group": "accessories",
+      "catalogs": [
+        "menswear",
+        "unisex"
+      ],
+      "title": "Caps & hats",
+      "desc": "Baseball caps, beanies or bucket hats.",
+      "tip": "Choose crown height to suit your face length.",
+      "shapes": {
+        "Round": "A taller crown adds length.",
+        "Heart": "A wider brim balances the forehead.",
+        "Square": "A rounded crown softens angles."
+      },
+      "art": "cap",
+      "photo": "photos/cap.jpg"
+    },
+    {
+      "id": "m-acc-bracelet",
+      "group": "accessories",
+      "catalogs": [
+        "menswear",
+        "unisex"
+      ],
+      "title": "Bracelets",
+      "desc": "Leather, bead or metal bracelets.",
+      "tip": "Wear on the wrist opposite your watch.",
+      "shapes": {},
+      "art": "bracelet",
+      "photo": "photos/bracelet.jpg"
+    },
+    {
+      "id": "u-acc-studs",
+      "group": "accessories",
+      "catalogs": [
+        "unisex",
+        "menswear"
+      ],
+      "title": "Small studs or huggie hoops",
+      "desc": "Minimal earrings for pierced ears.",
+      "tip": "One metal tone keeps it cohesive.",
+      "shapes": {
+        "Square": "Small round studs soften angles."
+      },
+      "art": "earrings",
+      "photo": "photos/stud-earrings.jpg"
+    },
+    {
+      "id": "w-acc-statement",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Statement earrings",
+      "desc": "Hoops and chandeliers that highlight the cheekbones.",
+      "tip": "Keep the necklace simple when the earrings are bold.",
+      "shapes": {
+        "Oval": "Highlights balanced cheekbones."
+      },
+      "art": "earrings",
+      "photo": "statementearrings.jpg"
+    },
+    {
+      "id": "w-acc-hoops",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Hoop earrings",
+      "desc": "Rounded hoops that soften angles.",
+      "tip": "Medium hoops are the most versatile.",
+      "shapes": {
+        "Square": "Curves soften the jaw.",
+        "Diamond": "Softens angular cheekbones."
+      },
+      "art": "earrings",
+      "photo": "hoops.jpg"
+    },
+    {
+      "id": "w-acc-drop",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Long drop earrings",
+      "desc": "Linear earrings that add length.",
+      "tip": "Lightweight drops are comfortable all day.",
+      "shapes": {
+        "Round": "Vertical lines add length."
+      },
+      "art": "earrings",
+      "photo": "longdropearring.jpg"
+    },
+    {
+      "id": "w-acc-choker",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Chokers",
+      "desc": "A short necklace that adds width at the neck.",
+      "tip": "Pair with an open neckline.",
+      "shapes": {
+        "Heart": "Adds width near a narrower chin."
+      },
+      "art": "necklace",
+      "photo": "choker.jpg"
+    },
+    {
+      "id": "w-acc-earcuff",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Ear cuffs",
+      "desc": "A modern accent along the ear.",
+      "tip": "No piercing needed for most cuffs.",
+      "shapes": {
+        "Heart": "Keeps focus near the cheekbones."
+      },
+      "art": "earrings",
+      "photo": "earcuffs.jpg"
+    },
+    {
+      "id": "w-acc-cluster",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Cluster earrings",
+      "desc": "Small, layered stones close to the ear.",
+      "tip": "Great for festive outfits without heavy drops.",
+      "shapes": {
+        "Diamond": "Adds width at the ear line."
+      },
+      "art": "earrings",
+      "photo": "clusterearrings.jpg"
+    },
+    {
+      "id": "w-acc-vneck",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "V-shaped necklaces",
+      "desc": "Pendants that form a V.",
+      "tip": "Match the V to your neckline.",
+      "shapes": {
+        "Round": "A V adds length."
+      },
+      "art": "necklace",
+      "photo": "vshapednecklace.jpg"
+    },
+    {
+      "id": "w-acc-pendant",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Long pendants",
+      "desc": "A single pendant on a longer chain.",
+      "tip": "Sits best over plain fabrics.",
+      "shapes": {
+        "Square": "A vertical line softens width.",
+        "Round": "Adds length."
+      },
+      "art": "necklace",
+      "photo": "longpendants.jpg"
+    },
+    {
+      "id": "w-acc-round-pendant",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Round pendant necklaces",
+      "desc": "Soft circular pendants.",
+      "tip": "Choose a chain that sits just below the collarbone.",
+      "shapes": {
+        "Diamond": "Curves soften angles."
+      },
+      "art": "necklace",
+      "photo": "roundpendantnecklace.jpg"
+    },
+    {
+      "id": "w-acc-layered",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear"
+      ],
+      "title": "Layered necklaces",
+      "desc": "Two or three fine chains at different lengths.",
+      "tip": "Keep 4–5 cm between layers so they don't tangle.",
+      "shapes": {
+        "Oval": "Frames the neckline with depth."
+      },
+      "art": "necklace",
+      "photo": "layerednecklace.jpg"
+    },
+    {
+      "id": "w-acc-hairclip",
+      "group": "accessories",
+      "catalogs": [
+        "womenswear",
+        "unisex"
+      ],
+      "title": "Hair clips",
+      "desc": "Claw clips and barrettes for quick styling.",
+      "tip": "A claw clip makes a quick, soft twist-up.",
+      "shapes": {
+        "Square": "Soft volume softens angles."
+      },
+      "art": "hairclip",
+      "photo": "hairclip.jpg"
+    }
+  ],
+  "grooming": {
+    "menswear": [
+      {
+        "topic": "Haircut schedule",
+        "tip": "Short cuts and fades look best trimmed every 2–4 weeks; longer styles every 6–8 weeks."
+      },
+      {
+        "topic": "Styling products",
+        "tip": "Matte clay or paste for texture, cream for a natural finish, curl cream for curls — use a pea-sized amount."
+      },
+      {
+        "topic": "Eyebrows",
+        "tip": "If you want tidier brows, remove only stray hairs between them and keep the natural shape."
+      },
+      {
+        "topic": "Watch & accessories",
+        "tip": "Wear one watch and keep other accessories to one or two pieces in the same metal tone."
+      },
+      {
+        "topic": "Profile photos",
+        "tip": "Face soft window light, hold the camera at eye level and wear a solid palette shade near your face."
+      }
+    ],
+    "womenswear": [
+      {
+        "topic": "Haircut schedule",
+        "tip": "Short cuts and fringes need a trim every 4–6 weeks; longer hair every 8–12 weeks."
+      },
+      {
+        "topic": "Heat & hair care",
+        "tip": "Use a heat-protection spray before hot tools, and let hair air-dry when you can."
+      },
+      {
+        "topic": "Eyebrows",
+        "tip": "Brow shaping is optional — if you shape them, follow your natural arch."
+      },
+      {
+        "topic": "Accessories",
+        "tip": "Let one area lead: bold earrings or a statement necklace, not both."
+      },
+      {
+        "topic": "Profile photos",
+        "tip": "Face soft window light, hold the camera at eye level and wear a solid palette shade near your face."
+      }
+    ],
+    "unisex": [
+      {
+        "topic": "Haircut schedule",
+        "tip": "Short cuts look best trimmed every 3–5 weeks; longer styles every 8–12 weeks."
+      },
+      {
+        "topic": "Styling products",
+        "tip": "A light texture spray or cream suits most cuts; curl cream for curls."
+      },
+      {
+        "topic": "Eyebrows",
+        "tip": "Tidy only if you want to; keeping your natural shape always works."
+      },
+      {
+        "topic": "Accessories",
+        "tip": "Pick one metal tone and repeat it across glasses, jewellery and watch."
+      },
+      {
+        "topic": "Profile photos",
+        "tip": "Face soft window light, hold the camera at eye level and wear a solid palette shade near your face."
+      }
+    ]
+  },
+  "color_outfits": {
+    "menswear": [
+      {
+        "id": "everyday",
+        "title": "Everyday casual",
+        "occasion": "everyday",
+        "pieces": [
+          [
+            "T-shirt or polo",
+            "accent"
+          ],
+          [
+            "Jeans or chinos",
+            "dark"
+          ],
+          [
+            "Overshirt",
+            "neutral"
+          ],
+          [
+            "Sneakers",
+            "light"
+          ]
+        ]
+      },
+      {
+        "id": "office",
+        "title": "Office & business",
+        "occasion": "office",
+        "pieces": [
+          [
+            "Shirt",
+            "light"
+          ],
+          [
+            "Trousers",
+            "dark"
+          ],
+          [
+            "Blazer",
+            "neutral"
+          ],
+          [
+            "Tie",
+            "accent"
+          ]
+        ]
+      },
+      {
+        "id": "formal",
+        "title": "Formal occasion",
+        "occasion": "formal",
+        "pieces": [
+          [
+            "Suit",
+            "dark"
+          ],
+          [
+            "Shirt",
+            "light"
+          ],
+          [
+            "Tie & pocket square",
+            "accent"
+          ],
+          [
+            "Knit or waistcoat",
+            "neutral"
+          ]
+        ]
+      },
+      {
+        "id": "festive",
+        "title": "Festive Indian",
+        "occasion": "festive",
+        "pieces": [
+          [
+            "Kurta",
+            "accent"
+          ],
+          [
+            "Nehru jacket",
+            "dark"
+          ],
+          [
+            "Churidar or pyjama",
+            "light"
+          ],
+          [
+            "Mojaris",
+            "neutral"
+          ]
+        ]
+      },
+      {
+        "id": "weekend",
+        "title": "Weekend & travel",
+        "occasion": "travel",
+        "pieces": [
+          [
+            "Henley or tee",
+            "light"
+          ],
+          [
+            "Relaxed trousers",
+            "neutral"
+          ],
+          [
+            "Bomber or denim jacket",
+            "dark"
+          ]
+        ]
+      }
+    ],
+    "womenswear": [
+      {
+        "id": "everyday",
+        "title": "Everyday",
+        "occasion": "everyday",
+        "pieces": [
+          [
+            "Top",
+            "accent"
+          ],
+          [
+            "Jeans or trousers",
+            "dark"
+          ],
+          [
+            "Layer or cardigan",
+            "neutral"
+          ],
+          [
+            "Sneakers or flats",
+            "light"
+          ]
+        ]
+      },
+      {
+        "id": "office",
+        "title": "Office & business",
+        "occasion": "office",
+        "pieces": [
+          [
+            "Blouse or shirt",
+            "light"
+          ],
+          [
+            "Trousers or skirt",
+            "dark"
+          ],
+          [
+            "Blazer",
+            "neutral"
+          ],
+          [
+            "Scarf or bag",
+            "accent"
+          ]
+        ]
+      },
+      {
+        "id": "formal",
+        "title": "Formal & evening",
+        "occasion": "formal",
+        "pieces": [
+          [
+            "Dress",
+            "accent"
+          ],
+          [
+            "Wrap or jacket",
+            "dark"
+          ],
+          [
+            "Clutch",
+            "light"
+          ],
+          [
+            "Heels",
+            "neutral"
+          ]
+        ]
+      },
+      {
+        "id": "festive",
+        "title": "Festive Indian",
+        "occasion": "festive",
+        "pieces": [
+          [
+            "Saree, lehenga or kurta",
+            "accent"
+          ],
+          [
+            "Blouse or contrast",
+            "dark"
+          ],
+          [
+            "Dupatta",
+            "light"
+          ],
+          [
+            "Juttis or heels",
+            "neutral"
+          ]
+        ]
+      },
+      {
+        "id": "weekend",
+        "title": "Weekend & travel",
+        "occasion": "travel",
+        "pieces": [
+          [
+            "Co-ord or dress",
+            "neutral"
+          ],
+          [
+            "Light layer",
+            "light"
+          ],
+          [
+            "Bag",
+            "dark"
+          ]
+        ]
+      }
+    ],
+    "unisex": [
+      {
+        "id": "everyday",
+        "title": "Everyday",
+        "occasion": "everyday",
+        "pieces": [
+          [
+            "Tee",
+            "accent"
+          ],
+          [
+            "Straight denim",
+            "dark"
+          ],
+          [
+            "Overshirt",
+            "neutral"
+          ],
+          [
+            "Sneakers",
+            "light"
+          ]
+        ]
+      },
+      {
+        "id": "layered",
+        "title": "Layered",
+        "occasion": "college",
+        "pieces": [
+          [
+            "Hoodie or knit",
+            "neutral"
+          ],
+          [
+            "Jacket",
+            "dark"
+          ],
+          [
+            "Base tee",
+            "light"
+          ],
+          [
+            "Beanie or bag",
+            "accent"
+          ]
+        ]
+      },
+      {
+        "id": "smart",
+        "title": "Smart & office",
+        "occasion": "office",
+        "pieces": [
+          [
+            "Relaxed shirt",
+            "light"
+          ],
+          [
+            "Trousers",
+            "dark"
+          ],
+          [
+            "Fine knit",
+            "neutral"
+          ],
+          [
+            "Loafers",
+            "accent"
+          ]
+        ]
+      },
+      {
+        "id": "festive",
+        "title": "Festive",
+        "occasion": "festive",
+        "pieces": [
+          [
+            "Kurta",
+            "accent"
+          ],
+          [
+            "Trousers",
+            "light"
+          ],
+          [
+            "Short jacket",
+            "dark"
+          ]
+        ]
+      }
+    ]
+  },
+  "undertone_accessories": {
+    "Warm": {
+      "summary": "Warm undertones are usually flattered by golden metals and warm leathers.",
+      "items": [
+        {
+          "name": "Gold",
+          "hex": "#C9A227"
+        },
+        {
+          "name": "Brass",
+          "hex": "#B5A642"
+        },
+        {
+          "name": "Tan leather",
+          "hex": "#A0703C"
+        },
+        {
+          "name": "Cognac",
+          "hex": "#9A4E1C"
+        }
+      ]
+    },
+    "Cool": {
+      "summary": "Cool undertones are usually flattered by silver-toned metals and cool, dark leathers.",
+      "items": [
+        {
+          "name": "Silver",
+          "hex": "#C0C0C0"
+        },
+        {
+          "name": "Gunmetal",
+          "hex": "#53565A"
+        },
+        {
+          "name": "Black leather",
+          "hex": "#1F1F1F"
+        },
+        {
+          "name": "Oxblood",
+          "hex": "#4A0E0E"
+        }
+      ]
+    },
+    "Neutral": {
+      "summary": "Neutral undertones can wear both warm and cool metals, so mixing is easy.",
+      "items": [
+        {
+          "name": "Rose gold",
+          "hex": "#B76E79"
+        },
+        {
+          "name": "Brushed silver",
+          "hex": "#A8A9AD"
+        },
+        {
+          "name": "Taupe leather",
+          "hex": "#8B7D6B"
+        },
+        {
+          "name": "Dark brown",
+          "hex": "#5C4033"
+        }
+      ]
+    }
+  },
+  "accessory_labels": {
+    "menswear": [
+      "Watch case & strap",
+      "Belt & shoes",
+      "Eyewear frames",
+      "Cufflinks & tie bar"
+    ],
+    "womenswear": [
+      "Jewellery metal",
+      "Handbag",
+      "Footwear",
+      "Eyewear frames"
+    ],
+    "unisex": [
+      "Jewellery & watch",
+      "Bag",
+      "Footwear",
+      "Eyewear frames"
+    ]
+  },
+  "avoid_guidance": {
+    "menswear": "If you love them, wear these as trousers, shoes or a bag rather than shirts, ties or collars near your face.",
+    "womenswear": "If you love them, wear these as skirts, trousers, shoes or bags rather than tops, scarves or earrings near your face.",
+    "unisex": "If you love them, wear these away from your face — trousers, shoes or a bag — rather than tops or collars."
+  }
+}

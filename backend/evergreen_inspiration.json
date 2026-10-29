@@ -1,0 +1,75 @@
+{
+  "color_analysis": {
+    "menswear": [
+      { "title": "Tonal dressing", "tip": "Wear two or three shades of one palette colour — for example a light shirt, mid knit and dark trousers in the same family." },
+      { "title": "One accent near the face", "tip": "Keep trousers and shoes neutral and let your strongest palette shade sit in a tee, tie or pocket square." },
+      { "title": "Festive contrast", "tip": "Pair a rich kurta from your palette with a lighter churidar and a dark Nehru jacket for depth without clashing." }
+    ],
+    "womenswear": [
+      { "title": "Monochrome with texture", "tip": "Head-to-toe in one palette shade looks polished when fabrics vary — knit, satin and denim together." },
+      { "title": "Palette near the face", "tip": "Your most flattering shade works hardest as a top, scarf or dupatta; keep colours to avoid for skirts and shoes." },
+      { "title": "Festive pairing", "tip": "Choose a saree or lehenga in a deep palette shade and echo a lighter shade in the blouse or dupatta." }
+    ],
+    "unisex": [
+      { "title": "Neutral base, one accent", "tip": "Build on palette neutrals and add one brighter shade through a tee, beanie or bag." },
+      { "title": "Analogous layering", "tip": "Layer colours that sit next to each other on the colour wheel for an easy, cohesive outfit." },
+      { "title": "Contrast at the top", "tip": "A lighter top with darker bottoms keeps attention near your face." }
+    ],
+    "mixed": [
+      { "title": "Tonal dressing", "tip": "Wear several shades of one palette colour with different textures." },
+      { "title": "Palette near the face", "tip": "Put your best shade closest to your face and use colours to avoid lower down." },
+      { "title": "One accent", "tip": "Let one bright palette shade carry the outfit and keep the rest neutral." }
+    ]
+  },
+  "skincare": {
+    "mixed": [
+      { "title": "Consistency over novelty", "tip": "A gentle cleanser, moisturiser and daily sunscreen used every day usually matter more than any single new launch." },
+      { "title": "One change at a time", "tip": "Introduce new products one at a time, a couple of weeks apart, so you can tell what suits you." },
+      { "title": "Sunscreen as the last morning step", "tip": "Apply a generous amount every morning and reapply when you're outdoors for long periods." }
+    ]
+  },
+  "face_shape": {
+    "menswear": [
+      { "title": "Shape the sides first", "tip": "Ask your barber how short the sides should be relative to the top — it changes the overall face proportion more than length on top." },
+      { "title": "Frames that match your features", "tip": "Choose frames roughly as wide as your face, with the top edge following your brow line." },
+      { "title": "Keep a clean neckline", "tip": "Whatever the cut, a tidy neckline and sideburns make it look fresh for longer." }
+    ],
+    "womenswear": [
+      { "title": "Face-framing layers", "tip": "Layers that start at the cheekbones or chin let you change shape without losing length." },
+      { "title": "Frames that match your features", "tip": "Choose frames roughly as wide as your face, with the top edge following your brow line." },
+      { "title": "Parting play", "tip": "Switching from a centre to a side parting changes balance instantly — no cut needed." }
+    ],
+    "unisex": [
+      { "title": "Work with your texture", "tip": "Cuts designed for your natural texture need far less daily styling." },
+      { "title": "Frames that match your features", "tip": "Choose frames roughly as wide as your face, with the top edge following your brow line." },
+      { "title": "Regular light trims", "tip": "Small, regular trims keep any length looking intentional." }
+    ],
+    "mixed": [
+      { "title": "Work with your texture", "tip": "Cuts designed for your natural texture need far less daily styling." },
+      { "title": "Frames that match your features", "tip": "Choose frames roughly as wide as your face, with the top edge following your brow line." },
+      { "title": "Parting play", "tip": "Switching your parting changes balance instantly — no cut needed." }
+    ]
+  },
+  "body_shape": {
+    "menswear": [
+      { "title": "Tailoring is the upgrade", "tip": "Hemming trousers and taking in a shirt's sides make inexpensive pieces look made for you." },
+      { "title": "Three-piece rule", "tip": "Add a third layer — overshirt, knit or jacket — to turn a tee and trousers into an outfit." },
+      { "title": "Shoes set the tone", "tip": "The same jeans and shirt read casual with sneakers and smart with loafers." }
+    ],
+    "womenswear": [
+      { "title": "One fitted, one relaxed", "tip": "Pair a fitted piece with a relaxed one so outfits feel balanced and comfortable." },
+      { "title": "Third-piece layering", "tip": "A blazer, cardigan or dupatta turns two pieces into a finished look." },
+      { "title": "Hem to your shoes", "tip": "Hem trousers for the shoes you'll wear most so the line looks intentional." }
+    ],
+    "unisex": [
+      { "title": "Balance volume", "tip": "Pair one roomy piece with one neater piece so the outfit keeps shape." },
+      { "title": "Layer from thin to thick", "tip": "Tee, then shirt or knit, then jacket — easy to adjust through the day." },
+      { "title": "Consistent palette", "tip": "Two or three palette shades across your wardrobe make everything mix and match." }
+    ],
+    "mixed": [
+      { "title": "Balance volume", "tip": "Pair one roomy piece with one neater piece so the outfit keeps shape." },
+      { "title": "Third-piece layering", "tip": "A jacket, knit or overshirt turns two pieces into an outfit." },
+      { "title": "Tailoring is the upgrade", "tip": "Small alterations make everyday pieces look made for you." }
+    ]
+  }
+}

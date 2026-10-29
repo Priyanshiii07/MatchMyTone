@@ -1,0 +1,12 @@
+QUICK STEPS TO GET NEW GEMINI API KEY:
+
+1. Go to: https://aistudio.google.com/apikey
+2. Click "Create API Key"
+3. Select your Google account
+4. Copy the new API key
+5. Edit the ignored file `backend/.env` and set `GEMINI_API_KEY=...`.
+6. Restart the Flask backend. The Next.js route proxies the request to Flask; the key is never sent to the browser.
+
+
+
+

@@ -1,0 +1,294 @@
+{
+  "version": 2,
+  "fields": {
+    "catalog": {
+      "label": "Styling recommendations",
+      "help": "Which clothing and hair ideas you want to see. This is separate from the gender on your profile.",
+      "options": [
+        {
+          "value": "menswear",
+          "label": "Men's styling"
+        },
+        {
+          "value": "womenswear",
+          "label": "Women's styling"
+        },
+        {
+          "value": "unisex",
+          "label": "Unisex"
+        },
+        {
+          "value": "mixed",
+          "label": "Mix of everything",
+          "retired": true
+        }
+      ]
+    },
+    "presentation": {
+      "label": "Preferred presentation",
+      "help": "Used to order ideas when you choose a mixed catalog.",
+      "options": [
+        {
+          "value": "masculine",
+          "label": "Masculine"
+        },
+        {
+          "value": "feminine",
+          "label": "Feminine"
+        },
+        {
+          "value": "androgynous",
+          "label": "Androgynous"
+        },
+        {
+          "value": "mixed",
+          "label": "A mix"
+        },
+        {
+          "value": "no_preference",
+          "label": "No preference"
+        }
+      ],
+      "retired": true
+    },
+    "style_extras": {
+      "label": "Also include",
+      "help": "Optional. Modest styling hides very revealing cuts; traditional brings Indian and festive wear forward.",
+      "multi": true,
+      "options": [
+        {
+          "value": "modest",
+          "label": "Modest styling"
+        },
+        {
+          "value": "traditional",
+          "label": "Traditional & festive wear"
+        }
+      ]
+    },
+    "fit": {
+      "label": "Fit you usually like",
+      "options": [
+        {
+          "value": "fitted",
+          "label": "Fitted"
+        },
+        {
+          "value": "regular",
+          "label": "Regular"
+        },
+        {
+          "value": "relaxed",
+          "label": "Relaxed"
+        },
+        {
+          "value": "oversized",
+          "label": "Oversized"
+        },
+        {
+          "value": "structured",
+          "label": "Structured / tailored"
+        },
+        {
+          "value": "no_preference",
+          "label": "No preference"
+        }
+      ],
+      "retired": true
+    },
+    "occasions": {
+      "label": "Occasions you dress for",
+      "multi": true,
+      "options": [
+        {
+          "value": "everyday",
+          "label": "Everyday"
+        },
+        {
+          "value": "college",
+          "label": "College"
+        },
+        {
+          "value": "office",
+          "label": "Office"
+        },
+        {
+          "value": "formal",
+          "label": "Formal events",
+          "retired": true
+        },
+        {
+          "value": "festive",
+          "label": "Festive"
+        },
+        {
+          "value": "wedding",
+          "label": "Weddings",
+          "retired": true
+        },
+        {
+          "value": "party",
+          "label": "Parties",
+          "retired": true
+        },
+        {
+          "value": "travel",
+          "label": "Travel & weekends",
+          "retired": true
+        }
+      ]
+    },
+    "hair_length": {
+      "label": "Hair length you want",
+      "options": [
+        {
+          "value": "short",
+          "label": "Short"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "long",
+          "label": "Long"
+        },
+        {
+          "value": "no_preference",
+          "label": "Show all lengths"
+        }
+      ]
+    },
+    "hair_texture": {
+      "label": "Your natural hair texture",
+      "help": "We only suggest texture-specific cuts when you tell us your texture.",
+      "options": [
+        {
+          "value": "straight",
+          "label": "Straight"
+        },
+        {
+          "value": "wavy",
+          "label": "Wavy"
+        },
+        {
+          "value": "curly",
+          "label": "Curly"
+        },
+        {
+          "value": "coily",
+          "label": "Coily"
+        },
+        {
+          "value": "not_sure",
+          "label": "Not sure"
+        }
+      ]
+    },
+    "facial_hair": {
+      "label": "Facial hair",
+      "help": "Beard and moustache ideas only appear if you ask for them.",
+      "options": [
+        {
+          "value": "clean_shaven",
+          "label": "Clean-shaven"
+        },
+        {
+          "value": "stubble",
+          "label": "Stubble"
+        },
+        {
+          "value": "beard",
+          "label": "Beard"
+        },
+        {
+          "value": "moustache",
+          "label": "Moustache"
+        },
+        {
+          "value": "no_preference",
+          "label": "Not relevant / skip"
+        }
+      ],
+      "retired": true
+    },
+    "makeup": {
+      "label": "Makeup color ideas",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Show makeup ideas"
+        },
+        {
+          "value": "no",
+          "label": "Don't show makeup"
+        }
+      ]
+    },
+    "maintenance": {
+      "label": "Upkeep you're happy with",
+      "options": [
+        {
+          "value": "low",
+          "label": "Low — quick and easy"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "high",
+          "label": "High — I enjoy styling"
+        }
+      ],
+      "retired": true
+    }
+  },
+  "skincare_extras": {
+    "label": "Routine extras",
+    "help": "Optional. Tick anything that applies; your skin-type answers still decide the core routine.",
+    "options": [
+      {
+        "value": "shaving",
+        "label": "I shave my face",
+        "group": "Shaving & facial hair"
+      },
+      {
+        "value": "razor_bumps",
+        "label": "I get razor bumps, ingrown hairs or irritation after shaving",
+        "group": "Shaving & facial hair"
+      },
+      {
+        "value": "beard",
+        "label": "I have a beard or stubble",
+        "group": "Shaving & facial hair"
+      },
+      {
+        "value": "workout",
+        "label": "I sweat a lot or work out often",
+        "group": "Lifestyle"
+      },
+      {
+        "value": "outdoors",
+        "label": "I spend a lot of time outdoors",
+        "group": "Lifestyle"
+      },
+      {
+        "value": "makeup",
+        "label": "I wear makeup or tinted sunscreen",
+        "group": "Lifestyle"
+      },
+      {
+        "value": "fragrance_free",
+        "label": "I prefer fragrance-free products",
+        "group": "Product preferences"
+      },
+      {
+        "value": "advanced",
+        "label": "I'd like a fuller routine with a treatment step",
+        "group": "Product preferences"
+      }
+    ]
+  },
+  "retired_note": "Fields or options marked retired are no longer offered. They stay listed so older saved preferences and API payloads are still accepted; they are ignored when recommendations are generated."
+}

@@ -1,0 +1,123 @@
+{
+  "slides": [
+    {
+      "photo": "photos/w-lehenga.jpg",
+      "alt": "Woman in an embroidered lehenga with a dupatta",
+      "label": "Festive",
+      "palette": [
+        {
+          "name": "Colour 1",
+          "hex": "#9D7C65"
+        },
+        {
+          "name": "Colour 2",
+          "hex": "#6F423A"
+        },
+        {
+          "name": "Colour 3",
+          "hex": "#D3C0B2"
+        },
+        {
+          "name": "Colour 4",
+          "hex": "#AEA28F"
+        },
+        {
+          "name": "Colour 5",
+          "hex": "#DFDCE5"
+        }
+      ]
+    },
+    {
+      "photo": "photos/m-chinos.jpg",
+      "alt": "Man in a denim shirt and brown chinos",
+      "label": "Everyday",
+      "palette": [
+        {
+          "name": "Colour 1",
+          "hex": "#565253"
+        },
+        {
+          "name": "Colour 2",
+          "hex": "#65696B"
+        },
+        {
+          "name": "Colour 3",
+          "hex": "#312725"
+        },
+        {
+          "name": "Colour 4",
+          "hex": "#A5A8A9"
+        },
+        {
+          "name": "Colour 5",
+          "hex": "#8E8D8C"
+        }
+      ]
+    },
+    {
+      "photo": "photos/w-long-coat.jpg",
+      "alt": "Model in a coral long coat on a runway",
+      "label": "Statement",
+      "palette": [
+        {
+          "name": "Colour 1",
+          "hex": "#E99772"
+        },
+        {
+          "name": "Colour 2",
+          "hex": "#2C2623"
+        },
+        {
+          "name": "Colour 3",
+          "hex": "#ECD8BD"
+        },
+        {
+          "name": "Colour 4",
+          "hex": "#A4644D"
+        }
+      ]
+    },
+    {
+      "photo": "photos/w-saree.jpg",
+      "alt": "Woman in a green saree outdoors",
+      "label": "Classic",
+      "palette": [
+        {
+          "name": "Colour 1",
+          "hex": "#131B11"
+        },
+        {
+          "name": "Colour 2",
+          "hex": "#868D3C"
+        },
+        {
+          "name": "Colour 3",
+          "hex": "#483D24"
+        },
+        {
+          "name": "Colour 4",
+          "hex": "#707229"
+        },
+        {
+          "name": "Colour 5",
+          "hex": "#C4CA6A"
+        }
+      ]
+    }
+  ],
+  "accents": [
+    {
+      "photo": "photos/mojari.jpg"
+    },
+    {
+      "photo": "photos/watch.jpg"
+    }
+  ],
+  "swatches": [
+    "#9D7C65",
+    "#6F423A",
+    "#565253",
+    "#65696B",
+    "#E99772"
+  ]
+}

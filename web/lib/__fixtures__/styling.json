@@ -1,0 +1,3320 @@
+{
+ "bodyMen": {
+  "module": "body",
+  "catalog_version": 2,
+  "catalog": "menswear",
+  "catalog_label": "Men's styling",
+  "catalog_source": "profile",
+  "needs_choice": false,
+  "preferences": {
+   "catalog": "menswear",
+   "catalog_source": "profile"
+  },
+  "palette": {
+   "result_id": "color-1",
+   "season": "Deep Autumn",
+   "colors": [
+    {
+     "name": "Terracotta",
+     "hex": "#C2593F"
+    },
+    {
+     "name": "Deep Teal",
+     "hex": "#005F60"
+    },
+    {
+     "name": "Olive",
+     "hex": "#6B705C"
+    },
+    {
+     "name": "Cream",
+     "hex": "#F3E9D2"
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#6B1D2F"
+    },
+    {
+     "name": "Mustard",
+     "hex": "#E3A857"
+    }
+   ]
+  },
+  "shape_label": "Triangle (Pear)",
+  "categories": [
+   {
+    "id": "tops",
+    "label": "Tops"
+   },
+   {
+    "id": "bottoms",
+    "label": "Bottoms"
+   },
+   {
+    "id": "outerwear",
+    "label": "Outerwear & tailoring"
+   },
+   {
+    "id": "traditional",
+    "label": "Traditional & festive"
+   },
+   {
+    "id": "footwear",
+    "label": "Footwear"
+   },
+   {
+    "id": "accessories",
+    "label": "Accessories"
+   }
+  ],
+  "items": [
+   {
+    "id": "m-crew-tee",
+    "catalog": "menswear",
+    "title": "Crew-neck T-shirts",
+    "why": "A crew neck in a structured cotton keeps attention up near the shoulders.",
+    "reasons": [],
+    "tip": "The shoulder seam should sit on your shoulder bone and the hem just past your belt.",
+    "art": "tee",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/m-crew-tee.jpg",
+    "category": "tops",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "fitted",
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "m-casual-shirt",
+    "catalog": "menswear",
+    "title": "Casual shirts",
+    "why": "Chest pockets and a firm collar add interest above the waist.",
+    "reasons": [],
+    "tip": "Untucked shirts should end around mid-fly; longer hems are meant to be tucked.",
+    "art": "shirt",
+    "colors": [
+     {
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/m-shirt.jpg",
+    "category": "tops",
+    "occasions": [
+     "everyday",
+     "party",
+     "travel",
+     "college"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "m-camp-shirt",
+    "catalog": "menswear",
+    "title": "Casual button-downs (camp collar)",
+    "why": "A print on top draws the eye upward.",
+    "reasons": [],
+    "tip": "Small, tonal prints are easier to wear than large busy ones.",
+    "art": "shirt-short",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/m-camp-shirt.jpg",
+    "category": "tops",
+    "occasions": [
+     "party",
+     "travel",
+     "everyday"
+    ],
+    "fits": [
+     "relaxed",
+     "regular"
+    ]
+   },
+   {
+    "id": "m-straight-jeans",
+    "catalog": "menswear",
+    "title": "Straight-fit jeans",
+    "why": "A straight leg falls smoothly from the hip without clinging.",
+    "reasons": [],
+    "tip": "Aim for a slight break, or none, where the hem meets your shoe.",
+    "art": "jeans",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/m-jeans.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel",
+     "party"
+    ],
+    "fits": [
+     "regular"
+    ]
+   },
+   {
+    "id": "m-chinos",
+    "catalog": "menswear",
+    "title": "Chinos",
+    "why": "A mid-to-dark straight chino keeps the lower half simple.",
+    "reasons": [],
+    "tip": "A mid-rise works for most; a small cuff suits loafers and sneakers.",
+    "art": "trousers",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "photos/m-chinos.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "office",
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "regular",
+     "fitted"
+    ]
+   },
+   {
+    "id": "m-slim-jeans",
+    "catalog": "menswear",
+    "title": "Slim or tapered jeans",
+    "why": "Slim through the thigh with a gentle taper to the ankle.",
+    "reasons": [],
+    "tip": "Leave room to sit comfortably — a little stretch helps.",
+    "art": "jeans",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/m-jeans.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "everyday",
+     "college",
+     "party"
+    ],
+    "fits": [
+     "fitted"
+    ]
+   },
+   {
+    "id": "m-bomber",
+    "catalog": "menswear",
+    "title": "Bomber jackets",
+    "why": "Volume at the chest and shoulders balances the hips.",
+    "reasons": [],
+    "tip": "The hem should land at your belt line.",
+    "art": "bomber",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/m-bomber.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "everyday",
+     "college",
+     "party"
+    ],
+    "fits": [
+     "regular"
+    ]
+   },
+   {
+    "id": "m-denim-jacket",
+    "catalog": "menswear",
+    "title": "Denim jackets",
+    "why": "A structured shoulder broadens the top line.",
+    "reasons": [],
+    "tip": "Wear it over a tee or hoodie; size up only if you layer knits.",
+    "art": "denim-jacket",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/m-denim-jacket.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "regular",
+     "fitted"
+    ]
+   },
+   {
+    "id": "m-blazer",
+    "catalog": "menswear",
+    "title": "Blazers",
+    "why": "Structured shoulders balance wider hips.",
+    "reasons": [],
+    "tip": "Shoulder seams end at your shoulder; let a little shirt cuff show.",
+    "art": "blazer",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/m-blazer.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "office",
+     "formal",
+     "party",
+     "wedding"
+    ],
+    "fits": [
+     "structured",
+     "fitted"
+    ]
+   },
+   {
+    "id": "m-kurta",
+    "catalog": "menswear",
+    "title": "Kurtas",
+    "why": "A kurta ending mid-thigh or at the knee falls smoothly past the hips.",
+    "reasons": [],
+    "tip": "Hip-to-knee length works for most heights; shorter kurtas pair well with jeans.",
+    "art": "kurta",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/m-kurta.jpg",
+    "category": "traditional",
+    "occasions": [
+     "festive",
+     "everyday",
+     "wedding"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "m-sherwani",
+    "catalog": "menswear",
+    "title": "Sherwanis",
+    "why": "Structured shoulders balance the lower body.",
+    "reasons": [],
+    "tip": "Get the shoulders fitted; the length usually sits just below the knee.",
+    "art": "sherwani",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/m-sherwani.jpg",
+    "category": "traditional",
+    "occasions": [
+     "wedding",
+     "festive"
+    ],
+    "fits": [
+     "structured"
+    ]
+   },
+   {
+    "id": "m-kurta-set",
+    "catalog": "menswear",
+    "title": "Kurta-pyjama sets",
+    "why": "A kurta with churidar or straight pyjama, matching or in contrast.",
+    "reasons": [],
+    "tip": "A tapered churidar suits shorter kurtas; straight pyjamas suit longer ones.",
+    "art": "kurta-set",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/m-kurta-set.jpg",
+    "category": "traditional",
+    "occasions": [
+     "festive",
+     "wedding"
+    ],
+    "fits": [
+     "regular"
+    ]
+   },
+   {
+    "id": "m-sneakers",
+    "catalog": "menswear",
+    "title": "Clean sneakers",
+    "why": "Minimal leather or canvas sneakers.",
+    "reasons": [],
+    "tip": "White or off-white goes with almost everything — keep them clean.",
+    "art": "sneaker",
+    "colors": [
+     {
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/sneakers.jpg",
+    "category": "footwear",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel",
+     "party"
+    ],
+    "fits": []
+   },
+   {
+    "id": "m-loafers",
+    "catalog": "menswear",
+    "title": "Loafers",
+    "why": "Slip-ons that dress up chinos and tailored trousers.",
+    "reasons": [],
+    "tip": "No-show socks keep the ankle clean in warm weather.",
+    "art": "loafer",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/loafers.jpg",
+    "category": "footwear",
+    "occasions": [
+     "office",
+     "party",
+     "everyday",
+     "formal"
+    ],
+    "fits": []
+   },
+   {
+    "id": "m-derby",
+    "catalog": "menswear",
+    "title": "Derby shoes",
+    "why": "Open-laced leather shoes that suit wider feet.",
+    "reasons": [],
+    "tip": "Match your belt to your shoes.",
+    "art": "derby",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/derby.jpg",
+    "category": "footwear",
+    "occasions": [
+     "office",
+     "formal"
+    ],
+    "fits": []
+   },
+   {
+    "id": "m-belt",
+    "catalog": "menswear",
+    "title": "Belts",
+    "why": "A leather belt matched to your shoes.",
+    "reasons": [],
+    "tip": "A 3–3.5 cm width suits most trousers.",
+    "art": "belt",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "photos/belt.jpg",
+    "category": "accessories",
+    "occasions": [
+     "office",
+     "formal",
+     "everyday"
+    ],
+    "fits": []
+   },
+   {
+    "id": "m-watch",
+    "catalog": "menswear",
+    "title": "Watches",
+    "why": "A simple dial on a leather or metal strap.",
+    "reasons": [],
+    "tip": "Match the strap to your belt and shoes, or the metal to your undertone.",
+    "art": "watch",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "photos/watch.jpg",
+    "category": "accessories",
+    "occasions": [
+     "office",
+     "everyday",
+     "formal"
+    ],
+    "fits": []
+   },
+   {
+    "id": "m-tie",
+    "catalog": "menswear",
+    "title": "Ties & pocket squares",
+    "why": "A tie in an accent shade with a pocket square that picks up a second colour.",
+    "reasons": [],
+    "tip": "Don't match the tie and pocket square exactly — echo a colour instead.",
+    "art": "tie",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/tie.jpg",
+    "category": "accessories",
+    "occasions": [
+     "office",
+     "formal",
+     "wedding"
+    ],
+    "fits": []
+   }
+  ],
+  "shape_notes": [
+   "Structure and detail on top — collars, chest pockets, structured shoulders — balance the hips.",
+   "Darker, straight or relaxed trousers keep the lower half simple.",
+   "Avoid very skinny trousers that emphasise the hip-to-ankle contrast."
+  ],
+  "fit_guide": [
+   {
+    "topic": "Fit & proportion",
+    "tip": "Shoulder seams should sit at the edge of your shoulders; most fit problems elsewhere can be tailored."
+   },
+   {
+    "topic": "Trouser length & break",
+    "tip": "A slight break (one soft fold at the shoe) suits most trousers; slim trousers look best with no break."
+   },
+   {
+    "topic": "Shirt length",
+    "tip": "Untucked shirts should end around mid-fly; if it covers your seat, it's meant to be tucked."
+   },
+   {
+    "topic": "Jacket length",
+    "tip": "A blazer should cover your seat; casual jackets look best ending at the belt."
+   },
+   {
+    "topic": "Layering",
+    "tip": "Go from thin to thick: tee, then shirt or overshirt, then jacket."
+   },
+   {
+    "topic": "Fabric & climate",
+    "tip": "Linen and cotton for hot, humid days; wool blends for air-conditioned offices and cooler months."
+   }
+  ],
+  "occasion_labels": {
+   "everyday": "Everyday",
+   "college": "College",
+   "office": "Office",
+   "formal": "Formal",
+   "festive": "Festive",
+   "wedding": "Weddings",
+   "party": "Parties",
+   "travel": "Travel & weekends"
+  }
+ },
+ "bodyWomen": {
+  "module": "body",
+  "catalog_version": 2,
+  "catalog": "womenswear",
+  "catalog_label": "Women's styling",
+  "catalog_source": "profile",
+  "needs_choice": false,
+  "preferences": {
+   "catalog": "womenswear",
+   "catalog_source": "profile"
+  },
+  "palette": {
+   "result_id": "color-1",
+   "season": "Deep Autumn",
+   "colors": [
+    {
+     "name": "Terracotta",
+     "hex": "#C2593F"
+    },
+    {
+     "name": "Deep Teal",
+     "hex": "#005F60"
+    },
+    {
+     "name": "Olive",
+     "hex": "#6B705C"
+    },
+    {
+     "name": "Cream",
+     "hex": "#F3E9D2"
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#6B1D2F"
+    },
+    {
+     "name": "Mustard",
+     "hex": "#E3A857"
+    }
+   ]
+  },
+  "shape_label": "Pear",
+  "categories": [
+   {
+    "id": "tops",
+    "label": "Tops"
+   },
+   {
+    "id": "bottoms",
+    "label": "Bottoms"
+   },
+   {
+    "id": "dresses",
+    "label": "Dresses & one-pieces"
+   },
+   {
+    "id": "outerwear",
+    "label": "Outerwear & tailoring"
+   },
+   {
+    "id": "traditional",
+    "label": "Traditional & festive"
+   },
+   {
+    "id": "footwear",
+    "label": "Footwear"
+   },
+   {
+    "id": "accessories",
+    "label": "Accessories"
+   }
+  ],
+  "items": [
+   {
+    "id": "w-offshoulder",
+    "catalog": "womenswear",
+    "title": "Off-shoulder tops",
+    "why": "Width at the shoulders balances the hips.",
+    "reasons": [],
+    "tip": "A wide elastic band stays put more comfortably.",
+    "art": "blouse",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "offshouldertop.jpg",
+    "category": "tops",
+    "occasions": [
+     "party",
+     "everyday",
+     "travel"
+    ],
+    "fits": [
+     "fitted",
+     "regular"
+    ]
+   },
+   {
+    "id": "w-boatneck",
+    "catalog": "womenswear",
+    "title": "Boat-neck tops",
+    "why": "A wide neckline balances the hips.",
+    "reasons": [],
+    "tip": "Tuck the front in to show the waist.",
+    "art": "blouse",
+    "colors": [
+     {
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "boatnecktop.jpg",
+    "category": "tops",
+    "occasions": [
+     "office",
+     "everyday"
+    ],
+    "fits": [
+     "regular",
+     "fitted"
+    ]
+   },
+   {
+    "id": "w-puff-sleeve",
+    "catalog": "womenswear",
+    "title": "Puff-sleeve tops",
+    "why": "Volume at the shoulders balances the hips.",
+    "reasons": [],
+    "tip": "Keep bottoms simple to balance the sleeves.",
+    "art": "blouse",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "puffsleevetop.jpg",
+    "category": "tops",
+    "occasions": [
+     "everyday",
+     "party",
+     "college"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "w-wide-leg",
+    "catalog": "womenswear",
+    "title": "Wide-leg trousers",
+    "why": "A wide leg falls straight from the hip.",
+    "reasons": [],
+    "tip": "Hem them to just skim the floor in the shoes you'll wear.",
+    "art": "wide-trousers",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "photos/w-wide-leg.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "office",
+     "everyday",
+     "party",
+     "travel"
+    ],
+    "fits": [
+     "relaxed",
+     "regular"
+    ]
+   },
+   {
+    "id": "w-flared",
+    "catalog": "womenswear",
+    "title": "Flared trousers",
+    "why": "The flare balances the line from hip to hem.",
+    "reasons": [],
+    "tip": "Wear with a small heel or platform to keep the line long.",
+    "art": "flared-trousers",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "flaredpants.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "everyday",
+     "party",
+     "office"
+    ],
+    "fits": [
+     "fitted",
+     "regular"
+    ]
+   },
+   {
+    "id": "w-bootcut",
+    "catalog": "womenswear",
+    "title": "Bootcut jeans",
+    "why": "Falls smoothly from the hip.",
+    "reasons": [],
+    "tip": "Mid or dark washes look polished.",
+    "art": "flared-trousers",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "bootcutjeans.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "fitted",
+     "regular"
+    ]
+   },
+   {
+    "id": "w-fit-flare",
+    "catalog": "womenswear",
+    "title": "Fit-and-flare dresses",
+    "why": "Fitted at the waist, flowing over the hips.",
+    "reasons": [],
+    "tip": "A knee-length hem is the easiest to wear day to night.",
+    "art": "dress",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "flareddresses.jpg",
+    "category": "dresses",
+    "occasions": [
+     "party",
+     "office",
+     "everyday"
+    ],
+    "fits": [
+     "fitted",
+     "regular"
+    ]
+   },
+   {
+    "id": "w-shift",
+    "catalog": "womenswear",
+    "title": "Shift dresses",
+    "why": "An easy, straight shape.",
+    "reasons": [],
+    "tip": "Add a belt only if you want to mark the waist.",
+    "art": "dress",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "shiftdresses.jpg",
+    "category": "dresses",
+    "occasions": [
+     "office",
+     "everyday"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "w-bodycon",
+    "catalog": "womenswear",
+    "title": "Bodycon dresses",
+    "why": "A close fit that follows your silhouette.",
+    "reasons": [],
+    "tip": "Thicker, structured knits are more forgiving than thin jersey.",
+    "art": "dress",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "bodycondresses.jpg",
+    "category": "dresses",
+    "occasions": [
+     "party"
+    ],
+    "fits": [
+     "fitted"
+    ]
+   },
+   {
+    "id": "w-cropped-jacket",
+    "catalog": "womenswear",
+    "title": "Cropped jackets",
+    "why": "Ends above the hips and highlights the waist.",
+    "reasons": [],
+    "tip": "Pair with high-waisted bottoms.",
+    "art": "bomber",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "croppedjacket.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "everyday",
+     "party",
+     "college"
+    ],
+    "fits": [
+     "fitted",
+     "regular"
+    ]
+   },
+   {
+    "id": "w-belted-blazer",
+    "catalog": "womenswear",
+    "title": "Belted blazers",
+    "why": "Structure that keeps the waist visible.",
+    "reasons": [],
+    "tip": "Belt at the natural waist, not the hips.",
+    "art": "blazer",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "beltedblazer.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "office",
+     "formal",
+     "party"
+    ],
+    "fits": [
+     "structured",
+     "fitted"
+    ]
+   },
+   {
+    "id": "w-soft-blazer",
+    "catalog": "womenswear",
+    "title": "Soft-shoulder blazers",
+    "why": "Soft-structured blazers without heavy shoulder pads.",
+    "reasons": [],
+    "tip": "Wear open for a long vertical line.",
+    "art": "blazer",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "minimalshoulderblazer.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "office",
+     "formal",
+     "everyday"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "w-saree",
+    "catalog": "womenswear",
+    "title": "Sarees & blouses",
+    "why": "A fitted blouse with interest at the neckline draws the eye up.",
+    "reasons": [],
+    "tip": "Lighter fabrics like georgette or chiffon drape closely; silks and organza hold shape.",
+    "art": "saree",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/w-saree.jpg",
+    "category": "traditional",
+    "occasions": [
+     "festive",
+     "wedding",
+     "formal"
+    ],
+    "fits": []
+   },
+   {
+    "id": "w-kurta-set",
+    "catalog": "womenswear",
+    "title": "Kurtas & kurta sets",
+    "why": "An A-line kurta flows past the hips.",
+    "reasons": [],
+    "tip": "Side slits make long kurtas easier to move in.",
+    "art": "kurta-w",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/w-kurta-set.jpg",
+    "category": "traditional",
+    "occasions": [
+     "everyday",
+     "office",
+     "festive",
+     "college"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "w-lehenga",
+    "catalog": "womenswear",
+    "title": "Lehengas",
+    "why": "A flared skirt, blouse and dupatta for weddings and festive events.",
+    "reasons": [],
+    "tip": "Lighter lehengas are easier to dance in.",
+    "art": "lehenga",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/w-lehenga.jpg",
+    "category": "traditional",
+    "occasions": [
+     "wedding",
+     "festive",
+     "party"
+    ],
+    "fits": []
+   },
+   {
+    "id": "w-block-heels",
+    "catalog": "womenswear",
+    "title": "Block heels",
+    "why": "Stable, comfortable height.",
+    "reasons": [],
+    "tip": "5–7 cm is comfortable for long days.",
+    "art": "heel",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "photos/block-heels.jpg",
+    "category": "footwear",
+    "occasions": [
+     "office",
+     "party",
+     "formal",
+     "wedding"
+    ],
+    "fits": []
+   },
+   {
+    "id": "w-flats",
+    "catalog": "womenswear",
+    "title": "Flats, juttis & loafers",
+    "why": "Comfortable everyday shoes.",
+    "reasons": [],
+    "tip": "Juttis suit kurta sets; loafers suit trousers.",
+    "art": "flat",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "photos/flats.jpg",
+    "category": "footwear",
+    "occasions": [
+     "everyday",
+     "office",
+     "college",
+     "festive"
+    ],
+    "fits": []
+   },
+   {
+    "id": "w-sneakers",
+    "catalog": "womenswear",
+    "title": "Sneakers",
+    "why": "Clean sneakers for casual outfits and travel.",
+    "reasons": [],
+    "tip": "White sneakers go with dresses as well as jeans.",
+    "art": "sneaker",
+    "colors": [
+     {
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/sneakers.jpg",
+    "category": "footwear",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": []
+   },
+   {
+    "id": "w-handbag",
+    "catalog": "womenswear",
+    "title": "Handbags",
+    "why": "A structured tote for work and a small bag for evenings.",
+    "reasons": [],
+    "tip": "A neutral from your palette goes with most outfits.",
+    "art": "handbag",
+    "colors": [
+     {
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "name": "Terracotta",
+      "hex": "#C2593F"
+     }
+    ],
+    "photo": "photos/handbag.jpg",
+    "category": "accessories",
+    "occasions": [
+     "office",
+     "everyday",
+     "party"
+    ],
+    "fits": []
+   },
+   {
+    "id": "w-corset-belt",
+    "catalog": "womenswear",
+    "title": "Corset & wide belts",
+    "why": "Add waist definition and a modern finishing touch.",
+    "reasons": [],
+    "tip": "Wear over dresses or long shirts.",
+    "art": "belt",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     }
+    ],
+    "photo": "corsetbelt.jpg",
+    "category": "accessories",
+    "occasions": [
+     "party",
+     "everyday"
+    ],
+    "fits": [
+     "fitted",
+     "structured"
+    ]
+   },
+   {
+    "id": "w-scarf",
+    "catalog": "womenswear",
+    "title": "Scarves & dupattas",
+    "why": "A quick way to wear your best colours near your face.",
+    "reasons": [],
+    "tip": "Drape vertically for length, or loop for warmth.",
+    "art": "scarf",
+    "colors": [
+     {
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ],
+    "photo": "photos/w-scarf.jpg",
+    "category": "accessories",
+    "occasions": [
+     "everyday",
+     "festive",
+     "travel",
+     "office"
+    ],
+    "fits": []
+   }
+  ],
+  "shape_notes": [
+   "Boat, off-shoulder and square necklines bring attention upward.",
+   "Darker or simpler bottoms with brighter tops create balance.",
+   "Straight-leg, bootcut and flared shapes fall smoothly from the hip."
+  ],
+  "fit_guide": [
+   {
+    "topic": "Fit & proportion",
+    "tip": "Choose one focus area per outfit — a fitted top with relaxed bottoms, or the reverse."
+   },
+   {
+    "topic": "Hem lengths",
+    "tip": "Hem trousers for the shoes you'll wear most; midi skirts look best ending just below the widest part of the calf."
+   },
+   {
+    "topic": "Waist definition",
+    "tip": "A front tuck, a belt or a wrap is optional — use it when you want to mark the waist."
+   },
+   {
+    "topic": "Layering",
+    "tip": "Long open layers add length; cropped layers mark the waist."
+   },
+   {
+    "topic": "Fabric & climate",
+    "tip": "Cotton, linen and rayon breathe in heat; structured fabrics hold shape for work."
+   },
+   {
+    "topic": "Comfort & movement",
+    "tip": "If you can't sit, reach or walk easily, the fit is wrong — not you."
+   }
+  ],
+  "occasion_labels": {
+   "everyday": "Everyday",
+   "college": "College",
+   "office": "Office",
+   "formal": "Formal",
+   "festive": "Festive",
+   "wedding": "Weddings",
+   "party": "Parties",
+   "travel": "Travel & weekends"
+  }
+ },
+ "bodyNeedsChoice": {
+  "module": "body",
+  "catalog_version": 2,
+  "catalog": "unisex",
+  "catalog_label": "Unisex styling",
+  "catalog_source": "default",
+  "needs_choice": true,
+  "preferences": {
+   "catalog": "unisex",
+   "catalog_source": "default"
+  },
+  "palette": null,
+  "shape_label": "Triangle (Pear)",
+  "categories": [
+   {
+    "id": "tops",
+    "label": "Tops"
+   },
+   {
+    "id": "bottoms",
+    "label": "Bottoms"
+   },
+   {
+    "id": "outerwear",
+    "label": "Outerwear & tailoring"
+   },
+   {
+    "id": "traditional",
+    "label": "Traditional & festive"
+   },
+   {
+    "id": "footwear",
+    "label": "Footwear"
+   },
+   {
+    "id": "accessories",
+    "label": "Accessories"
+   }
+  ],
+  "items": [
+   {
+    "id": "u-oversized-tee",
+    "catalog": "unisex",
+    "title": "Oversized T-shirts",
+    "why": "A roomier top balances the hips.",
+    "reasons": [],
+    "tip": "Balance the volume with straight or tapered bottoms.",
+    "art": "tee",
+    "colors": [],
+    "photo": "photos/u-oversized-tee.jpg",
+    "category": "tops",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "oversized",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "u-hoodie",
+    "catalog": "unisex",
+    "title": "Hoodies & sweatshirts",
+    "why": "Upper-body volume balances the hips.",
+    "reasons": [],
+    "tip": "Choose a hem with a rib so it sits neatly at the hip.",
+    "art": "hoodie",
+    "colors": [],
+    "photo": "photos/u-hoodie.jpg",
+    "category": "tops",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "relaxed",
+     "oversized"
+    ]
+   },
+   {
+    "id": "u-relaxed-shirt",
+    "catalog": "unisex",
+    "title": "Relaxed shirts",
+    "why": "A loose cotton or linen shirt, worn open or buttoned.",
+    "reasons": [],
+    "tip": "Roll the sleeves twice for an easy look.",
+    "art": "shirt",
+    "colors": [],
+    "photo": "photos/u-relaxed-shirt.jpg",
+    "category": "tops",
+    "occasions": [
+     "everyday",
+     "office",
+     "travel",
+     "college"
+    ],
+    "fits": [
+     "relaxed",
+     "regular"
+    ]
+   },
+   {
+    "id": "u-straight-denim",
+    "catalog": "unisex",
+    "title": "Straight-leg denim",
+    "why": "A straight, mid-rise jean.",
+    "reasons": [],
+    "tip": "A slight crop shows off sneakers.",
+    "art": "jeans",
+    "colors": [],
+    "photo": "photos/m-jeans.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel",
+     "party"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "u-relaxed-trousers",
+    "catalog": "unisex",
+    "title": "Relaxed trousers",
+    "why": "Pleated or elastic-waist trousers with drape.",
+    "reasons": [],
+    "tip": "Taper slightly at the ankle if you're shorter.",
+    "art": "wide-trousers",
+    "colors": [],
+    "photo": "photos/u-relaxed-trousers.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "office",
+     "everyday",
+     "travel"
+    ],
+    "fits": [
+     "relaxed",
+     "oversized"
+    ]
+   },
+   {
+    "id": "u-cargo",
+    "catalog": "unisex",
+    "title": "Cargo & utility trousers",
+    "why": "Practical trousers with pockets.",
+    "reasons": [],
+    "tip": "Keep the top streamlined.",
+    "art": "cargo",
+    "colors": [],
+    "photo": "photos/m-cargo.jpg",
+    "category": "bottoms",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "relaxed"
+    ]
+   },
+   {
+    "id": "u-denim-jacket",
+    "catalog": "unisex",
+    "title": "Denim jackets",
+    "why": "Structure at the shoulders balances the hips.",
+    "reasons": [],
+    "tip": "Size up for a boxy fit over hoodies.",
+    "art": "denim-jacket",
+    "colors": [],
+    "photo": "photos/m-denim-jacket.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": [
+     "regular",
+     "oversized"
+    ]
+   },
+   {
+    "id": "u-chore-jacket",
+    "catalog": "unisex",
+    "title": "Chore jackets & overshirts",
+    "why": "Boxy cotton jackets with patch pockets.",
+    "reasons": [],
+    "tip": "Wear open over a tee or knit.",
+    "art": "overshirt",
+    "colors": [],
+    "photo": "photos/u-chore-jacket.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "everyday",
+     "office",
+     "travel"
+    ],
+    "fits": [
+     "relaxed",
+     "regular"
+    ]
+   },
+   {
+    "id": "u-layer",
+    "catalog": "unisex",
+    "title": "Minimalist layering pieces",
+    "why": "Light cardigans, vests and zip knits.",
+    "reasons": [],
+    "tip": "Stick to two or three palette shades for easy mixing.",
+    "art": "cardigan",
+    "colors": [],
+    "photo": "photos/u-cardigan.jpg",
+    "category": "outerwear",
+    "occasions": [
+     "office",
+     "everyday",
+     "travel"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "u-kurta",
+    "catalog": "unisex",
+    "title": "Straight kurtas with trousers",
+    "why": "A simple straight kurta worn with straight trousers or jeans.",
+    "reasons": [],
+    "tip": "Plain fabrics with a contrast placket keep it versatile.",
+    "art": "kurta",
+    "colors": [],
+    "photo": "photos/u-kurta.jpg",
+    "category": "traditional",
+    "occasions": [
+     "festive",
+     "everyday",
+     "wedding"
+    ],
+    "fits": [
+     "regular",
+     "relaxed"
+    ]
+   },
+   {
+    "id": "u-jacket-trad",
+    "catalog": "unisex",
+    "title": "Bandhgala & short jackets",
+    "why": "A structured band-collar jacket over a kurta or tee.",
+    "reasons": [],
+    "tip": "Dark palette shades look festive without being loud.",
+    "art": "nehru-jacket",
+    "colors": [],
+    "photo": "photos/u-bandhgala.jpg",
+    "category": "traditional",
+    "occasions": [
+     "festive",
+     "wedding",
+     "party"
+    ],
+    "fits": [
+     "structured"
+    ]
+   },
+   {
+    "id": "u-sneakers",
+    "catalog": "unisex",
+    "title": "Sneakers",
+    "why": "Low-top leather or canvas sneakers.",
+    "reasons": [],
+    "tip": "One light and one dark pair cover most outfits.",
+    "art": "sneaker",
+    "colors": [],
+    "photo": "photos/sneakers.jpg",
+    "category": "footwear",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel",
+     "party"
+    ],
+    "fits": []
+   },
+   {
+    "id": "u-boots",
+    "catalog": "unisex",
+    "title": "Boots",
+    "why": "Chelsea or lace-up boots.",
+    "reasons": [],
+    "tip": "Treat leather before the rainy season.",
+    "art": "boot",
+    "colors": [],
+    "photo": "photos/chelsea-boots.jpg",
+    "category": "footwear",
+    "occasions": [
+     "everyday",
+     "travel",
+     "office"
+    ],
+    "fits": []
+   },
+   {
+    "id": "u-loafers",
+    "catalog": "unisex",
+    "title": "Loafers",
+    "why": "Easy slip-ons that smarten up trousers.",
+    "reasons": [],
+    "tip": "Chunky soles suit relaxed trousers.",
+    "art": "loafer",
+    "colors": [],
+    "photo": "photos/loafers.jpg",
+    "category": "footwear",
+    "occasions": [
+     "office",
+     "everyday",
+     "party"
+    ],
+    "fits": []
+   },
+   {
+    "id": "u-bag",
+    "catalog": "unisex",
+    "title": "Crossbody bags & totes",
+    "why": "Hands-free bags in leather or canvas.",
+    "reasons": [],
+    "tip": "Wear the strap so the bag sits at the hip.",
+    "art": "backpack",
+    "colors": [],
+    "photo": "photos/backpack.jpg",
+    "category": "accessories",
+    "occasions": [
+     "everyday",
+     "college",
+     "travel"
+    ],
+    "fits": []
+   },
+   {
+    "id": "u-watch",
+    "catalog": "unisex",
+    "title": "Watches & simple jewellery",
+    "why": "A simple watch, a fine chain or small hoops.",
+    "reasons": [],
+    "tip": "Choose one metal tone and repeat it.",
+    "art": "watch",
+    "colors": [],
+    "photo": "photos/watch.jpg",
+    "category": "accessories",
+    "occasions": [
+     "office",
+     "everyday"
+    ],
+    "fits": []
+   }
+  ],
+  "shape_notes": [
+   "Keep volume and detail on top; choose straight bottoms.",
+   "Darker trousers with lighter tops create balance."
+  ],
+  "fit_guide": [
+   {
+    "topic": "Fit & proportion",
+    "tip": "Pair one roomy piece with one neater piece so the outfit keeps shape."
+   },
+   {
+    "topic": "Lengths",
+    "tip": "A slight crop at the ankle suits sneakers and loafers; full length suits boots."
+   },
+   {
+    "topic": "Layering",
+    "tip": "Build around a base tee or shirt, then add an overshirt, knit or jacket."
+   },
+   {
+    "topic": "Colour coordination",
+    "tip": "Stick to two or three palette shades per outfit for easy mixing."
+   },
+   {
+    "topic": "Fabric & climate",
+    "tip": "Choose breathable cotton and linen for heat; heavier twill and wool for cooler days."
+   },
+   {
+    "topic": "Comfort & movement",
+    "tip": "Relaxed shouldn't mean sloppy — check the shoulders still sit near your shoulder line."
+   }
+  ],
+  "occasion_labels": {
+   "everyday": "Everyday",
+   "college": "College",
+   "office": "Office",
+   "formal": "Formal",
+   "festive": "Festive",
+   "wedding": "Weddings",
+   "party": "Parties",
+   "travel": "Travel & weekends"
+  }
+ },
+ "faceMen": {
+  "module": "face",
+  "catalog_version": 2,
+  "catalog": "menswear",
+  "catalog_label": "Men's styling",
+  "catalog_source": "profile",
+  "needs_choice": false,
+  "preferences": {
+   "catalog": "menswear",
+   "catalog_source": "profile",
+   "hair_texture": "curly"
+  },
+  "palette": {
+   "result_id": "color-1",
+   "season": "Deep Autumn",
+   "colors": [
+    {
+     "name": "Terracotta",
+     "hex": "#C2593F"
+    },
+    {
+     "name": "Deep Teal",
+     "hex": "#005F60"
+    },
+    {
+     "name": "Olive",
+     "hex": "#6B705C"
+    },
+    {
+     "name": "Cream",
+     "hex": "#F3E9D2"
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#6B1D2F"
+    },
+    {
+     "name": "Mustard",
+     "hex": "#E3A857"
+    }
+   ]
+  },
+  "hair": [
+   {
+    "id": "m-hair-curly-taper",
+    "catalog": "menswear",
+    "title": "Curly top with taper",
+    "why": "Keeping curls taller than wide adds length.",
+    "reasons": [
+     "Suits the hair texture you told us",
+     "Medium upkeep"
+    ],
+    "tip": "Apply curl cream to damp hair and avoid brushing curls when dry.",
+    "art": "hair-curly-short",
+    "colors": [],
+    "photo": "photos/hair-curly-short.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium"
+    ],
+    "maintenance": "medium",
+    "textures": [
+     "wavy",
+     "curly",
+     "coily"
+    ]
+   },
+   {
+    "id": "m-hair-twists",
+    "catalog": "menswear",
+    "title": "Short twists or natural coils",
+    "why": "Height on top elongates.",
+    "reasons": [
+     "Suits the hair texture you told us",
+     "Medium upkeep"
+    ],
+    "tip": "Moisturise regularly and sleep on a satin pillowcase to reduce frizz.",
+    "art": "hair-curly-short",
+    "colors": [],
+    "photo": "photos/hair-curly-short.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium"
+    ],
+    "maintenance": "medium",
+    "textures": [
+     "coily",
+     "curly"
+    ]
+   },
+   {
+    "id": "m-hair-crop",
+    "catalog": "menswear",
+    "title": "Textured crop",
+    "why": "Texture on top adds height; keep the sides short.",
+    "reasons": [
+     "Low upkeep"
+    ],
+    "tip": "Ask for scissor-cut texture on top with a low or mid taper; style with a matte clay.",
+    "art": "hair-crop",
+    "colors": [],
+    "photo": "photos/hair-crop.jpg",
+    "group": "hair",
+    "lengths": [
+     "short"
+    ],
+    "maintenance": "low"
+   },
+   {
+    "id": "m-hair-side-part",
+    "catalog": "menswear",
+    "title": "Side part",
+    "why": "An off-centre part adds asymmetry and length.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "A natural part grows out more gracefully than a shaved 'hard' part.",
+    "art": "hair-sidepart",
+    "colors": [],
+    "photo": "photos/hair-sidepart.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium"
+    ],
+    "maintenance": "medium"
+   }
+  ],
+  "hair_alternatives": [
+   {
+    "id": "m-hair-quiff",
+    "catalog": "menswear",
+    "title": "Quiff",
+    "why": "Lift at the front elongates the face.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Blow-dry upwards and finish with a light paste.",
+    "art": "hair-quiff",
+    "colors": [],
+    "photo": "photos/hair-quiff.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "m-hair-pompadour",
+    "catalog": "menswear",
+    "title": "Pompadour",
+    "why": "Height at the crown makes the face look longer.",
+    "reasons": [
+     "High upkeep"
+    ],
+    "tip": "Needs daily styling with a pomade and blow-dryer.",
+    "art": "hair-pompadour",
+    "colors": [],
+    "photo": "photos/hair-pompadour.jpg",
+    "group": "hair",
+    "lengths": [
+     "medium"
+    ],
+    "maintenance": "high"
+   },
+   {
+    "id": "m-hair-fade",
+    "catalog": "menswear",
+    "title": "Fade variations",
+    "why": "A mid or high fade slims the sides.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Low fades grow out softer; skin fades need a trim every 2–3 weeks.",
+    "art": "hair-fade",
+    "colors": [],
+    "photo": "photos/hair-fade.jpg",
+    "group": "hair",
+    "lengths": [
+     "short"
+    ],
+    "maintenance": "medium"
+   }
+  ],
+  "texture_known": true,
+  "eyewear": [
+   {
+    "id": "eye-rect",
+    "catalog": "menswear",
+    "title": "Rectangular frames",
+    "why": "Angular lines add definition.",
+    "reasons": [],
+    "tip": "A slightly wider-than-tall lens suits most faces.",
+    "art": "frames-rect",
+    "colors": [],
+    "photo": "photos/frames-rect.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-browline",
+    "catalog": "menswear",
+    "title": "Browline frames",
+    "why": "The defined upper line adds structure.",
+    "reasons": [],
+    "tip": "The top rim should follow your eyebrows.",
+    "art": "frames-browline",
+    "colors": [],
+    "photo": "wayfarer.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-square",
+    "catalog": "menswear",
+    "title": "Square acetate frames",
+    "why": "Angles contrast soft curves.",
+    "reasons": [],
+    "tip": "Check that your eyes sit near the centre of each lens.",
+    "art": "frames-square",
+    "colors": [],
+    "photo": "oversizedframes.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-round",
+    "catalog": "menswear",
+    "title": "Round frames",
+    "why": "Soft circles that contrast with angles.",
+    "reasons": [],
+    "tip": "Make sure the frame is about as wide as your face at the temples.",
+    "art": "frames-round",
+    "colors": [],
+    "photo": "roundframes.jpg",
+    "group": "eyewear"
+   }
+  ],
+  "accessories": [
+   {
+    "id": "m-acc-watch",
+    "catalog": "menswear",
+    "title": "Watches",
+    "why": "A rectangular dial adds an angular accent.",
+    "reasons": [],
+    "tip": "Match the metal to your undertone and the strap to your belt.",
+    "art": "watch",
+    "colors": [],
+    "photo": "photos/watch.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "m-acc-chain",
+    "catalog": "menswear",
+    "title": "Fine chains",
+    "why": "A slightly longer chain creates a vertical line.",
+    "reasons": [],
+    "tip": "Keep it close to the collarbone.",
+    "art": "necklace",
+    "colors": [],
+    "photo": "photos/chain.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "m-acc-cap",
+    "catalog": "menswear",
+    "title": "Caps & hats",
+    "why": "A taller crown adds length.",
+    "reasons": [],
+    "tip": "Choose crown height to suit your face length.",
+    "art": "cap",
+    "colors": [],
+    "photo": "photos/cap.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "m-acc-bracelet",
+    "catalog": "menswear",
+    "title": "Bracelets",
+    "why": "Leather, bead or metal bracelets.",
+    "reasons": [],
+    "tip": "Wear on the wrist opposite your watch.",
+    "art": "bracelet",
+    "colors": [],
+    "photo": "photos/bracelet.jpg",
+    "group": "accessories"
+   }
+  ],
+  "grooming": [
+   {
+    "topic": "Haircut schedule",
+    "tip": "Short cuts and fades look best trimmed every 2–4 weeks; longer styles every 6–8 weeks."
+   },
+   {
+    "topic": "Styling products",
+    "tip": "Matte clay or paste for texture, cream for a natural finish, curl cream for curls — use a pea-sized amount."
+   },
+   {
+    "topic": "Eyebrows",
+    "tip": "If you want tidier brows, remove only stray hairs between them and keep the natural shape."
+   },
+   {
+    "topic": "Watch & accessories",
+    "tip": "Wear one watch and keep other accessories to one or two pieces in the same metal tone."
+   },
+   {
+    "topic": "Profile photos",
+    "tip": "Face soft window light, hold the camera at eye level and wear a solid palette shade near your face."
+   }
+  ],
+  "makeup": null
+ },
+ "faceMenPrompt": {
+  "module": "face",
+  "catalog_version": 2,
+  "catalog": "menswear",
+  "catalog_label": "Men's styling",
+  "catalog_source": "profile",
+  "needs_choice": false,
+  "preferences": {
+   "catalog": "menswear",
+   "catalog_source": "profile"
+  },
+  "palette": null,
+  "hair": [
+   {
+    "id": "m-hair-crop",
+    "catalog": "menswear",
+    "title": "Textured crop",
+    "why": "Texture on top adds height; keep the sides short.",
+    "reasons": [
+     "Low upkeep"
+    ],
+    "tip": "Ask for scissor-cut texture on top with a low or mid taper; style with a matte clay.",
+    "art": "hair-crop",
+    "colors": [],
+    "photo": "photos/hair-crop.jpg",
+    "group": "hair",
+    "lengths": [
+     "short"
+    ],
+    "maintenance": "low"
+   },
+   {
+    "id": "m-hair-side-part",
+    "catalog": "menswear",
+    "title": "Side part",
+    "why": "An off-centre part adds asymmetry and length.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "A natural part grows out more gracefully than a shaved 'hard' part.",
+    "art": "hair-sidepart",
+    "colors": [],
+    "photo": "photos/hair-sidepart.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "m-hair-quiff",
+    "catalog": "menswear",
+    "title": "Quiff",
+    "why": "Lift at the front elongates the face.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Blow-dry upwards and finish with a light paste.",
+    "art": "hair-quiff",
+    "colors": [],
+    "photo": "photos/hair-quiff.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "m-hair-pompadour",
+    "catalog": "menswear",
+    "title": "Pompadour",
+    "why": "Height at the crown makes the face look longer.",
+    "reasons": [
+     "High upkeep"
+    ],
+    "tip": "Needs daily styling with a pomade and blow-dryer.",
+    "art": "hair-pompadour",
+    "colors": [],
+    "photo": "photos/hair-pompadour.jpg",
+    "group": "hair",
+    "lengths": [
+     "medium"
+    ],
+    "maintenance": "high"
+   }
+  ],
+  "hair_alternatives": [
+   {
+    "id": "m-hair-fade",
+    "catalog": "menswear",
+    "title": "Fade variations",
+    "why": "A mid or high fade slims the sides.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Low fades grow out softer; skin fades need a trim every 2–3 weeks.",
+    "art": "hair-fade",
+    "colors": [],
+    "photo": "photos/hair-fade.jpg",
+    "group": "hair",
+    "lengths": [
+     "short"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "m-hair-long",
+    "catalog": "menswear",
+    "title": "Longer hairstyles",
+    "why": "Keep length past the chin with face-framing layers.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Long layers stop it sitting bulky; tie it into a low bun for formal events.",
+    "art": "hair-long",
+    "colors": [],
+    "photo": "photos/hair-long-m.jpg",
+    "group": "hair",
+    "lengths": [
+     "long"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "m-hair-bun",
+    "catalog": "menswear",
+    "title": "Top knot or low bun",
+    "why": "A higher knot adds length.",
+    "reasons": [
+     "Low upkeep"
+    ],
+    "tip": "Use a soft elastic to avoid breakage.",
+    "art": "hair-bun",
+    "colors": [],
+    "photo": "photos/hair-bun.jpg",
+    "group": "hair",
+    "lengths": [
+     "long"
+    ],
+    "maintenance": "low"
+   }
+  ],
+  "texture_known": false,
+  "eyewear": [
+   {
+    "id": "eye-rect",
+    "catalog": "menswear",
+    "title": "Rectangular frames",
+    "why": "Angular lines add definition.",
+    "reasons": [],
+    "tip": "A slightly wider-than-tall lens suits most faces.",
+    "art": "frames-rect",
+    "colors": [],
+    "photo": "photos/frames-rect.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-browline",
+    "catalog": "menswear",
+    "title": "Browline frames",
+    "why": "The defined upper line adds structure.",
+    "reasons": [],
+    "tip": "The top rim should follow your eyebrows.",
+    "art": "frames-browline",
+    "colors": [],
+    "photo": "wayfarer.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-square",
+    "catalog": "menswear",
+    "title": "Square acetate frames",
+    "why": "Angles contrast soft curves.",
+    "reasons": [],
+    "tip": "Check that your eyes sit near the centre of each lens.",
+    "art": "frames-square",
+    "colors": [],
+    "photo": "oversizedframes.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-round",
+    "catalog": "menswear",
+    "title": "Round frames",
+    "why": "Soft circles that contrast with angles.",
+    "reasons": [],
+    "tip": "Make sure the frame is about as wide as your face at the temples.",
+    "art": "frames-round",
+    "colors": [],
+    "photo": "roundframes.jpg",
+    "group": "eyewear"
+   }
+  ],
+  "accessories": [
+   {
+    "id": "m-acc-watch",
+    "catalog": "menswear",
+    "title": "Watches",
+    "why": "A rectangular dial adds an angular accent.",
+    "reasons": [],
+    "tip": "Match the metal to your undertone and the strap to your belt.",
+    "art": "watch",
+    "colors": [],
+    "photo": "photos/watch.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "m-acc-chain",
+    "catalog": "menswear",
+    "title": "Fine chains",
+    "why": "A slightly longer chain creates a vertical line.",
+    "reasons": [],
+    "tip": "Keep it close to the collarbone.",
+    "art": "necklace",
+    "colors": [],
+    "photo": "photos/chain.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "m-acc-cap",
+    "catalog": "menswear",
+    "title": "Caps & hats",
+    "why": "A taller crown adds length.",
+    "reasons": [],
+    "tip": "Choose crown height to suit your face length.",
+    "art": "cap",
+    "colors": [],
+    "photo": "photos/cap.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "m-acc-bracelet",
+    "catalog": "menswear",
+    "title": "Bracelets",
+    "why": "Leather, bead or metal bracelets.",
+    "reasons": [],
+    "tip": "Wear on the wrist opposite your watch.",
+    "art": "bracelet",
+    "colors": [],
+    "photo": "photos/bracelet.jpg",
+    "group": "accessories"
+   }
+  ],
+  "grooming": [
+   {
+    "topic": "Haircut schedule",
+    "tip": "Short cuts and fades look best trimmed every 2–4 weeks; longer styles every 6–8 weeks."
+   },
+   {
+    "topic": "Styling products",
+    "tip": "Matte clay or paste for texture, cream for a natural finish, curl cream for curls — use a pea-sized amount."
+   },
+   {
+    "topic": "Eyebrows",
+    "tip": "If you want tidier brows, remove only stray hairs between them and keep the natural shape."
+   },
+   {
+    "topic": "Watch & accessories",
+    "tip": "Wear one watch and keep other accessories to one or two pieces in the same metal tone."
+   },
+   {
+    "topic": "Profile photos",
+    "tip": "Face soft window light, hold the camera at eye level and wear a solid palette shade near your face."
+   }
+  ],
+  "makeup": null
+ },
+ "faceWomenMakeup": {
+  "module": "face",
+  "catalog_version": 2,
+  "catalog": "womenswear",
+  "catalog_label": "Women's styling",
+  "catalog_source": "profile",
+  "needs_choice": false,
+  "preferences": {
+   "catalog": "womenswear",
+   "catalog_source": "profile",
+   "makeup": "yes"
+  },
+  "palette": {
+   "result_id": "color-1",
+   "season": "Deep Autumn",
+   "colors": [
+    {
+     "name": "Terracotta",
+     "hex": "#C2593F"
+    },
+    {
+     "name": "Deep Teal",
+     "hex": "#005F60"
+    },
+    {
+     "name": "Olive",
+     "hex": "#6B705C"
+    },
+    {
+     "name": "Cream",
+     "hex": "#F3E9D2"
+    },
+    {
+     "name": "Burgundy",
+     "hex": "#6B1D2F"
+    },
+    {
+     "name": "Mustard",
+     "hex": "#E3A857"
+    }
+   ]
+  },
+  "hair": [
+   {
+    "id": "w-hair-pixie",
+    "catalog": "womenswear",
+    "title": "Pixie cut",
+    "why": "A side-swept pixie with a soft fringe narrows the forehead.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Book a trim every 4–6 weeks to keep the shape.",
+    "art": "hair-pixie",
+    "colors": [],
+    "photo": "photos/hair-pixie.jpg",
+    "group": "hair",
+    "lengths": [
+     "short"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "w-hair-bob",
+    "catalog": "womenswear",
+    "title": "Chin-length bob",
+    "why": "Volume at the chin balances a narrower chin.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Soft, textured ends feel easier than a blunt line at the jaw.",
+    "art": "hair-bob",
+    "colors": [],
+    "photo": "photos/hair-bob.jpg",
+    "group": "hair",
+    "lengths": [
+     "short"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "w-hair-lob",
+    "catalog": "womenswear",
+    "title": "Layered lob",
+    "why": "Fullness near the jaw balances the forehead.",
+    "reasons": [
+     "Low upkeep"
+    ],
+    "tip": "Ask for layers starting just below the chin.",
+    "art": "hair-lob",
+    "colors": [],
+    "photo": "layeredlob.jpg",
+    "group": "hair",
+    "lengths": [
+     "medium"
+    ],
+    "maintenance": "low"
+   },
+   {
+    "id": "w-hair-curtain-bangs",
+    "catalog": "womenswear",
+    "title": "Curtain bangs",
+    "why": "Parted bangs narrow a wider forehead.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Blow-dry with a round brush away from the face.",
+    "art": "hair-fringe",
+    "colors": [],
+    "photo": "curtainbangs.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium",
+     "long"
+    ],
+    "maintenance": "medium"
+   }
+  ],
+  "hair_alternatives": [
+   {
+    "id": "w-hair-wispy-fringe",
+    "catalog": "womenswear",
+    "title": "Wispy fringe",
+    "why": "Softens a wider forehead.",
+    "reasons": [
+     "Medium upkeep"
+    ],
+    "tip": "Trim the fringe every 3–4 weeks.",
+    "art": "hair-fringe",
+    "colors": [],
+    "photo": "wispyfringe.jpg",
+    "group": "hair",
+    "lengths": [
+     "short",
+     "medium",
+     "long"
+    ],
+    "maintenance": "medium"
+   },
+   {
+    "id": "w-hair-low-pony",
+    "catalog": "womenswear",
+    "title": "Low ponytail",
+    "why": "A low line balances the forehead.",
+    "reasons": [
+     "Low upkeep"
+    ],
+    "tip": "Wrap a strand around the elastic for a polished finish.",
+    "art": "hair-ponytail",
+    "colors": [],
+    "photo": "lowpony.jpg",
+    "group": "hair",
+    "lengths": [
+     "medium",
+     "long"
+    ],
+    "maintenance": "low"
+   },
+   {
+    "id": "w-hair-curtain-pony",
+    "catalog": "womenswear",
+    "title": "Ponytail with face-framing pieces",
+    "why": "Front pieces soften the forehead.",
+    "reasons": [
+     "Low upkeep"
+    ],
+    "tip": "Leave out two front sections before tying.",
+    "art": "hair-ponytail",
+    "colors": [],
+    "photo": "curtainpony.jpg",
+    "group": "hair",
+    "lengths": [
+     "medium",
+     "long"
+    ],
+    "maintenance": "low"
+   }
+  ],
+  "texture_known": false,
+  "eyewear": [
+   {
+    "id": "eye-round",
+    "catalog": "menswear",
+    "title": "Round frames",
+    "why": "Light round frames soften the forehead.",
+    "reasons": [],
+    "tip": "Make sure the frame is about as wide as your face at the temples.",
+    "art": "frames-round",
+    "colors": [],
+    "photo": "roundframes.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-rect",
+    "catalog": "menswear",
+    "title": "Rectangular frames",
+    "why": "A slim rectangle keeps the upper face light.",
+    "reasons": [],
+    "tip": "A slightly wider-than-tall lens suits most faces.",
+    "art": "frames-rect",
+    "colors": [],
+    "photo": "photos/frames-rect.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-aviator",
+    "catalog": "menswear",
+    "title": "Aviator-inspired frames",
+    "why": "A wider lower edge balances a broader forehead.",
+    "reasons": [],
+    "tip": "Thin metal aviators feel lighter for everyday wear.",
+    "art": "frames-aviator",
+    "colors": [],
+    "photo": "photos/frames-aviator.jpg",
+    "group": "eyewear"
+   },
+   {
+    "id": "eye-rimless",
+    "catalog": "menswear",
+    "title": "Lightweight semi-rimless frames",
+    "why": "Keeps the upper face light.",
+    "reasons": [],
+    "tip": "A good everyday choice if you wear glasses for long hours.",
+    "art": "frames-rimless",
+    "colors": [],
+    "photo": "semirimlessframes.jpg",
+    "group": "eyewear"
+   }
+  ],
+  "accessories": [
+   {
+    "id": "w-acc-choker",
+    "catalog": "womenswear",
+    "title": "Chokers",
+    "why": "Adds width near a narrower chin.",
+    "reasons": [],
+    "tip": "Pair with an open neckline.",
+    "art": "necklace",
+    "colors": [],
+    "photo": "choker.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "w-acc-earcuff",
+    "catalog": "womenswear",
+    "title": "Ear cuffs",
+    "why": "Keeps focus near the cheekbones.",
+    "reasons": [],
+    "tip": "No piercing needed for most cuffs.",
+    "art": "earrings",
+    "colors": [],
+    "photo": "earcuffs.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "w-acc-statement",
+    "catalog": "womenswear",
+    "title": "Statement earrings",
+    "why": "Hoops and chandeliers that highlight the cheekbones.",
+    "reasons": [],
+    "tip": "Keep the necklace simple when the earrings are bold.",
+    "art": "earrings",
+    "colors": [],
+    "photo": "statementearrings.jpg",
+    "group": "accessories"
+   },
+   {
+    "id": "w-acc-hoops",
+    "catalog": "womenswear",
+    "title": "Hoop earrings",
+    "why": "Rounded hoops that soften angles.",
+    "reasons": [],
+    "tip": "Medium hoops are the most versatile.",
+    "art": "earrings",
+    "colors": [],
+    "photo": "hoops.jpg",
+    "group": "accessories"
+   }
+  ],
+  "grooming": [
+   {
+    "topic": "Haircut schedule",
+    "tip": "Short cuts and fringes need a trim every 4–6 weeks; longer hair every 8–12 weeks."
+   },
+   {
+    "topic": "Heat & hair care",
+    "tip": "Use a heat-protection spray before hot tools, and let hair air-dry when you can."
+   },
+   {
+    "topic": "Eyebrows",
+    "tip": "Brow shaping is optional — if you shape them, follow your natural arch."
+   },
+   {
+    "topic": "Accessories",
+    "tip": "Let one area lead: bold earrings or a statement necklace, not both."
+   },
+   {
+    "topic": "Profile photos",
+    "tip": "Face soft window light, hold the camera at eye level and wear a solid palette shade near your face."
+   }
+  ],
+  "makeup": {
+   "available": true,
+   "ideas": [
+    {
+     "area": "Lips",
+     "colors": [
+      {
+       "name": "Deep Teal",
+       "hex": "#005F60"
+      }
+     ]
+    },
+    {
+     "area": "Cheeks",
+     "colors": [
+      {
+       "name": "Cream",
+       "hex": "#F3E9D2"
+      }
+     ]
+    },
+    {
+     "area": "Eyes",
+     "colors": [
+      {
+       "name": "Olive",
+       "hex": "#6B705C"
+      }
+     ]
+    },
+    {
+     "area": "Liner",
+     "colors": [
+      {
+       "name": "Burgundy",
+       "hex": "#6B1D2F"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "colorMen": {
+  "module": "color",
+  "catalog_version": 2,
+  "catalog": "menswear",
+  "catalog_label": "Men's styling",
+  "catalog_source": "profile",
+  "needs_choice": false,
+  "preferences": {
+   "catalog": "menswear",
+   "catalog_source": "profile"
+  },
+  "palette": null,
+  "outfits": [
+   {
+    "id": "menswear-everyday",
+    "catalog": "menswear",
+    "title": "Everyday casual",
+    "occasion": "everyday",
+    "pieces": [
+     {
+      "piece": "T-shirt or polo",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Jeans or chinos",
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     },
+     {
+      "piece": "Overshirt",
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "piece": "Sneakers",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     }
+    ]
+   },
+   {
+    "id": "menswear-office",
+    "catalog": "menswear",
+    "title": "Office & business",
+    "occasion": "office",
+    "pieces": [
+     {
+      "piece": "Shirt",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Trousers",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Blazer",
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "piece": "Tie",
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ]
+   },
+   {
+    "id": "menswear-formal",
+    "catalog": "menswear",
+    "title": "Formal occasion",
+    "occasion": "formal",
+    "pieces": [
+     {
+      "piece": "Suit",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Shirt",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Tie & pocket square",
+      "name": "Mustard",
+      "hex": "#E3A857"
+     },
+     {
+      "piece": "Knit or waistcoat",
+      "name": "Olive",
+      "hex": "#6B705C"
+     }
+    ]
+   },
+   {
+    "id": "menswear-festive",
+    "catalog": "menswear",
+    "title": "Festive Indian",
+    "occasion": "festive",
+    "pieces": [
+     {
+      "piece": "Kurta",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Nehru jacket",
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     },
+     {
+      "piece": "Churidar or pyjama",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Mojaris",
+      "name": "Olive",
+      "hex": "#6B705C"
+     }
+    ]
+   },
+   {
+    "id": "menswear-weekend",
+    "catalog": "menswear",
+    "title": "Weekend & travel",
+    "occasion": "travel",
+    "pieces": [
+     {
+      "piece": "Henley or tee",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Relaxed trousers",
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "piece": "Bomber or denim jacket",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     }
+    ]
+   }
+  ],
+  "accessories": {
+   "summary": "Warm undertones are usually flattered by golden metals and warm leathers.",
+   "items": [
+    {
+     "name": "Gold",
+     "hex": "#C9A227"
+    },
+    {
+     "name": "Brass",
+     "hex": "#B5A642"
+    },
+    {
+     "name": "Tan leather",
+     "hex": "#A0703C"
+    },
+    {
+     "name": "Cognac",
+     "hex": "#9A4E1C"
+    }
+   ],
+   "labels": [
+    "Watch case & strap",
+    "Belt & shoes",
+    "Eyewear frames",
+    "Cufflinks & tie bar"
+   ]
+  },
+  "avoid": {
+   "colors": [
+    {
+     "name": "Icy Lavender",
+     "hex": "#E6E6FA"
+    }
+   ],
+   "guidance": "If you love them, wear these as trousers, shoes or a bag rather than shirts, ties or collars near your face."
+  },
+  "occasion_labels": {
+   "everyday": "Everyday",
+   "college": "College",
+   "office": "Office",
+   "formal": "Formal",
+   "festive": "Festive",
+   "wedding": "Weddings",
+   "party": "Parties",
+   "travel": "Travel & weekends"
+  }
+ },
+ "colorWomen": {
+  "module": "color",
+  "catalog_version": 2,
+  "catalog": "womenswear",
+  "catalog_label": "Women's styling",
+  "catalog_source": "profile",
+  "needs_choice": false,
+  "preferences": {
+   "catalog": "womenswear",
+   "catalog_source": "profile"
+  },
+  "palette": null,
+  "outfits": [
+   {
+    "id": "womenswear-everyday",
+    "catalog": "womenswear",
+    "title": "Everyday",
+    "occasion": "everyday",
+    "pieces": [
+     {
+      "piece": "Top",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Jeans or trousers",
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     },
+     {
+      "piece": "Layer or cardigan",
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "piece": "Sneakers or flats",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     }
+    ]
+   },
+   {
+    "id": "womenswear-office",
+    "catalog": "womenswear",
+    "title": "Office & business",
+    "occasion": "office",
+    "pieces": [
+     {
+      "piece": "Blouse or shirt",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Trousers or skirt",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Blazer",
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "piece": "Scarf or bag",
+      "name": "Mustard",
+      "hex": "#E3A857"
+     }
+    ]
+   },
+   {
+    "id": "womenswear-formal",
+    "catalog": "womenswear",
+    "title": "Formal & evening",
+    "occasion": "formal",
+    "pieces": [
+     {
+      "piece": "Dress",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Wrap or jacket",
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     },
+     {
+      "piece": "Clutch",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Heels",
+      "name": "Olive",
+      "hex": "#6B705C"
+     }
+    ]
+   },
+   {
+    "id": "womenswear-festive",
+    "catalog": "womenswear",
+    "title": "Festive Indian",
+    "occasion": "festive",
+    "pieces": [
+     {
+      "piece": "Saree, lehenga or kurta",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     },
+     {
+      "piece": "Blouse or contrast",
+      "name": "Burgundy",
+      "hex": "#6B1D2F"
+     },
+     {
+      "piece": "Dupatta",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Juttis or heels",
+      "name": "Olive",
+      "hex": "#6B705C"
+     }
+    ]
+   },
+   {
+    "id": "womenswear-weekend",
+    "catalog": "womenswear",
+    "title": "Weekend & travel",
+    "occasion": "travel",
+    "pieces": [
+     {
+      "piece": "Co-ord or dress",
+      "name": "Olive",
+      "hex": "#6B705C"
+     },
+     {
+      "piece": "Light layer",
+      "name": "Cream",
+      "hex": "#F3E9D2"
+     },
+     {
+      "piece": "Bag",
+      "name": "Deep Teal",
+      "hex": "#005F60"
+     }
+    ]
+   }
+  ],
+  "accessories": {
+   "summary": "Warm undertones are usually flattered by golden metals and warm leathers.",
+   "items": [
+    {
+     "name": "Gold",
+     "hex": "#C9A227"
+    },
+    {
+     "name": "Brass",
+     "hex": "#B5A642"
+    },
+    {
+     "name": "Tan leather",
+     "hex": "#A0703C"
+    },
+    {
+     "name": "Cognac",
+     "hex": "#9A4E1C"
+    }
+   ],
+   "labels": [
+    "Jewellery metal",
+    "Handbag",
+    "Footwear",
+    "Eyewear frames"
+   ]
+  },
+  "avoid": {
+   "colors": [
+    {
+     "name": "Icy Lavender",
+     "hex": "#E6E6FA"
+    }
+   ],
+   "guidance": "If you love them, wear these as skirts, trousers, shoes or bags rather than tops, scarves or earrings near your face."
+  },
+  "occasion_labels": {
+   "everyday": "Everyday",
+   "college": "College",
+   "office": "Office",
+   "formal": "Formal",
+   "festive": "Festive",
+   "wedding": "Weddings",
+   "party": "Parties",
+   "travel": "Travel & weekends"
+  }
+ },
+ "skincareShaving": {
+  "module": "skincare",
+  "catalog_version": 3,
+  "skin_type": "Oily Skin",
+  "concerns": [
+   "excess oil",
+   "breakouts",
+   "visible pores"
+  ],
+  "level": "advanced",
+  "extras": [
+   "shaving",
+   "beard",
+   "advanced"
+  ],
+  "morning": [
+   {
+    "id": "am-cleanse",
+    "label": "Cleanse gently",
+    "detail": "Minimalist B12 + Oat Extract 6.5% Gentle Cleanser",
+    "product_id": "minimalist-oat-cleanser",
+    "why": "Clean skin first, so everything after it goes on evenly."
+   },
+   {
+    "id": "am-hydrate",
+    "label": "Hydrate",
+    "detail": "The Ordinary Hyaluronic Acid Hydration Serum",
+    "product_id": "ordinary-hyaluronic-serum",
+    "why": "Thin, watery layers go on before thicker creams."
+   },
+   {
+    "id": "am-moisturise",
+    "label": "Moisturise",
+    "detail": "Deconstruct Ceramide Barrier Repair Moisturizer",
+    "product_id": "deconstruct-ceramide-moisturizer",
+    "why": "Seals in water and supports your skin barrier."
+   },
+   {
+    "id": "am-protect",
+    "label": "Protect with sunscreen",
+    "detail": "Dr. Sheth's Ceramide & Vitamin C Sunscreen SPF 50+",
+    "product_id": "drsheths-sunscreen",
+    "why": "Always the last morning step, so nothing thins it out."
+   }
+  ],
+  "evening": [
+   {
+    "id": "pm-cleanse",
+    "label": "Cleanse away the day",
+    "detail": "Minimalist B12 + Oat Extract 6.5% Gentle Cleanser",
+    "product_id": "minimalist-oat-cleanser",
+    "why": "Clean skin first, so everything after it goes on evenly."
+   },
+   {
+    "id": "pm-treat",
+    "label": "Treat (one active only)",
+    "detail": "Plum 10% Niacinamide & Rice Water Face Serum",
+    "product_id": "plum-niacinamide-serum",
+    "why": "Treatments go on clean skin, before moisturiser. Use only one active at a time."
+   },
+   {
+    "id": "pm-moisturise",
+    "label": "Moisturise",
+    "detail": "Deconstruct Ceramide Barrier Repair Moisturizer",
+    "product_id": "deconstruct-ceramide-moisturizer",
+    "why": "Seals in water and supports your skin barrier."
+   }
+  ],
+  "sections": [
+   {
+    "id": "shaving",
+    "title": "Shaving care",
+    "intro": "Based on the American Academy of Dermatology's shaving tips.",
+    "steps": [
+     {
+      "label": "Soften first",
+      "detail": "Shave after a warm shower, or wet your skin and hair first so hairs are softer."
+     },
+     {
+      "label": "Use a shaving cream or gel",
+      "detail": "If your skin is sensitive, choose one made for sensitive skin and check the label for 'fragrance-free'."
+     },
+     {
+      "label": "Shave with the grain",
+      "detail": "Shave in the direction your hair grows and rinse the blade after each swipe."
+     },
+     {
+      "label": "Replace blades often",
+      "detail": "A dull blade drags and irritates; change the blade or disposable razor every 5–7 shaves."
+     },
+     {
+      "label": "Moisturise afterwards",
+      "detail": "Finish with your moisturiser to calm and protect freshly shaved skin."
+     }
+    ]
+   },
+   {
+    "id": "beard",
+    "title": "Beard-area care",
+    "intro": "Skin under facial hair still needs cleansing and moisture.",
+    "steps": [
+     {
+      "label": "Cleanse the beard area",
+      "detail": "Work your gentle cleanser through the beard to the skin underneath, then rinse well."
+     },
+     {
+      "label": "Moisturise the skin underneath",
+      "detail": "Massage moisturiser into the skin, not just the hair; a beard oil is optional."
+     },
+     {
+      "label": "Trim on clean, dry hair",
+      "detail": "Trimming dry hair shows the true length and avoids cutting too short."
+     }
+    ]
+   }
+  ],
+  "products": [
+   {
+    "id": "minimalist-oat-cleanser",
+    "brand": "Minimalist",
+    "name": "B12 + Oat Extract 6.5% Gentle Cleanser",
+    "category": "Cleanser",
+    "step": "cleanse",
+    "image": "/assets/minimalistcleanser.png",
+    "href": "https://beminimalist.co/products/oat-extract-06-gentle-cleanser",
+    "description": "A low-foaming cleanse for removing daily buildup without making skin feel stripped.",
+    "caution": "Patch-test if your skin reacts easily.",
+    "ingredients": [
+     {
+      "name": "Oat extract",
+      "why": "A long-used soothing ingredient often chosen for gentle, comfort-focused cleansers."
+     },
+     {
+      "name": "Vitamin B12",
+      "why": "Named on the label as part of the formula's gentle, low-foaming cleanse."
+     }
+    ],
+    "reason": "Chosen for your breakouts focus.",
+    "alternatives": [
+     {
+      "id": "cerave-hydrating-cleanser",
+      "brand": "CeraVe",
+      "name": "Hydrating Cleanser",
+      "href": "https://www.ceraveindia.com/"
+     }
+    ]
+   },
+   {
+    "id": "ordinary-hyaluronic-serum",
+    "brand": "The Ordinary",
+    "name": "Hyaluronic Acid Hydration Serum",
+    "category": "Hydration",
+    "step": "hydrate",
+    "image": "/assets/ordinaryserum.png",
+    "href": "https://theordinary.com/en-in/hyaluronic-acid-2-b5-hydrating-serum-100637.html",
+    "description": "A simple hydration layer for skin that feels tight or dehydrated.",
+    "caution": "Layer onto slightly damp skin and follow with moisturizer.",
+    "ingredients": [
+     {
+      "name": "Hyaluronic acid (2%)",
+      "why": "A humectant that draws water into the skin's surface; apply to damp skin and seal with moisturiser."
+     },
+     {
+      "name": "Vitamin B5 (panthenol)",
+      "why": "A humectant often used for comfort and hydration."
+     }
+    ],
+    "reason": "A gentle general-purpose hydration option for oily skin.",
+    "alternatives": []
+   },
+   {
+    "id": "plum-niacinamide-serum",
+    "brand": "Plum",
+    "name": "10% Niacinamide & Rice Water Face Serum",
+    "category": "Serum",
+    "step": "treat",
+    "image": "/assets/plumserum.png",
+    "href": "https://plumgoodness.com/collections/face-serums",
+    "description": "A targeted option for the look of excess oil, visible pores, and post-breakout marks.",
+    "caution": "Introduce one active at a time and stop if irritation occurs.",
+    "ingredients": [
+     {
+      "name": "Niacinamide (10%)",
+      "why": "A widely used form of vitamin B3 often chosen for the look of oiliness, pores and marks. Start slowly — higher strengths can sting some skin."
+     },
+     {
+      "name": "Rice water",
+      "why": "Named on the label as a supporting ingredient."
+     }
+    ],
+    "reason": "Chosen for your breakouts and visible pores focus.",
+    "alternatives": []
+   },
+   {
+    "id": "deconstruct-ceramide-moisturizer",
+    "brand": "Deconstruct",
+    "name": "Ceramide Barrier Repair Moisturizer",
+    "category": "Moisturizer",
+    "step": "moisturise",
+    "image": "/assets/moisturiser.png",
+    "href": "https://thedeconstruct.in/products/ceramide-moisturizer",
+    "description": "A barrier-supporting moisturizer for dryness, dehydration, and sensitivity-prone routines.",
+    "caution": "Start with a small amount and adjust to your skin.",
+    "ingredients": [
+     {
+      "name": "Ceramides",
+      "why": "Barrier lipids commonly used in moisturisers for dry or easily irritated skin."
+     }
+    ],
+    "reason": "A gentle general-purpose moisturizer option for oily skin.",
+    "alternatives": []
+   },
+   {
+    "id": "drsheths-sunscreen",
+    "brand": "Dr. Sheth's",
+    "name": "Ceramide & Vitamin C Sunscreen SPF 50+",
+    "category": "Sunscreen",
+    "step": "protect",
+    "image": "/assets/drshethssunscreen.png",
+    "href": "https://www.drsheths.com/collections/sunscreen",
+    "description": "Daily sun protection that supports routines focused on uneven tone and post-breakout marks.",
+    "caution": "Apply generously and reapply when outdoors.",
+    "ingredients": [
+     {
+      "name": "Broad-spectrum SPF 50+",
+      "why": "Daily UV protection, the single most important step for uneven-looking tone and marks."
+     },
+     {
+      "name": "Ceramides & vitamin C",
+      "why": "Named on the label; vitamin C is a common antioxidant in daytime products."
+     }
+    ],
+    "reason": "Chosen for your breakouts focus.",
+    "alternatives": []
+   }
+  ],
+  "cautions": [
+   "Patch-test each new product on a small area (for example, behind the ear or on the inner arm) for a few days before using it on your face.",
+   "Introduce only one new active ingredient at a time, a couple of weeks apart, so you can tell what suits you.",
+   "See a dermatologist for persistent acne, painful bumps, rashes or anything that worries you."
+  ]
+ }
+}

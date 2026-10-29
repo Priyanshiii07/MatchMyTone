@@ -1,0 +1,110 @@
+{
+  "version": 2,
+  "body": {
+    "Hourglass": {
+      "description": "Balanced shoulders and hips with a defined waist — a classic, even silhouette.",
+      "why": "Pieces that follow the waistline keep the natural balance between your shoulders and hips visible.",
+      "image": "hourglass.png"
+    },
+    "Rectangle": {
+      "description": "A straighter silhouette with gentle, even proportions through the shoulders, waist and hips.",
+      "why": "Volume, texture and waist details add shape and movement to an even, streamlined frame.",
+      "image": "rectangle.png"
+    },
+    "Pear": {
+      "description": "Hips and thighs are naturally more prominent than the shoulders, often with a well-defined waist.",
+      "why": "Interest at the neckline and shoulders, with easy shapes below, creates a harmonious top-to-bottom balance.",
+      "image": "pear.png"
+    },
+    "Apple": {
+      "description": "A fuller midsection, often with slimmer legs and shoulders and hips of similar width.",
+      "why": "Pieces that skim the midsection and create vertical lines feel comfortable and draw attention to the neckline and legs.",
+      "image": "apple.png"
+    },
+    "Inverted Triangle": {
+      "description": "Shoulders and upper body are naturally more prominent than the hips.",
+      "why": "Simple shapes at the shoulders with volume or detail below create a balanced, easy silhouette.",
+      "image": "invertedtriangle.png"
+    }
+  },
+  "face": {
+    "Oval": {
+      "description": "Slightly longer than wide, with soft curves and a gently narrower chin.",
+      "why": "Balanced proportions suit most styles, so suggestions focus on highlighting your natural symmetry.",
+      "image": "oval.png"
+    },
+    "Round": {
+      "description": "Soft curves and fuller cheeks, with length and width that are close to equal.",
+      "why": "Height at the crown and vertical lines add length, while gentle angles add contrast to rounded features.",
+      "image": "round.png"
+    },
+    "Square": {
+      "description": "A broad forehead and defined jawline create a bold, structured look.",
+      "why": "Soft curves and vertical movement balance strong, angular lines.",
+      "image": "square.png"
+    },
+    "Heart": {
+      "description": "A wider forehead and narrower chin create an elegant, tapered shape.",
+      "why": "Softness near the forehead and width near the jaw balance a wider upper face.",
+      "image": "heart.png"
+    },
+    "Diamond": {
+      "description": "High cheekbones with a narrower forehead and chin create a sculpted look.",
+      "why": "Width at the forehead and jaw, with softness at the cheekbones, creates balance.",
+      "image": "diamond.png"
+    }
+  },
+  "skincare": {
+    "Oily Skin": {
+      "description": "Oily skin produces more sebum, so the face can look shiny and pores can clog more easily.",
+      "image": "oily.png",
+      "focus": [
+        "Gentle, non-stripping cleansing twice a day",
+        "Lightweight, non-comedogenic hydration",
+        "Daily broad-spectrum sunscreen"
+      ]
+    },
+    "Dry Skin": {
+      "description": "Dry skin has less natural moisture, so it can feel tight, rough or flaky.",
+      "image": "dry.png",
+      "focus": [
+        "Non-foaming, hydrating cleansers",
+        "Layering hydration on slightly damp skin",
+        "Barrier-supporting moisturiser and daily sunscreen"
+      ]
+    },
+    "Combination Skin": {
+      "description": "Combination skin has oilier areas, usually the T-zone, alongside normal or dry cheeks.",
+      "image": "combination.png",
+      "focus": [
+        "Balancing products that suit both zones",
+        "Lighter layers on the T-zone, richer care on dry areas",
+        "Daily broad-spectrum sunscreen"
+      ]
+    },
+    "Normal Skin": {
+      "description": "Normal skin is well balanced, with little dryness, oiliness or sensitivity.",
+      "image": "normal.png",
+      "focus": [
+        "A simple, consistent routine",
+        "Light hydration to maintain balance",
+        "Daily broad-spectrum sunscreen"
+      ]
+    },
+    "Sensitive Skin": {
+      "description": "Sensitive skin reacts easily to products or weather, with redness, stinging or discomfort.",
+      "image": "sensitive.png",
+      "focus": [
+        "Few, fragrance-free products",
+        "Introducing one new product at a time after a patch test",
+        "Mineral or gentle sunscreen and barrier care"
+      ]
+    }
+  },
+  "disclaimers": {
+    "color": "Color results are an AI estimate from one selfie. Lighting, camera white balance and makeup can change how undertone appears.",
+    "skincare": "General information based on your answers, not a medical diagnosis. Patch-test new products and consult a dermatologist for persistent or severe concerns.",
+    "face": "Based on your questionnaire answers, not a measurement of your face. Face-shape labels don't decide what looks good — use these ideas as a starting point and wear what makes you feel like yourself.",
+    "body": "Based on your questionnaire answers, not body measurements. Body shape describes proportions only — every shape is a good shape, and these ideas are options, not rules."
+  }
+}

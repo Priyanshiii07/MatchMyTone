@@ -1,0 +1,56 @@
+# Render Blueprint for the MatchMyTone API (Flask, backend/). The website (web/) is deployed on Vercel.
+# Secrets are never stored here: every `sync: false` value is entered in the Render dashboard.
+# See DEPLOYMENT.md for the full sequence.
+services:
+  - type: web
+    name: matchmytone-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    # One worker with threads: the duplicate-request guards and AI cooldowns live in process memory.
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 1 --threads 8 --timeout 120
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.7
+      - key: APP_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB
+        value: matchmytone
+      - key: SECRET_KEY
+        generateValue: true
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: JWT_ACCESS_TOKEN_MINUTES
+        value: "60"
+      - key: REQUIRE_EMAIL_VERIFICATION
+        value: "true"
+      - key: EMAIL_VERIFICATION_HOURS
+        value: "24"
+      - key: FRONTEND_URL
+        sync: false
+      - key: BACKEND_URL
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: FROM_EMAIL
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash
+      - key: GEMINI_FALLBACK_MODELS
+        value: gemini-3.6-flash,gemini-3.1-flash-lite
+      - key: GEMINI_TEXT_MODELS
+        value: gemini-3.5-flash-lite,gemini-3.1-flash-lite,gemini-3.5-flash,gemini-3.6-flash
+      - key: GEMINI_AUTO_DISCOVER
+        value: "true"
+      # Keep every AI request shorter than the website's 60 s Vercel function limit.
+      - key: COLOR_ANALYSIS_MAX_SECONDS
+        value: "55"
+      - key: AI_TEXT_MAX_SECONDS
+        value: "45"
+      - key: OPENAI_API_KEY
+        sync: false
