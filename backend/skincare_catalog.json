@@ -1,0 +1,394 @@
+{
+  "version": 3,
+  "products": [
+    {
+      "id": "minimalist-oat-cleanser",
+      "brand": "Minimalist",
+      "name": "B12 + Oat Extract 6.5% Gentle Cleanser",
+      "category": "Cleanser",
+      "step": "cleanse",
+      "image": "/assets/minimalistcleanser.png",
+      "href": "https://beminimalist.co/products/oat-extract-06-gentle-cleanser",
+      "skinTypes": [
+        "oily",
+        "dry",
+        "sensitive",
+        "normal",
+        "combination"
+      ],
+      "concerns": [
+        "acne",
+        "barrier",
+        "sensitive"
+      ],
+      "description": "A low-foaming cleanse for removing daily buildup without making skin feel stripped.",
+      "caution": "Patch-test if your skin reacts easily.",
+      "ingredients": [
+        {
+          "name": "Oat extract",
+          "why": "A long-used soothing ingredient often chosen for gentle, comfort-focused cleansers."
+        },
+        {
+          "name": "Vitamin B12",
+          "why": "Named on the label as part of the formula's gentle, low-foaming cleanse."
+        }
+      ]
+    },
+    {
+      "id": "cerave-hydrating-cleanser",
+      "brand": "CeraVe",
+      "name": "Hydrating Cleanser",
+      "category": "Gentle cleanse",
+      "step": "cleanse",
+      "image": "/assets/ceravecleanser.png",
+      "href": "https://www.ceraveindia.com/",
+      "skinTypes": [
+        "dry",
+        "sensitive",
+        "normal"
+      ],
+      "concerns": [
+        "dry",
+        "dehydration",
+        "barrier",
+        "sensitive"
+      ],
+      "description": "A gentle, non-foaming cleansing option for comfortable barrier-conscious routines.",
+      "caution": "Discontinue if persistent irritation occurs.",
+      "ingredients": [
+        {
+          "name": "Ceramides",
+          "why": "Lipids that are naturally part of the skin barrier; often added to non-stripping cleansers."
+        },
+        {
+          "name": "Hyaluronic acid",
+          "why": "A humectant that helps skin hold on to water."
+        }
+      ]
+    },
+    {
+      "id": "deconstruct-ceramide-moisturizer",
+      "brand": "Deconstruct",
+      "name": "Ceramide Barrier Repair Moisturizer",
+      "category": "Moisturizer",
+      "step": "moisturise",
+      "image": "/assets/moisturiser.png",
+      "href": "https://thedeconstruct.in/products/ceramide-moisturizer",
+      "skinTypes": [
+        "dry",
+        "sensitive",
+        "normal",
+        "combination",
+        "oily"
+      ],
+      "concerns": [
+        "dry",
+        "dehydration",
+        "barrier",
+        "sensitive"
+      ],
+      "description": "A barrier-supporting moisturizer for dryness, dehydration, and sensitivity-prone routines.",
+      "caution": "Start with a small amount and adjust to your skin.",
+      "ingredients": [
+        {
+          "name": "Ceramides",
+          "why": "Barrier lipids commonly used in moisturisers for dry or easily irritated skin."
+        }
+      ]
+    },
+    {
+      "id": "drsheths-sunscreen",
+      "brand": "Dr. Sheth's",
+      "name": "Ceramide & Vitamin C Sunscreen SPF 50+",
+      "category": "Sunscreen",
+      "step": "protect",
+      "image": "/assets/drshethssunscreen.png",
+      "href": "https://www.drsheths.com/collections/sunscreen",
+      "skinTypes": [
+        "oily",
+        "dry",
+        "sensitive",
+        "normal",
+        "combination"
+      ],
+      "concerns": [
+        "tone",
+        "acne",
+        "sensitive",
+        "dry"
+      ],
+      "description": "Daily sun protection that supports routines focused on uneven tone and post-breakout marks.",
+      "caution": "Apply generously and reapply when outdoors.",
+      "ingredients": [
+        {
+          "name": "Broad-spectrum SPF 50+",
+          "why": "Daily UV protection, the single most important step for uneven-looking tone and marks."
+        },
+        {
+          "name": "Ceramides & vitamin C",
+          "why": "Named on the label; vitamin C is a common antioxidant in daytime products."
+        }
+      ]
+    },
+    {
+      "id": "plum-niacinamide-serum",
+      "brand": "Plum",
+      "name": "10% Niacinamide & Rice Water Face Serum",
+      "category": "Serum",
+      "step": "treat",
+      "active": true,
+      "image": "/assets/plumserum.png",
+      "href": "https://plumgoodness.com/collections/face-serums",
+      "skinTypes": [
+        "oily",
+        "combination",
+        "normal"
+      ],
+      "concerns": [
+        "acne",
+        "tone",
+        "pores"
+      ],
+      "description": "A targeted option for the look of excess oil, visible pores, and post-breakout marks.",
+      "caution": "Introduce one active at a time and stop if irritation occurs.",
+      "ingredients": [
+        {
+          "name": "Niacinamide (10%)",
+          "why": "A widely used form of vitamin B3 often chosen for the look of oiliness, pores and marks. Start slowly — higher strengths can sting some skin."
+        },
+        {
+          "name": "Rice water",
+          "why": "Named on the label as a supporting ingredient."
+        }
+      ]
+    },
+    {
+      "id": "ordinary-hyaluronic-serum",
+      "brand": "The Ordinary",
+      "name": "Hyaluronic Acid Hydration Serum",
+      "category": "Hydration",
+      "step": "hydrate",
+      "image": "/assets/ordinaryserum.png",
+      "href": "https://theordinary.com/en-in/hyaluronic-acid-2-b5-hydrating-serum-100637.html",
+      "skinTypes": [
+        "dry",
+        "sensitive",
+        "normal",
+        "combination"
+      ],
+      "concerns": [
+        "dry",
+        "dehydration",
+        "barrier"
+      ],
+      "description": "A simple hydration layer for skin that feels tight or dehydrated.",
+      "caution": "Layer onto slightly damp skin and follow with moisturizer.",
+      "ingredients": [
+        {
+          "name": "Hyaluronic acid (2%)",
+          "why": "A humectant that draws water into the skin's surface; apply to damp skin and seal with moisturiser."
+        },
+        {
+          "name": "Vitamin B5 (panthenol)",
+          "why": "A humectant often used for comfort and hydration."
+        }
+      ]
+    }
+  ],
+  "concern_map": {
+    "1": {
+      "A": [
+        "oily",
+        "acne",
+        "pores"
+      ],
+      "B": [
+        "dry",
+        "dehydration"
+      ],
+      "C": [
+        "combination"
+      ],
+      "D": [
+        "normal"
+      ],
+      "E": [
+        "sensitive",
+        "barrier"
+      ]
+    },
+    "8": {
+      "A": [
+        "acne",
+        "pores"
+      ],
+      "B": [
+        "dry",
+        "dehydration"
+      ],
+      "C": [
+        "combination"
+      ],
+      "D": [
+        "normal"
+      ],
+      "E": [
+        "sensitive",
+        "barrier"
+      ]
+    },
+    "9": {
+      "A": [
+        "acne"
+      ],
+      "E": [
+        "sensitive",
+        "barrier"
+      ]
+    },
+    "10": {
+      "E": [
+        "sensitive",
+        "barrier"
+      ]
+    }
+  },
+  "concern_labels": {
+    "oily": "excess oil",
+    "acne": "breakouts",
+    "pores": "visible pores",
+    "dry": "dryness",
+    "dehydration": "dehydration",
+    "combination": "combination zones",
+    "normal": "balance",
+    "sensitive": "sensitivity",
+    "barrier": "skin-barrier support",
+    "tone": "uneven-looking tone"
+  },
+  "sections": {
+    "shaving": {
+      "title": "Shaving care",
+      "intro": "Based on the American Academy of Dermatology's shaving tips.",
+      "steps": [
+        {
+          "label": "Soften first",
+          "detail": "Shave after a warm shower, or wet your skin and hair first so hairs are softer."
+        },
+        {
+          "label": "Use a shaving cream or gel",
+          "detail": "If your skin is sensitive, choose one made for sensitive skin and check the label for 'fragrance-free'."
+        },
+        {
+          "label": "Shave with the grain",
+          "detail": "Shave in the direction your hair grows and rinse the blade after each swipe."
+        },
+        {
+          "label": "Replace blades often",
+          "detail": "A dull blade drags and irritates; change the blade or disposable razor every 5–7 shaves."
+        },
+        {
+          "label": "Moisturise afterwards",
+          "detail": "Finish with your moisturiser to calm and protect freshly shaved skin."
+        }
+      ]
+    },
+    "razor_bumps": {
+      "title": "Razor bumps & ingrown hairs",
+      "intro": "Small changes that often reduce bumps. This isn't a diagnosis.",
+      "steps": [
+        {
+          "label": "Don't stretch the skin",
+          "detail": "Pulling skin taut while shaving lets hairs retract below the surface, where they can grow back in."
+        },
+        {
+          "label": "Avoid shaving too close",
+          "detail": "Fewer passes, or a trimmer that leaves a little length, can help."
+        },
+        {
+          "label": "Leave bumps alone",
+          "detail": "Don't pick or dig at ingrown hairs — that can cause marks and infection."
+        },
+        {
+          "label": "See a dermatologist",
+          "detail": "If bumps are painful, frequent or leave dark marks, a dermatologist can suggest treatment."
+        }
+      ]
+    },
+    "beard": {
+      "title": "Beard-area care",
+      "intro": "Skin under facial hair still needs cleansing and moisture.",
+      "steps": [
+        {
+          "label": "Cleanse the beard area",
+          "detail": "Work your gentle cleanser through the beard to the skin underneath, then rinse well."
+        },
+        {
+          "label": "Moisturise the skin underneath",
+          "detail": "Massage moisturiser into the skin, not just the hair; a beard oil is optional."
+        },
+        {
+          "label": "Trim on clean, dry hair",
+          "detail": "Trimming dry hair shows the true length and avoids cutting too short."
+        }
+      ]
+    },
+    "workout": {
+      "title": "Sweat & post-workout care",
+      "intro": "Sweat left on skin can contribute to breakouts for some people.",
+      "steps": [
+        {
+          "label": "Cleanse after sweating",
+          "detail": "Wash your face with your gentle cleanser soon after a workout."
+        },
+        {
+          "label": "Change out of sweaty clothes",
+          "detail": "Especially headbands and caps that sit against the skin."
+        },
+        {
+          "label": "Reapply sunscreen outdoors",
+          "detail": "If you train outside, reapply after sweating."
+        }
+      ]
+    },
+    "outdoors": {
+      "title": "Outdoor protection",
+      "intro": "Daily sunscreen matters most when you're outside for long periods.",
+      "steps": [
+        {
+          "label": "Reapply sunscreen",
+          "detail": "Reapply about every two hours outdoors, and after sweating or swimming."
+        },
+        {
+          "label": "Add shade",
+          "detail": "A wide-brimmed hat or cap and sunglasses add protection."
+        }
+      ]
+    },
+    "makeup": {
+      "title": "Makeup removal",
+      "intro": "Only relevant because you told us you wear makeup or tinted sunscreen.",
+      "steps": [
+        {
+          "label": "Remove makeup first",
+          "detail": "Use a gentle remover such as micellar water or a cleansing balm before your cleanser."
+        },
+        {
+          "label": "Never sleep in makeup",
+          "detail": "Leftover makeup can clog pores and irritate skin."
+        },
+        {
+          "label": "Sunscreen under makeup",
+          "detail": "Apply sunscreen as the last skincare step, then let it set before makeup."
+        }
+      ]
+    }
+  },
+  "cautions": {
+    "patch_test": "Patch-test each new product on a small area (for example, behind the ear or on the inner arm) for a few days before using it on your face.",
+    "one_active": "Introduce only one new active ingredient at a time, a couple of weeks apart, so you can tell what suits you.",
+    "sensitive": "Because your answers point to sensitivity, we've left out the active treatment serum and kept the routine short.",
+    "many_products": "You told us you already use several products. Using many actives together raises the chance of irritation — keep the essentials and add extras one at a time.",
+    "fragrance_free": "Look for 'fragrance-free' on labels. 'Unscented' products can still contain masking fragrance.",
+    "dermatologist": "See a dermatologist for persistent acne, painful bumps, rashes or anything that worries you."
+  }
+}

@@ -1,0 +1,144 @@
+import io
+import json
+import unittest
+from unittest.mock import patch
+from urllib.error import HTTPError
+
+import app
+
+
+class GeminiValidationTests(unittest.TestCase):
+    def setUp(self):
+        self.original_key = app.GEMINI_API_KEY
+        self.original_models = app.GEMINI_MODEL_CACHE.copy()
+        self.original_openai_models = app.OPENAI_MODEL_CACHE.copy()
+        app.GEMINI_API_KEY = "test-key"
+        app.GEMINI_MODEL_CACHE.update({"expires": 0, "models": ()})
+        app.OPENAI_MODEL_CACHE.update({"expires": 0, "models": ()})
+
+    def tearDown(self):
+        app.GEMINI_API_KEY = self.original_key
+        app.GEMINI_MODEL_CACHE.clear()
+        app.GEMINI_MODEL_CACHE.update(self.original_models)
+        app.OPENAI_MODEL_CACHE.clear()
+        app.OPENAI_MODEL_CACHE.update(self.original_openai_models)
+
+    def test_missing_key_is_configuration_error(self):
+        app.GEMINI_API_KEY = ""
+        with self.assertRaisesRegex(RuntimeError, "not configured"):
+            app.analyze_color_with_gemini("abc", "image/jpeg")
+
+    def test_model_must_be_reported_by_gemini_model_list(self):
+        body = json.dumps({"models": [{"name": "models/gemini-3.8-flash", "supportedGenerationMethods": ["generateContent"]}]}).encode()
+        with patch.object(app, "urlopen", return_value=io.BytesIO(body)):
+            self.assertEqual(app.select_gemini_model(), "gemini-3.8-flash")
+
+    def test_unsupported_configured_model_is_rejected(self):
+        body = json.dumps({"models": [{"name": "models/gemini-2.0-flash", "supportedGenerationMethods": ["generateContent"]}]}).encode()
+        with patch.object(app, "urlopen", return_value=io.BytesIO(body)):
+            with self.assertRaisesRegex(RuntimeError, "not available"):
+                app.select_gemini_model()
+
+    def test_valid_response_is_parsed_and_invalid_response_is_rejected(self):
+        valid = {"isFace": True, "detectedGender": "female", "seasonType": "Soft Autumn", "undertone": "Warm", "skinAge": 30,
+                 "colorsToWear": [{"name": str(i), "hex": "#123456"} for i in range(6)],
+                 "colorsToAvoid": [{"name": str(i), "hex": "#654321"} for i in range(3)]}
+        model_list = io.BytesIO(json.dumps({"models": [{"name": "models/gemini-3.8-flash", "supportedGenerationMethods": ["generateContent"]}]}).encode())
+        generated = io.BytesIO(json.dumps({"candidates": [{"content": {"parts": [{"text": json.dumps(valid)}]}}]}).encode())
+        with patch.object(app, "urlopen", side_effect=[model_list, generated]):
+            self.assertEqual(app.analyze_color_with_gemini("a" * 100, "image/jpeg")["seasonType"], "Soft Autumn")
+        with self.assertRaisesRegex(ValueError, "complete color"):
+            app.validate_color_result({"isFace": True, "detectedGender": "female", "undertone": "Warm", "skinAge": 30})
+
+    def test_invalid_key_is_not_retried(self):
+        error = HTTPError("url", 401, "unauthorized", {}, io.BytesIO(b"{}"))
+        with patch.object(app, "urlopen", side_effect=error) as request:
+            with self.assertRaisesRegex(RuntimeError, "API key"):
+                app.select_gemini_model()
+            self.assertEqual(request.call_count, 1)
+
+    def _model_list(self, *names):
+        return io.BytesIO(json.dumps({"models": [{"name": f"models/{name}", "supportedGenerationMethods": ["generateContent"]} for name in names]}).encode())
+
+    def _http_error(self, status, headers=None):
+        return HTTPError("url", status, "error", headers or {}, io.BytesIO(b"{}"))
+
+    def _valid_generation(self):
+        result = {"isFace": True, "detectedGender": "female", "seasonType": "Soft Autumn", "undertone": "Warm", "skinAge": 30,
+                  "colorsToWear": [{"name": str(i), "hex": "#123456"} for i in range(6)],
+                  "colorsToAvoid": [{"name": str(i), "hex": "#654321"} for i in range(3)]}
+        return io.BytesIO(json.dumps({"candidates": [{"content": {"parts": [{"text": json.dumps(result)}]}}]}).encode())
+
+    def _valid_openai_generation(self):
+        return io.BytesIO(json.dumps({"output_text": json.dumps({"isFace": True, "description": "", "detectedGender": "female", "seasonType": "Soft Autumn", "seasonDescription": "", "undertone": "Warm", "undertoneDescription": "", "skinAge": 30, "skinAgeDescription": "", "colorsToWear": [{"name": str(i), "hex": "#123456"} for i in range(6)], "colorsToAvoid": [{"name": str(i), "hex": "#654321"} for i in range(3)]})}).encode())
+
+    def test_gemini_503_switches_to_openai_provider(self):
+        with patch.object(app, "OPENAI_API_KEY", "openai-test"), patch.object(app, "analyze_color_with_gemini", side_effect=app.ProviderError("busy", "temporary")), patch.object(app, "analyze_color_with_openai", return_value=json.loads(self._valid_generation().read().decode())["candidates"][0]["content"]["parts"][0]["text"] and {"isFace": True}) as fallback:
+            result, provider = app.analyze_color_with_providers("a" * 100, "image/jpeg")
+            self.assertEqual(provider, "openai")
+            fallback.assert_called_once()
+
+    def test_persistent_503_does_not_retry_gemini(self):
+        with patch.object(app, "urlopen", side_effect=[self._model_list("gemini-3.8-flash"), self._http_error(503)]) as request:
+            with self.assertRaisesRegex(RuntimeError, "temporarily unavailable"):
+                app.analyze_color_with_gemini("a" * 100, "image/jpeg")
+            self.assertEqual(request.call_count, 2)
+
+    def test_verified_fallback_is_used_when_primary_is_unavailable(self):
+        with patch.object(app, "GEMINI_FALLBACK_MODEL", "gemini-fallback"), patch.object(app, "urlopen", return_value=self._model_list("gemini-fallback")):
+            self.assertEqual(app.select_gemini_model(), "gemini-fallback")
+
+    def test_rate_limit_is_not_treated_as_service_unavailable(self):
+        with patch.object(app, "urlopen", side_effect=[self._model_list("gemini-3.8-flash"), self._http_error(429)]) as request:
+            with self.assertRaisesRegex(RuntimeError, "quota or rate limit"):
+                app.analyze_color_with_gemini("a" * 100, "image/jpeg")
+            self.assertEqual(request.call_count, 2)
+
+    def test_timeout_is_bounded_to_one_gemini_call(self):
+        with patch.object(app, "urlopen", side_effect=[self._model_list("gemini-3.8-flash"), TimeoutError()]) as request:
+            with self.assertRaisesRegex(RuntimeError, "could not be reached"):
+                app.analyze_color_with_gemini("a" * 100, "image/jpeg")
+            self.assertEqual(request.call_count, 2)
+
+    def test_openai_responses_image_request_is_parsed(self):
+        with patch.object(app, "OPENAI_API_KEY", "openai-test"), patch.object(app, "OPENAI_VISION_MODEL", "gpt-4.1-mini"), patch.object(app, "urlopen", side_effect=[io.BytesIO(json.dumps({"data": [{"id": "gpt-4.1-mini"}]}).encode()), self._valid_openai_generation()]) as request:
+            result = app.analyze_color_with_openai("a" * 100, "image/jpeg")
+            self.assertTrue(result["isFace"])
+            self.assertEqual(request.call_count, 2)
+
+    def test_invalid_openai_key_is_rejected(self):
+        with patch.object(app, "OPENAI_API_KEY", "openai-test"), patch.object(app, "urlopen", side_effect=self._http_error(401)):
+            with self.assertRaisesRegex(app.ProviderError, "OpenAI rejected"):
+                app.get_openai_models()
+
+    def test_unsupported_openai_model_is_rejected(self):
+        with patch.object(app, "OPENAI_API_KEY", "openai-test"), patch.object(app, "OPENAI_VISION_MODEL", "gpt-missing"), patch.object(app, "urlopen", return_value=io.BytesIO(json.dumps({"data": [{"id": "gpt-4.1-mini"}]}).encode())):
+            with self.assertRaisesRegex(app.ProviderError, "not available"):
+                app.analyze_color_with_openai("a" * 100, "image/jpeg")
+
+    def test_openai_rate_limit_is_classified_without_retry(self):
+        with patch.object(app, "OPENAI_API_KEY", "openai-test"), patch.object(app, "urlopen", side_effect=[io.BytesIO(json.dumps({"data": [{"id": "gpt-4.1-mini"}]}).encode()), self._http_error(429)]) as request:
+            with self.assertRaisesRegex(app.ProviderError, "quota or rate limit") as raised:
+                app.analyze_color_with_openai("a" * 100, "image/jpeg")
+            self.assertEqual(raised.exception.kind, "rate_limit")
+            self.assertEqual(request.call_count, 2)
+
+    def test_malformed_openai_response_is_rejected(self):
+        with patch.object(app, "OPENAI_API_KEY", "openai-test"), patch.object(app, "urlopen", side_effect=[io.BytesIO(json.dumps({"data": [{"id": "gpt-4.1-mini"}]}).encode()), io.BytesIO(json.dumps({"output_text": "not-json"}).encode())]):
+            with self.assertRaisesRegex(app.ProviderError, "Expecting value"):
+                app.analyze_color_with_openai("a" * 100, "image/jpeg")
+
+    def test_missing_openai_does_not_fabricate_or_call_fallback(self):
+        with patch.object(app, "OPENAI_API_KEY", ""), patch.object(app, "analyze_color_with_gemini", side_effect=app.ProviderError("busy", "temporary")), patch.object(app, "analyze_color_with_openai") as fallback:
+            with self.assertRaises(app.ProviderError):
+                app.analyze_color_with_providers("a" * 100, "image/jpeg")
+            fallback.assert_not_called()
+
+    def test_both_providers_fail_without_fabricating_a_result(self):
+        with patch.object(app, "OPENAI_API_KEY", "openai-test"), patch.object(app, "analyze_color_with_gemini", side_effect=app.ProviderError("busy", "temporary")), patch.object(app, "analyze_color_with_openai", side_effect=app.ProviderError("quota", "rate_limit")):
+            with self.assertRaisesRegex(app.ProviderError, "Both analysis providers"):
+                app.analyze_color_with_providers("a" * 100, "image/jpeg")
+
+
+if __name__ == "__main__":
+    unittest.main()
