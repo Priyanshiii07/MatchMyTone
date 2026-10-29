@@ -11,6 +11,9 @@ import time
 import uuid
 import hashlib
 import secrets
+import json
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 import logging
 
 import resend
@@ -32,7 +35,7 @@ import styling
 from auth_helpers import client_ip, current_user, require_user
 from color_providers import ProviderError
 import config
-from config import BACKEND_URL, CORS_ORIGINS, EMAIL_VERIFICATION_HOURS, FLASK_DEBUG, FRONTEND_URL, FROM_EMAIL, JWT_ACCESS_TOKEN_MINUTES, JWT_SECRET_KEY, PRODUCTION, RESEND_API_KEY, SECRET_KEY
+from config import BACKEND_URL, CORS_ORIGINS, EMAIL_VERIFICATION_HOURS, FLASK_DEBUG, FRONTEND_URL, JWT_ACCESS_TOKEN_MINUTES, JWT_SECRET_KEY, PRODUCTION, RESEND_API_KEY, SECRET_KEY
 from models import (
     analysis_collections,
     db,
@@ -76,7 +79,7 @@ if PRODUCTION and not config.REQUIRE_EMAIL_VERIFICATION_SETTING:
 if config.email_problems():
     app.logger.warning("Verification emails cannot be sent: %s", " ".join(config.email_problems()))
 else:
-    app.logger.info("Email: Resend configured; verification links point to %s/verify-email", FRONTEND_URL)
+    app.logger.info("Email: %s configured; verification links point to %s/verify-email", config.EMAIL_PROVIDER, FRONTEND_URL)
 
 
 @jwt.invalid_token_loader
@@ -183,24 +186,54 @@ def validate_profile(data, require_all=False):
 EMAIL_ADDRESS = re.compile(r"[^@\s<>\"']+@[^@\s<>\"']+")
 
 
+BREVO_URL = "https://api.brevo.com/v3/smtp/email"
+
+
 def email_problems():
-    """Configuration problems that stop emails being sent (the key is checked on the live client so tests can stub it)."""
+    """Configuration problems that stop emails being sent (the Resend key is read from the live client so tests can stub it)."""
     problems = [problem for problem in config.email_problems() if not problem.startswith("RESEND_API_KEY")]
-    return (["RESEND_API_KEY is not set."] if not resend.api_key else []) + problems
+    if config.EMAIL_PROVIDER == "resend" and not resend.api_key:
+        problems.insert(0, "RESEND_API_KEY is not set.")
+    return problems
+
+
+def _sender():
+    match = re.match(r"\s*(.*?)\s*<([^>]+)>\s*$", config.FROM_EMAIL)
+    return (match.group(1) or "MatchMyTone", match.group(2)) if match else ("MatchMyTone", config.FROM_EMAIL)
+
+
+def _send_with_brevo(message):
+    """Brevo's transactional email API over HTTPS (works on hosts that block SMTP ports, such as Render's free tier)."""
+    name, address = _sender()
+    body = {"sender": {"name": name, "email": address}, "to": [{"email": to} for to in message["to"]], "subject": message["subject"],
+            **({"htmlContent": message["html"]} if message.get("html") else {}), **({"textContent": message["text"]} if message.get("text") else {})}
+    request = Request(BREVO_URL, data=json.dumps(body).encode(), headers={"api-key": config.BREVO_API_KEY, "Content-Type": "application/json", "Accept": "application/json"}, method="POST")
+    try:
+        with urlopen(request, timeout=20) as response:
+            if response.status not in (200, 201, 202):
+                raise RuntimeError(f"Brevo answered HTTP {response.status}")
+    except HTTPError as error:
+        detail = json.loads(error.read() or b"{}") if error.fp else {}
+        raise RuntimeError(f"Brevo HTTP {error.code}: {detail.get('code', '')} {detail.get('message', '')}") from None
+    except URLError as error:
+        raise RuntimeError(f"Brevo unreachable: {type(error.reason).__name__}") from None
 
 
 def send_email(message, purpose):
-    """Send through Resend. Returns True only when the provider accepted the message.
+    """Send through the configured provider (Resend or Brevo). Returns True only when the provider accepted the message.
 
-    Failures are logged with Resend's reason (for example an unverified sender domain), with any email
+    Failures are logged with the provider's reason (for example an unverified sender), with any email
     addresses masked; message bodies, links and tokens are never logged.
     """
     if (problems := email_problems()):
         app.logger.warning("Email not sent purpose=%s reason=%s", purpose, " ".join(problems))
         return False
     try:
-        resend.Emails.send({"from": FROM_EMAIL, **message})
-        app.logger.info("Email accepted by Resend purpose=%s", purpose)
+        if config.EMAIL_PROVIDER == "brevo":
+            _send_with_brevo(message)
+        else:
+            resend.Emails.send({"from": config.FROM_EMAIL, **message})
+        app.logger.info("Email accepted by %s purpose=%s", config.EMAIL_PROVIDER, purpose)
         return True
     except Exception as error:
         reason = EMAIL_ADDRESS.sub("<email>", str(getattr(error, "message", "") or error))[:200]
@@ -732,7 +765,7 @@ def get_quiz(quiz_type):
 @app.post("/api/email/share-color-analysis")
 @require_user
 def share_color_analysis():
-    if not resend.api_key:
+    if email_problems():
         return jsonify({"error": "Email sharing is not configured on the server."}), 503
     user = current_user()
     data = request.get_json(silent=True) or {}
@@ -740,12 +773,9 @@ def share_color_analysis():
     colors = data.get("colorsToWearDisplay") or data.get("colors_to_wear_display") or result.get("colorsToWear") or result.get("colors_to_wear") or []
     rows = "".join(f'<li>{escape(str(color.get("name", "Color")))} ({escape(str(color.get("hex", "")))})</li>' for color in colors if isinstance(color, dict))
     html = f'<h1>MatchMyTone color analysis</h1><p><strong>Season:</strong> {escape(str(result.get("seasonType") or result.get("season_type") or ""))}</p><p><strong>Undertone:</strong> {escape(str(result.get("undertone") or ""))}</p><p>Colors to wear:</p><ul>{rows}</ul>'
-    try:
-        resend.Emails.send({"from": FROM_EMAIL, "to": [user["email"]], "subject": "My Color Analysis - MatchMyTone", "html": html})
+    if send_email({"to": [user["email"]], "subject": "My Color Analysis - MatchMyTone", "html": html}, "share_color_analysis"):
         return jsonify({"message": "We emailed your color analysis.", "to": user["email"]})
-    except Exception as error:
-        app.logger.warning("Color analysis email failed: %s", type(error).__name__)
-        return jsonify({"error": "Could not send the email."}), 502
+    return jsonify({"error": "Could not send the email."}), 502
 
 
 @app.get("/api/test-email")
@@ -753,7 +783,7 @@ def test_email():
     # Local diagnostics only: in any non-debug deployment this endpoint does not exist.
     if not FLASK_DEBUG:
         return jsonify({"error": "Not found."}), 404
-    return jsonify({"resend_api_key_set": bool(resend.api_key), "from_email_set": bool(FROM_EMAIL), "backend_url": BACKEND_URL})
+    return jsonify({"email_provider": config.EMAIL_PROVIDER, "problems": email_problems(), "backend_url": BACKEND_URL})
 
 
 try:

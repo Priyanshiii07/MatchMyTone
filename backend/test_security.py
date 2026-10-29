@@ -3,6 +3,7 @@
 Email is never sent: Resend is replaced by a recorder. Tokens are read from the recorded message only.
 """
 
+import json
 import re
 import uuid
 from datetime import timedelta
@@ -355,5 +356,66 @@ def test_misconfigured_sender_is_reported_not_faked(client, monkeypatch):
     monkeypatch.setattr(app.resend.Emails, "send", lambda message: sent.append(message))
     details, body = register(client)
     assert body["verification_email_sent"] is False and sent == []
+    response = client.post("/api/auth/resend-verification", json={"email": details["email"]})
+    assert response.status_code == 503 and response.get_json()["errorCode"] == "email_not_configured"
+
+
+# ---------- Brevo (no-domain option) ----------
+
+class _BrevoResponse:
+    status = 201
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+
+@pytest.fixture
+def brevo(monkeypatch):
+    """EMAIL_PROVIDER=brevo with the HTTPS call captured instead of sent."""
+    calls = []
+    monkeypatch.setattr(config, "EMAIL_PROVIDER", "brevo")
+    monkeypatch.setattr(config, "BREVO_API_KEY", "brevo-test-key")
+    monkeypatch.setattr(config, "FROM_EMAIL", "MatchMyTone <matchmytone.app@gmail.com>")
+
+    def fake_urlopen(request, timeout=None):
+        calls.append({"url": request.full_url, "headers": dict(request.header_items()), "body": json.loads(request.data)})
+        return _BrevoResponse()
+
+    monkeypatch.setattr(app, "urlopen", fake_urlopen)
+    return calls
+
+
+def test_brevo_sends_verification_from_a_single_verified_sender(client, brevo, require_verification):
+    # Arrange / Act
+    details, body = register(client)
+    # Assert: one HTTPS call to Brevo with the sender split into name and address, and a working link.
+    assert body["verification_email_sent"] is True and len(brevo) == 1
+    call = brevo[0]
+    assert call["url"] == "https://api.brevo.com/v3/smtp/email" and call["headers"]["Api-key"] == "brevo-test-key"
+    assert call["body"]["sender"] == {"name": "MatchMyTone", "email": "matchmytone.app@gmail.com"}
+    assert call["body"]["to"] == [{"email": details["email"]}] and "Verify my email" in call["body"]["htmlContent"]
+    token = re.search(r"/verify-email#token=([A-Za-z0-9_-]+)", call["body"]["textContent"]).group(1)
+    assert client.post("/api/auth/verify-email", json={"token": token}).get_json()["status"] == "verified"
+
+
+def test_brevo_rejection_is_reported_not_faked(client, brevo, monkeypatch, require_verification):
+    from io import BytesIO
+    from urllib.error import HTTPError
+
+    def reject(request, timeout=None):
+        raise HTTPError(request.full_url, 400, "Bad Request", {}, BytesIO(b'{"code":"invalid_parameter","message":"sender not valid"}'))
+
+    monkeypatch.setattr(app, "urlopen", reject)
+    details, body = register(client)
+    assert body["verification_email_sent"] is False and "couldn't send" in body["message"]
+    assert login(client, details).status_code == 403
+
+
+def test_brevo_without_a_key_counts_as_not_configured(client, brevo, monkeypatch):
+    monkeypatch.setattr(config, "BREVO_API_KEY", "")
+    details, _ = register(client)
     response = client.post("/api/auth/resend-verification", json={"email": details["email"]})
     assert response.status_code == 503 and response.get_json()["errorCode"] == "email_not_configured"

@@ -33,7 +33,12 @@ services:
         sync: false
       - key: BACKEND_URL
         sync: false
+      # resend (needs a verified domain) or brevo (a single verified sender address is enough).
+      - key: EMAIL_PROVIDER
+        sync: false
       - key: RESEND_API_KEY
+        sync: false
+      - key: BREVO_API_KEY
         sync: false
       - key: FROM_EMAIL
         sync: false

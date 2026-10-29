@@ -33,6 +33,10 @@ CORS_ORIGINS = _csv(os.getenv("CORS_ORIGINS") or (FRONTEND_URL if PRODUCTION els
 # Sender for every email, e.g. "MatchMyTone <noreply@mail.yourdomain.com>"; its domain must be verified in Resend.
 FROM_EMAIL = (os.getenv("FROM_EMAIL") or "").strip()
 RESEND_API_KEY = (os.getenv("RESEND_API_KEY") or "").strip()
+# Which service sends email: "resend" (default; needs a domain verified in Resend to reach other people) or
+# "brevo" (a single verified sender address, such as a Gmail address, is enough while you have no domain).
+EMAIL_PROVIDER = (os.getenv("EMAIL_PROVIDER") or "resend").strip().lower()
+BREVO_API_KEY = (os.getenv("BREVO_API_KEY") or "").strip()
 GEMINI_API_KEY = (os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_GEMINI_API_KEY") or "").strip()
 GEMINI_MODEL = (os.getenv("GEMINI_MODEL") or "gemini-3.5-flash").strip()
 # Ordered Gemini models tried after GEMINI_MODEL; GEMINI_FALLBACK_MODEL is the older single-model setting.
@@ -60,12 +64,16 @@ TREND_CACHE_DAYS = max(1, int(os.getenv("TREND_CACHE_DAYS") or "7"))
 def email_problems():
     """Why verification emails can't be delivered with this configuration (variable names only, never values)."""
     problems = []
-    if not RESEND_API_KEY:
+    if EMAIL_PROVIDER not in {"resend", "brevo"}:
+        problems.append("EMAIL_PROVIDER must be resend or brevo.")
+    elif EMAIL_PROVIDER == "brevo" and not BREVO_API_KEY:
+        problems.append("BREVO_API_KEY is not set (EMAIL_PROVIDER=brevo).")
+    elif EMAIL_PROVIDER == "resend" and not RESEND_API_KEY:
         problems.append("RESEND_API_KEY is not set.")
     if not FROM_EMAIL or "@" not in FROM_EMAIL:
         problems.append("FROM_EMAIL is not set (e.g. MatchMyTone <noreply@mail.yourdomain.com>).")
     elif FROM_EMAIL.rstrip(">").lower().endswith(("@example.com", "@example.org")):
-        problems.append("FROM_EMAIL uses a placeholder domain; use an address on a domain verified in Resend.")
+        problems.append("FROM_EMAIL uses a placeholder address; use a sender verified with your email provider.")
     if PRODUCTION and (not FRONTEND_URL.startswith("https://") or "localhost" in FRONTEND_URL or "127.0.0.1" in FRONTEND_URL):
         problems.append("FRONTEND_URL must be the website's public https:// address (verification links point there).")
     return problems
