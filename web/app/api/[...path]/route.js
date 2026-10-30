@@ -14,9 +14,15 @@ async function proxy(request, { params }) {
   if (token) headers.set("Authorization", `Bearer ${token}`);
   const init = { method: request.method, headers, cache: "no-store" };
   if (request.method !== "GET" && request.method !== "HEAD") init.body = await request.text();
-  const upstream = await fetch(`${API_BASE}/${path.join("/")}`, init);
-  const body = await upstream.arrayBuffer();
-  return new NextResponse(body, { status: upstream.status, headers: { "content-type": upstream.headers.get("content-type") || "application/json" } });
+  try {
+    const upstream = await fetch(`${API_BASE}/${path.join("/")}`, init);
+    const body = await upstream.arrayBuffer();
+    return new NextResponse(body, { status: upstream.status, headers: { "content-type": upstream.headers.get("content-type") || "application/json" } });
+  } catch (error) {
+    // Logs the API host only (never cookies, tokens or bodies) so a wrong MATCHMYTONE_API_BASE_URL is easy to spot.
+    console.error(`MatchMyTone API unreachable at ${new URL(API_BASE).host}: ${error?.cause?.code || error?.name || "fetch failed"}`);
+    return NextResponse.json({ error: "The MatchMyTone service is unavailable right now. Please try again shortly.", errorCode: "api_unreachable" }, { status: 502 });
+  }
 }
 
 export const GET = proxy;

@@ -9,7 +9,8 @@ export async function POST(request) {
     const upstream = await fetch(`${API_BASE}/auth/register`, { method: "POST", headers, body: JSON.stringify(await request.json()), cache: "no-store" });
     const data = await upstream.json().catch(() => ({ error: "Invalid server response" }));
     return NextResponse.json(data, { status: upstream.status });
-  } catch {
+  } catch (error) {
+    console.error(`MatchMyTone API unreachable at ${new URL(API_BASE).host}: ${error?.cause?.code || error?.name || "fetch failed"}`);
     return NextResponse.json({ error: "The account service is unavailable right now. Please try again shortly." }, { status: 503 });
   }
 }

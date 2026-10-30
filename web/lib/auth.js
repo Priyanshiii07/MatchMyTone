@@ -1,6 +1,23 @@
 import { cookies } from "next/headers";
 
-const API_BASE = (process.env.MATCHMYTONE_API_BASE_URL || process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:5000/api").replace(/\/$/, "");
+/**
+ * Where this server reaches the Flask API, normalised so small typos in the hosting dashboard don't break login:
+ * surrounding spaces/quotes are removed, a missing https:// is added, and the URL always ends in /api.
+ */
+export function normalizeApiBase(value) {
+  let base = String(value || "").trim().replace(/^["']|["']$/g, "").trim();
+  if (!base) return "";
+  if (!/^https?:\/\//i.test(base)) base = `${/^(localhost|127\.0\.0\.1)(:|\/|$)/.test(base) ? "http" : "https"}://${base}`;
+  base = base.replace(/\/+$/, "");
+  return /\/api$/i.test(base) ? base : `${base}/api`;
+}
+
+const configuredBase = normalizeApiBase(process.env.MATCHMYTONE_API_BASE_URL || process.env.NEXT_PUBLIC_API_BASE_URL);
+if (!configuredBase && process.env.NODE_ENV === "production") {
+  // Shows in the hosting logs (e.g. Vercel → Logs); without it every API call fails with "service unavailable".
+  console.error("MATCHMYTONE_API_BASE_URL is not set: set it to https://<your-api>.onrender.com/api and redeploy.");
+}
+export const API_BASE = configuredBase || "http://127.0.0.1:5000/api";
 
 export async function getSession() {
   const token = (await cookies()).get("matchmytone_access")?.value;
@@ -23,4 +40,3 @@ export async function apiGetWithSession(path) {
   } catch { return null; }
 }
 
-export { API_BASE };

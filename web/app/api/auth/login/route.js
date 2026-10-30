@@ -20,7 +20,8 @@ export async function POST(request) {
     const response = NextResponse.json({ message: data.message, user: { ...data.user, token: undefined } });
     response.cookies.set("matchmytone_access", token, { httpOnly: true, sameSite: "lax", secure: process.env.NODE_ENV === "production", path: "/", maxAge: tokenLifetimeSeconds(token) });
     return response;
-  } catch {
+  } catch (error) {
+    console.error(`MatchMyTone API unreachable at ${new URL(API_BASE).host}: ${error?.cause?.code || error?.name || "fetch failed"}`);
     return NextResponse.json({ error: "The account service is unavailable right now. Please try again shortly." }, { status: 503 });
   }
 }

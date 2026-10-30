@@ -4,6 +4,8 @@ import os
 import uuid
 
 # Must be set before config/models are imported; load_dotenv does not override existing variables.
+# Tests never touch the database in backend/.env (which may be production Atlas): local MongoDB unless TEST_MONGODB_URI is set.
+os.environ["MONGODB_URI"] = os.environ.get("TEST_MONGODB_URI", "mongodb://127.0.0.1:27017/matchmytone_test")
 os.environ["MONGODB_DB"] = "matchmytone_test"
 os.environ["RESEND_API_KEY"] = ""
 os.environ["FROM_EMAIL"] = "MatchMyTone <noreply@mail.matchmytone.test>"
