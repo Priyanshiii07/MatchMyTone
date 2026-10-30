@@ -11,9 +11,6 @@ import time
 import uuid
 import hashlib
 import secrets
-import json
-from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
 import logging
 
 import resend
@@ -79,7 +76,9 @@ if PRODUCTION and not config.REQUIRE_EMAIL_VERIFICATION_SETTING:
 if config.email_problems():
     app.logger.warning("Verification emails cannot be sent: %s", " ".join(config.email_problems()))
 else:
-    app.logger.info("Email: %s configured; verification links point to %s/verify-email", config.EMAIL_PROVIDER, FRONTEND_URL)
+    app.logger.info("Email: Resend configured; verification links point to %s/verify-email", FRONTEND_URL)
+    if config.RESEND_TEST_SENDER in config.FROM_EMAIL.lower():
+        app.logger.warning("FROM_EMAIL is Resend's test sender: verification emails reach only the Resend account owner's address until a domain is verified.")
 
 
 @jwt.invalid_token_loader
@@ -186,54 +185,24 @@ def validate_profile(data, require_all=False):
 EMAIL_ADDRESS = re.compile(r"[^@\s<>\"']+@[^@\s<>\"']+")
 
 
-BREVO_URL = "https://api.brevo.com/v3/smtp/email"
-
-
 def email_problems():
     """Configuration problems that stop emails being sent (the Resend key is read from the live client so tests can stub it)."""
     problems = [problem for problem in config.email_problems() if not problem.startswith("RESEND_API_KEY")]
-    if config.EMAIL_PROVIDER == "resend" and not resend.api_key:
-        problems.insert(0, "RESEND_API_KEY is not set.")
-    return problems
-
-
-def _sender():
-    match = re.match(r"\s*(.*?)\s*<([^>]+)>\s*$", config.FROM_EMAIL)
-    return (match.group(1) or "MatchMyTone", match.group(2)) if match else ("MatchMyTone", config.FROM_EMAIL)
-
-
-def _send_with_brevo(message):
-    """Brevo's transactional email API over HTTPS (works on hosts that block SMTP ports, such as Render's free tier)."""
-    name, address = _sender()
-    body = {"sender": {"name": name, "email": address}, "to": [{"email": to} for to in message["to"]], "subject": message["subject"],
-            **({"htmlContent": message["html"]} if message.get("html") else {}), **({"textContent": message["text"]} if message.get("text") else {})}
-    request = Request(BREVO_URL, data=json.dumps(body).encode(), headers={"api-key": config.BREVO_API_KEY, "Content-Type": "application/json", "Accept": "application/json"}, method="POST")
-    try:
-        with urlopen(request, timeout=20) as response:
-            if response.status not in (200, 201, 202):
-                raise RuntimeError(f"Brevo answered HTTP {response.status}")
-    except HTTPError as error:
-        detail = json.loads(error.read() or b"{}") if error.fp else {}
-        raise RuntimeError(f"Brevo HTTP {error.code}: {detail.get('code', '')} {detail.get('message', '')}") from None
-    except URLError as error:
-        raise RuntimeError(f"Brevo unreachable: {type(error.reason).__name__}") from None
+    return (["RESEND_API_KEY is not set."] if not resend.api_key else []) + problems
 
 
 def send_email(message, purpose):
-    """Send through the configured provider (Resend or Brevo). Returns True only when the provider accepted the message.
+    """Send through Resend. Returns True only when Resend accepted the message.
 
-    Failures are logged with the provider's reason (for example an unverified sender), with any email
-    addresses masked; message bodies, links and tokens are never logged.
+    Failures are logged with Resend's reason (for example an unverified domain, or the test sender writing to
+    someone other than the account owner), with email addresses masked; bodies, links and tokens are never logged.
     """
     if (problems := email_problems()):
         app.logger.warning("Email not sent purpose=%s reason=%s", purpose, " ".join(problems))
         return False
     try:
-        if config.EMAIL_PROVIDER == "brevo":
-            _send_with_brevo(message)
-        else:
-            resend.Emails.send({"from": config.FROM_EMAIL, **message})
-        app.logger.info("Email accepted by %s purpose=%s", config.EMAIL_PROVIDER, purpose)
+        resend.Emails.send({"from": config.FROM_EMAIL, **message})
+        app.logger.info("Email accepted by Resend purpose=%s", purpose)
         return True
     except Exception as error:
         reason = EMAIL_ADDRESS.sub("<email>", str(getattr(error, "message", "") or error))[:200]
@@ -783,7 +752,7 @@ def test_email():
     # Local diagnostics only: in any non-debug deployment this endpoint does not exist.
     if not FLASK_DEBUG:
         return jsonify({"error": "Not found."}), 404
-    return jsonify({"email_provider": config.EMAIL_PROVIDER, "problems": email_problems(), "backend_url": BACKEND_URL})
+    return jsonify({"problems": email_problems(), "backend_url": BACKEND_URL})
 
 
 try:
