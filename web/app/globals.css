@@ -53,7 +53,7 @@ p { margin: 0; }
 /* ---------- Page frame ---------- */
 /* Page canvas: warm layered light instead of a grid. Module pages add their own accent (styles/visual-refresh.css). */
 .inner-page, .welcome-page { --accent-a: rgba(232, 182, 174, .42); --accent-b: rgba(212, 175, 96, .26); background: radial-gradient(1100px 620px at 8% -6%, var(--accent-a), transparent 62%), radial-gradient(900px 560px at 100% 8%, var(--accent-b), transparent 60%), radial-gradient(800px 600px at 50% 110%, rgba(167, 173, 145, .2), transparent 65%), linear-gradient(170deg, #fff8ef 0%, #fff2df 55%, #f9e6d6 100%); min-height: 100vh; position: relative; }
-.inner-page::before, .welcome-page::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); content: ""; inset: 0; mix-blend-mode: multiply; opacity: .05; pointer-events: none; position: absolute; }
+.inner-page::before, .welcome-page::before { background-image: linear-gradient(rgba(184, 144, 24, .07) 1px, transparent 1px), linear-gradient(90deg, rgba(184, 144, 24, .07) 1px, transparent 1px); background-size: 44px 44px; content: ""; inset: 0; -webkit-mask-image: linear-gradient(to bottom, #000 35%, transparent); mask-image: linear-gradient(to bottom, #000 35%, transparent); pointer-events: none; position: absolute; }
 .inner-content { padding: var(--space-4) 0 var(--space-6); position: relative; z-index: 1; }
 .page-toolbar { margin-bottom: var(--space-3); }
 .page-intro { margin-bottom: var(--space-5); max-width: 680px; }

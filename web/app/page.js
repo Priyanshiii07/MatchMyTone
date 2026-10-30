@@ -5,8 +5,8 @@ import ModuleArt from "./components/ModuleArt";
 import PaletteDemo from "./components/PaletteDemo";
 import SiteFooter from "./components/SiteFooter";
 import SiteHeader from "./components/SiteHeader";
-import HeroEditorial from "./components/HeroEditorial";
-import Photo from "./components/Photo";
+import HeroStickers from "./components/HeroStickers";
+import StyleArt from "./components/StyleArt";
 
 const FEATURES = [
   ["color", "Color Analysis", "One live selfie reveals your undertone and seasonal palette, then turns it into outfit combinations you can wear."],
@@ -19,11 +19,11 @@ const STEPS = [
   ["sparkle", "Run an analysis", "A live selfie for color, short questionnaires for skin, face and body."],
   ["journal", "Keep your guide", "Results, saved styles and printable summaries stay in your private journal."],
 ];
-// Real photographs from the recommendation catalog (photos/ are credited on /credits).
+// Illustrated stickers (the home page only); recommendation pages use real photographs.
 const CATALOG_PREVIEW = [
-  ["Men's styling", [["photos/m-shirt.jpg", "Oxford shirt"], ["photos/m-nehru.jpg", "Nehru jacket"], ["photos/hair-quiff.jpg", "Quiff"]]],
-  ["Women's styling", [["photos/w-saree.jpg", "Saree"], ["beltedblazer.jpg", "Belted blazer"], ["layeredlob.jpg", "Layered lob"]]],
-  ["Unisex styling", [["photos/u-hoodie.jpg", "Hoodie"], ["photos/m-denim-jacket.jpg", "Denim jacket"], ["photos/hair-shag.jpg", "Modern shag"]]],
+  ["Men's styling", [["shirt", "Oxford shirt", "#5B6C8F"], ["nehru-jacket", "Nehru jacket", "#005F60"], ["hair-quiff", "Quiff", "#5B3A29"]]],
+  ["Women's styling", [["saree", "Saree", "#C2593F"], ["blazer", "Belted blazer", "#C98B9B"], ["hair-lob", "Layered lob", "#6B3F2A"]]],
+  ["Unisex styling", [["hoodie", "Hoodie", "#6B705C"], ["denim-jacket", "Denim jacket", "#5B6C8F"], ["hair-shag", "Modern shag", "#4A3426"]]],
 ];
 
 export default function WelcomePage() {
@@ -39,7 +39,7 @@ export default function WelcomePage() {
           <div className="action-group"><Link className="btn btn-primary" href="/signup">Discover your style<Icon name="arrow-right" /></Link><Link className="btn btn-quiet" href="#analyses">Explore the analyses</Link></div>
           <p className="hero-login">Already have an account? <Link href="/login">Log in</Link></p>
         </div>
-        <HeroEditorial />
+        <HeroStickers />
       </section>
 
       <section id="analyses" className="shell home-section" aria-labelledby="features-title">
@@ -65,7 +65,7 @@ export default function WelcomePage() {
         <div className="catalog-preview">{CATALOG_PREVIEW.map(([title, items]) => (
           <article key={title} className="catalog-column">
             <h3>{title}</h3>
-            <ul>{items.map(([src, label]) => <li key={src}><span className="catalog-photo"><Photo src={src} alt={label} /></span>{label}</li>)}</ul>
+            <ul>{items.map(([art, label, color]) => <li key={art}><span className="sticker catalog-sticker"><StyleArt art={art} color={color} /></span>{label}</li>)}</ul>
           </article>
         ))}</div>
       </section>

@@ -1,10 +1,11 @@
-import Photo from "./Photo";
+import StyleArt from "./StyleArt";
 
 const BRAND_PALETTE = ["#C2593F", "#E3A857", "#D67C73", "#6B705C", "#005F60", "#8C5E34"];
 const HEX = /^#[0-9a-f]{6}$/i;
-// Face and body cards show a real photograph matching the user's styling, so nobody sees a default women's figure.
-const BODY_PHOTO = { menswear: ["photos/card-body-m.jpg", "Man in a full-length traditional outfit"], womenswear: ["photos/card-body-w.jpg", "Woman in a full-length floral dress"], unisex: ["photos/card-body-u.jpg", "Person in a matching grey jacket and trousers"] };
-const FACE_PHOTO = { menswear: ["photos/card-face-m.jpg", "Close-up portrait of a man's face"], womenswear: ["photos/card-face-w.jpg", "Close-up portrait of a woman's face"], unisex: ["photos/card-face-u.jpg", "Close-up portrait of a person in glasses"] };
+// Face and body cards show illustrated stickers that follow the user's styling, so nobody sees a default women's figure.
+// [main sticker, main colour, small sticker, small colour]
+const FACE_STICKERS = { menswear: ["hair-quiff", "#5B3A29", "frames-rect", "#B89018"], womenswear: ["hair-waves", "#6B3F2A", "frames-cateye", "#C2593F"], unisex: ["hair-shag", "#4A3426", "frames-round", "#B89018"] };
+const BODY_STICKERS = { menswear: ["blazer", "#005F60", "loafer", "#8C5E34"], womenswear: ["dress", "#C98B8B", "heel", "#B89018"], unisex: ["denim-jacket", "#5B6C8F", "sneaker", "#6B705C"] };
 
 function Swatches({ palette }) {
   const colors = (palette || []).map((color) => color?.hex).filter((hex) => HEX.test(String(hex))).slice(0, 6);
@@ -27,11 +28,22 @@ function Routine() {
   );
 }
 
-/** Distinct visual for each analysis card: palette and routine motifs, and real photographs for face and body. */
+/** A main die-cut sticker with a smaller companion sticker tucked against it. */
+function StickerPair({ set }) {
+  const [main, mainColor, small, smallColor] = set;
+  return (
+    <span className="sticker-pair">
+      <span className="sticker sticker-main"><StyleArt art={main} color={mainColor} /></span>
+      <span className="sticker sticker-small"><StyleArt art={small} color={smallColor} /></span>
+      <span className="sticker-dot" style={{ background: mainColor }} />
+      <span className="sticker-dot sticker-dot-b" style={{ background: smallColor }} />
+    </span>
+  );
+}
+
+/** Distinct illustration for each analysis card: palette and routine motifs, and styled stickers for face and body. */
 export default function ModuleArt({ module, catalog = "unisex", palette }) {
-  if (module === "face" || module === "body") {
-    const [src, alt] = (module === "face" ? FACE_PHOTO : BODY_PHOTO)[catalog] || (module === "face" ? FACE_PHOTO : BODY_PHOTO).unisex;
-    return <span className={`module-art module-art-${module} has-photo`}><span className="module-art-photo"><Photo src={src} alt={alt} category={module === "face" ? "hair" : "clothing"} /></span></span>;
-  }
-  return <span className={`module-art module-art-${module}`} aria-hidden="true">{module === "color" ? <Swatches palette={palette} /> : <Routine />}</span>;
+  const sets = module === "face" ? FACE_STICKERS : module === "body" ? BODY_STICKERS : null;
+  const art = sets ? <StickerPair set={sets[catalog] || sets.unisex} /> : module === "color" ? <Swatches palette={palette} /> : <Routine />;
+  return <span className={`module-art module-art-${module}`} aria-hidden="true">{art}</span>;
 }

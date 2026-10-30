@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import DashboardBackdrop from "../components/DashboardBackdrop";
 import Icon from "../components/Icon";
 import ModuleArt from "../components/ModuleArt";
 import PageShell from "../components/PageShell";
@@ -22,11 +23,12 @@ export default async function DashboardPage() {
   const firstName = String(user.name || "").split(/\s+/)[0];
   return (
     <PageShell width="wide" className="dashboard-page">
+      <DashboardBackdrop />
       <header className="dashboard-welcome reveal">
         <p className="eyebrow"><Icon name="sparkle" size={14} /> Welcome back</p>
         <h1>Hello, <em>{firstName}</em>.</h1>
         <p>Choose an analysis to continue your style discovery.</p>
-        {resolved && !resolved.needs_choice && <p className="styling-chip"><Icon name="hanger" size={16} />{catalogSourceText(resolved)} · <Link href="/profile/edit#style-preferences">Change</Link></p>}
+        {resolved && !resolved.needs_choice && <p className="styling-chip"><Icon name="hanger" size={16} />{catalogSourceText(resolved)}</p>}
       </header>
       {resolved?.needs_choice && (
         <aside className="prompt-card dashboard-prompt reveal">
